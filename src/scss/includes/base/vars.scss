@@ -1,14 +1,23 @@
-$font-Manrope: 'Manrope', sans-serif;
-$font-MessinaSans: 'MessinaSans', sans-serif;
-$font-MessinaSansSerif: 'MessinaSansSerif', sans-serif;
-$font-MessinaSansMono: 'MessinaSansMono', sans-serif;
+$font-Montserrat: "Montserrat", sans-serif;
+$font-Body-Grotesque: "Body-Grotesque", sans-serif;
+$font-Kharkiv: "Kharkiv", sans-serif;
+$font-Potra: "Potra", sans-serif;
 
 // Colors
-$color-black: #1A1A1A;
-$color-red: #F2571F;
+$color-black: #131313;
+$color-red: #FB1B3D;
+$color-white: #ffffff;
 
 // Media queries
-$desktop-extra: 1200px;
-$desktop: 992px;
-$tablet: 768px;
-$mobile: 576px;
+$desktop-extra-large: pxToRem(1536, em);
+$desktop-extra: pxToRem(1440, em);
+$desktop: pxToRem(992, em);
+$tablet: pxToRem(768, em);
+$mobile: pxToRem(576, em);
+$medium-mobile: pxToRem(450, em);
+$min-medium-mobile: pxToRem(449, em);
+$small-mobile: pxToRem(320, em);
+
+// Font sizes, weights, etc.
+$typography-font-size: pxToRem(15);
+$typography-font-weight: 400;

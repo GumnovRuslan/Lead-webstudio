@@ -1,40 +1,113 @@
-// Fonts
+// Body-Grotesque
+
+// @font-face {
+// 	font-family: 'Body-Grotesque';
+// 	src:url('../../../fonts/Body-Grotesque-Bold-trial.woff2') format("woff2");
+// 	font-weight:700;
+// 	font-style:normal
+// }
+
 @font-face {
-	font-family: 'MessinaSans';
-	src:url('../fonts/MessinaSans/MessinaSans-Light.eot?') format("embedded-opentype"),
-	url('../fonts/MessinaSans/MessinaSans-Light.ttf') format("truetype"),
-	url('../fonts/MessinaSans/MessinaSans-Light.woff2') format("woff2"),
-	url('../fonts/MessinaSans/MessinaSans-Light.woff') format("woff");
-	font-weight:300;
-	font-style:normal
+	font-family: 'Body-Grotesque';
+	src:url('../../../fonts/Body-Grotesque-Fit-Bold-trial.woff2') format("woff2"),
+	url('../../../fonts/Body-Grotesque-Fit-Bold-trial.ttf') format("truetype");
+	font-weight:800;
+	font-style: normal
+}
+
+// @font-face {
+// 	font-family: 'Body-Grotesque';
+// 	src:url('../../../fonts/Body-Grotesque-Large-Bold-trial.woff2') format("woff2");
+// 	font-weight:700;
+// 	font-style:normal
+// }
+
+// @font-face {
+// 	font-family: 'Body-Grotesque';
+// 	src:url('../../../fonts/Body-Grotesque-Slim-Bold-trial.woff2') format("woff2");
+// 	font-weight:700;
+// 	font-style:normal
+// }
+
+// Kharkiv
+
+@font-face {
+	font-family: 'Kharkiv';
+	src:url('../../../fonts/Kharkiv\ Tone.woff2') format("woff2"),
+	url('../../../fonts/Kharkiv\ Tone.ttf') format("truetype");
+	font-weight: 400;
+	font-style: normal
+}
+
+// Potra
+
+@font-face {
+	font-family: 'Potra';
+	src:url('../../../fonts/Potra.woff2') format("woff2"),
+	url('../../../fonts/Potra.ttf') format("truetype");
+	font-weight: 300;
+	font-style: normal
+}
+
+// Montserrat
+
+// @font-face {
+// 	font-family: 'Montserrat';
+// 	src:url('../../../fonts/Montserrat-Thin.woff2') format("woff2");
+// 	font-weight: 100;
+// 	font-style: normal
+// }
+
+// @font-face {
+// 	font-family: 'Montserrat';
+// 	src:url('../../../fonts/Montserrat-Light.woff2') format("woff2");
+// 	font-weight: 300;
+// 	font-style: normal
+// }
+
+@font-face {
+	font-family: 'Montserrat';
+	src:url('../../../fonts/Montserrat-Regular.woff2') format("woff2"),
+	url('../../../fonts/Montserrat-Regular.ttf') format("truetype");
+	font-weight: 400;
+	font-style: normal
 }
 
 @font-face {
-	font-family: 'MessinaSans';
-	src:url('../fonts/MessinaSans/MessinaSans-Regular.eot?') format("embedded-opentype"),
-	url('../fonts/MessinaSans/MessinaSans-Regular.ttf') format("truetype"),
-	url('../fonts/MessinaSans/MessinaSans-Regular.woff2') format("woff2"),
-	url('../fonts/MessinaSans/MessinaSans-Regular.woff') format("woff");
-	font-weight:400;
-	font-style:normal
+	font-family: 'Montserrat';
+	src:url('../../../fonts/Montserrat-Medium.woff2') format("woff2"),
+	url('../../../fonts/Montserrat-Medium.ttf') format("truetype");;
+	font-weight: 500;
+	font-style: normal
 }
 
 @font-face {
-	font-family: 'MessinaSans';
-	src:url('../fonts/MessinaSans/MessinaSans-SemiBold.eot?') format("embedded-opentype"),
-	url('../fonts/MessinaSans/MessinaSans-SemiBold.ttf') format("truetype"),
-	url('../fonts/MessinaSans/MessinaSans-SemiBold.woff2') format("woff2"),
-	url('../fonts/MessinaSans/MessinaSans-SemiBold.woff') format("woff");
-	font-weight:600;
-	font-style:normal
+	font-family: 'Montserrat';
+	src:url('../../../fonts/Montserrat-SemiBold.woff2') format("woff2"),
+	url('../../../fonts/Montserrat-SemiBold.ttf') format("truetype");;
+	font-weight: 600;
+	font-style: normal
 }
 
 @font-face {
-	font-family: 'MessinaSans';
-	src:url('../fonts/MessinaSans/MessinaSans-Bold.eot?') format("embedded-opentype"),
-	url('../fonts/MessinaSans/MessinaSans-Bold.ttf') format("truetype"),
-	url('../fonts/MessinaSans/MessinaSans-Bold.woff2') format("woff2"),
-	url('../fonts/MessinaSans/MessinaSans-Bold.woff') format("woff");
-	font-weight:700;
-	font-style:normal
+	font-family: 'Montserrat';
+	src:url('../../../fonts/Montserrat-Bold.woff2') format("woff2"),
+	url('../../../fonts/Montserrat-Bold.ttf') format("truetype");;
+	font-weight: 700;
+	font-style: normal
 }
+
+@font-face {
+	font-family: 'Montserrat';
+	src:url('../../../fonts/Montserrat-ExtraBold.woff2') format("woff2"),
+	url('../../../fonts/Montserrat-ExtraBold.ttf') format("truetype");;
+	font-weight: 800;
+	font-style: normal
+}
+
+// @font-face {
+// 	font-family: 'Montserrat';
+// 	src:url('../../../fonts/Montserrat-Black.woff2') format("woff2");
+// 	font-weight: 900;
+// 	font-style: normal
+// }
