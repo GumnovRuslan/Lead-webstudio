@@ -122,7 +122,7 @@ a {
 
     &__item {
         position: relative;
-        height: pxToRem(2);
+        height: pxToRem(1);
         background: $color-white;
         display: flex;
         align-items: center;
@@ -131,8 +131,8 @@ a {
             content: "";
             position: absolute;
             right: 0;
-            width: pxToRem(10);
-            height: pxToRem(10);
+            width: pxToRem(6);
+            height: pxToRem(6);
             border-top: pxToRem(2) solid $color-white;
             border-right: pxToRem(2) solid $color-white;
             transform: rotate(45deg);
@@ -158,9 +158,9 @@ a {
 .button {
 
     &__container {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
+        // display: inline-flex;
+        // flex-direction: column;
+        // justify-content: center;
         border-radius: 50%;
         background: $color-red;
 		color: $color-white;
