@@ -8,24 +8,26 @@ body {
         display: flex;
 
         @include mobile {
+            gap: pxToRem(20);
             justify-content: space-between;
             align-items: center;
-            width: pxToRem(414);
+            max-width: pxToRem(414);
             margin: 0 auto;
-            padding: pxToRem(29) pxToRem(0) pxToRem(0) pxToRem(0);
+            padding-top: pxToRem(29);
         }
 
         @include tablet {
             flex-direction: column;
             align-items: center;
-            padding-top: pxToRem(10);
+            padding-top: pxToRem(20);
             gap: pxToRem(10);
         }
 
         @include desktop {
+            justify-content: center;
             gap: pxToRem(72);
-            padding: pxToRem(70) pxToRem(0) pxToRem(0) pxToRem(167);
-            width: pxToRem(1920);
+            padding: pxToRem(70) pxToRem(10) pxToRem(0) pxToRem(30);
+            max-width: pxToRem(1920);
             margin: 0 auto;
         }
     }
@@ -34,7 +36,9 @@ body {
         display: flex;
 
         @include mobile {
-            gap: pxToRem(67);
+            max-width: pxToRem(282);
+            flex: auto;
+            justify-content: space-between;
         }
 
         @include tablet {
@@ -44,7 +48,9 @@ body {
         }
 
         @include desktop {
-            gap: pxToRem(262);
+            max-width: pxToRem(1307);
+            flex: auto;
+            justify-content: space-between;
         }
     }
 
@@ -69,10 +75,10 @@ body {
 
         @include mobile {
             position: absolute;
-            top: pxToRem(100);
+            top: pxToRem(83);
             left: -100%;
             width: 100vw;
-            padding-top: pxToRem(84);
+            padding-top: pxToRem(100);
             background: $color-black;
             transition: 0.5s all;
         }
@@ -149,9 +155,6 @@ body {
             align-items: center;
             gap: pxToRem(14);
         }
-    }
-
-    &__languages {
     }
 
     &__drop-down {
