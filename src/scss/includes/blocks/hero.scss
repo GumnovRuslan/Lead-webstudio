@@ -1,0 +1,312 @@
+.hero {
+
+    &__container {
+        position: relative;
+
+        @include mobile {
+            display: flex;
+            align-items: center;
+            max-width: pxToRem(414);
+            margin: 0 auto;
+            padding: pxToRem(177) pxToRem(15)pxToRem(0) pxToRem(15);
+        }
+
+        @include tablet {
+            max-width: pxToRem(768);
+            margin: 0 auto;
+            padding: pxToRem(50) pxToRem(30);
+        }
+
+        @include desktop {
+            display: flex;
+            max-width: pxToRem(1920);
+            height: 100vh;
+            margin: 0 auto;
+            padding: pxToRem(0) pxToRem(170)pxToRem(0) pxToRem(165);
+        }
+    }
+
+    &__content {
+
+        @include tablet {
+            margin-top: pxToRem(150);
+        }
+        
+        @include desktop {
+            margin-top: pxToRem(263);
+        }
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            gap: pxToRem(34);
+        }
+
+        @include tablet {
+            gap: pxToRem(20);
+        }
+
+        @include desktop {
+            position: relative;
+        }
+    }
+
+    &__heading-container {
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            gap: pxToRem(48);
+            max-width: pxToRem(320);
+        }
+
+        @include tablet {
+            gap: pxToRem(40);
+            max-width: pxToRem(500);
+        }
+
+        @include desktop {
+            gap: pxToRem(25);
+            max-width: pxToRem(1135);
+        }
+    }
+
+    &__subtitle {
+        color: $color-white;
+        position: relative;
+
+        ::before {
+            content: "";
+            position: absolute;
+            width: pxToRem(4);
+            height: pxToRem(4);
+            border-radius: 50%;
+            box-shadow: 0 0 pxToRem(1) pxToRem(1) $color-white;
+            background: $color-white;
+        }
+
+        @include mobile {
+            padding-left: pxToRem(15);
+
+            ::before {
+                top: pxToRem(6);
+                left: 0;
+            }
+        }
+
+        @include tablet {
+            padding-left: pxToRem(15);
+
+            ::before {
+                top: pxToRem(6);
+                left: 0;
+            }
+        }
+
+        @include desktop {
+            max-width: pxToRem(631);
+            padding-left: pxToRem(19);
+
+            ::before {
+                top: pxToRem(16);
+                left: pxToRem(-1);
+            }
+        }
+    }
+
+    &__subtitle-text {
+        line-height: 132.4%;
+
+        @include mobile {
+            font-size: pxToRem(12);
+        }
+
+        @include desktop {
+            font-size: pxToRem(20);
+        }
+    }
+
+    &__title {
+        color: $color-white;
+        
+        @include mobile {
+            padding: 0 pxToRem(2);
+        }
+
+        @include desktop {
+            padding: 0 pxToRem(5);
+        }
+    }
+
+    &__title-text {
+        font-family: $font-Potra;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+
+        span {
+            font-family: $font-Body-Grotesque;
+            letter-spacing: 0.16em;
+        }
+
+        @include mobile {
+            font-size: pxToRem(40);
+            line-height: 108.5%;
+        }
+
+        @include tablet {
+            font-size: pxToRem(50);
+            line-height: 108.5%;
+        }
+        
+
+        @include desktop {
+            font-size: pxToRem(150);
+            line-height: 109.5%;
+        }
+    }
+
+
+    &__button {
+        padding: 0 pxToRem(8);
+
+        @include desktop {
+            position: absolute;
+            left: pxToRem(-1);
+            bottom: pxToRem(-108);
+        }
+    }
+
+    &__button-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: pxToRem(-15) pxToRem(-15) pxToRem(20) rgba(0, 0, 0, 0.8);;
+
+        @include mobile {
+            width: pxToRem(153);
+            height: pxToRem(153);
+        }
+
+        @include tablet {
+            width: pxToRem(153);
+            height: pxToRem(153);
+        }
+
+        @include desktop {
+            width: pxToRem(170);
+            height: pxToRem(170);
+        }
+    }
+
+    &__button-text {
+        font-weight: 700;
+        font-size: pxToRem(20);
+        line-height: 132.4%;
+    }
+
+    &__arrow {
+        position: absolute;
+
+        @include mobile {
+            bottom: pxToRem(55);
+            width: pxToRem(100);
+        }
+
+        @include tablet {
+            bottom: pxToRem(50);
+            width: pxToRem(100);
+        }
+
+        @include desktop {
+            bottom: pxToRem(60);
+            width: pxToRem(110);
+        }
+    }
+
+    &__image {
+        position: absolute;
+
+        @include mobile {
+            top: pxToRem(17);
+            right: pxToRem(9);
+        }
+
+        @include tablet {
+            top: pxToRem(20);
+            right: pxToRem(40);
+        }
+
+        @include desktop {
+            top: pxToRem(23);
+            right: pxToRem(121);
+        }
+    }
+
+    &__img-mobile {
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__img-desktop {
+
+        @include tablet {
+            display: none;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__shadow {
+        position: absolute;
+        z-index: -1;
+        width: pxToRem(1);
+        height: pxToRem(1);
+        border-radius: 50%;
+        opacity: 0.3;
+
+        @include mobile {
+            bottom: 10%;
+            right: 10%;
+            box-shadow: 0 0 pxToRem(1000) pxToRem(150) $color-white;
+        }
+
+        @include tablet {
+            top: 30%;
+            right: 10%;
+            box-shadow: 0 0 pxToRem(1000) pxToRem(200) $color-white;
+        }
+
+        @include desktop {
+            top: 0;
+            right: 45%;
+            box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
+        }
+    }
+
+    &__slider {
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            position: absolute;
+            top: pxToRem(399);
+            right: pxToRem(-25);
+            transform: rotate(-90deg);
+        }
+    }
+}
