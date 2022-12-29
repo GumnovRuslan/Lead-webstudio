@@ -17,6 +17,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: $font-Montserrat;
+    scroll-behavior: smooth;
 }
 
 input[type="submit"]:focus {
@@ -131,8 +132,8 @@ a {
             content: "";
             position: absolute;
             right: 0;
-            width: pxToRem(6);
-            height: pxToRem(6);
+            width: pxToRem(7);
+            height: pxToRem(7);
             border-top: pxToRem(2) solid $color-white;
             border-right: pxToRem(2) solid $color-white;
             transform: rotate(45deg);
