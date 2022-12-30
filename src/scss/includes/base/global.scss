@@ -1,227 +1,209 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 
-	*::before, *::after {
-		box-sizing: border-box;
-	}
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-	&:not(iframe) {
-		transition: 0.25s ease;
-		transition-property: background, border, color, left, margin, padding, right, opacity;
-	}
+  &:not(iframe) {
+    transition: 0.25s ease;
+    transition-property: background, border, color, left, margin, padding, right,
+      opacity;
+  }
 }
 
 html,
 body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: $font-Montserrat;
-    scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $font-Montserrat;
+  scroll-behavior: smooth;
 }
 
 input[type="submit"]:focus {
-	outline: none;
+  outline: none;
 }
 
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 img,
 video,
 audio {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 label,
 button,
 input,
 select {
-	cursor: pointer;
-	border: none;
+  cursor: pointer;
+  border: none;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 label[for] {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 abbr[title],
 acronym[title],
 dfn {
-	cursor: help;
+  cursor: help;
 }
 
 textarea {
-	resize: vertical;
+  resize: vertical;
 }
 
 [disabled] {
-	cursor: default;
+  cursor: default;
 }
 
 [aria-disabled="true"] {
-	cursor: default;
-	pointer-events: none;
+  cursor: default;
+  pointer-events: none;
 }
 
 .no-js button[type="button"] {
-	display: none;
+  display: none;
 }
 
 sub,
 sup {
-	line-height: 0;
+  line-height: 0;
 }
 
 img {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 a {
-	text-decoration: none;
-	cursor: pointer;
-	
-	&:not([href]){
-		cursor: initial;
-	}
+  text-decoration: none;
+  cursor: pointer;
+
+  &:not([href]) {
+    cursor: initial;
+  }
 }
 
 //===================================
 
 .arrow-black {
+  &__item {
+    position: relative;
+    height: pxToRem(2);
+    background: $color-black;
+    display: flex;
+    align-items: center;
 
-    &__item {
-        position: relative;
-        height: pxToRem(2);
-        background: $color-black;
-        display: flex;
-        align-items: center;
-
-        &:before {
-            content: "";
-            position: absolute;
-            right: 0;
-            width: pxToRem(10);
-            height: pxToRem(10);
-            border-top: pxToRem(2) solid $color-black;
-            border-right: pxToRem(2) solid $color-black;
-            transform: rotate(45deg);
-        }
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: pxToRem(10);
+      height: pxToRem(10);
+      border-top: pxToRem(2) solid $color-black;
+      border-right: pxToRem(2) solid $color-black;
+      transform: rotate(45deg);
     }
+  }
 }
 
 .arrow-white {
+  &__item {
+    position: relative;
+    height: pxToRem(1);
+    background: $color-white;
+    display: flex;
+    align-items: center;
 
-    &__item {
-        position: relative;
-        height: pxToRem(1);
-        background: $color-white;
-        display: flex;
-        align-items: center;
-
-        &:before {
-            content: "";
-            position: absolute;
-            right: 0;
-            width: pxToRem(7);
-            height: pxToRem(7);
-            border-top: pxToRem(2) solid $color-white;
-            border-right: pxToRem(2) solid $color-white;
-            transform: rotate(45deg);
-        }
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: pxToRem(7);
+      height: pxToRem(7);
+      border-top: pxToRem(2) solid $color-white;
+      border-right: pxToRem(2) solid $color-white;
+      transform: rotate(45deg);
     }
+  }
 }
 
 .heading-vertical {
-
-    &__text {
-        display: inline-block;
-        font-family: $font-Body-Grotesque;
-        font-weight: 800;
-        font-size: pxToRem(70);
-        line-height: 108.5%;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        color: $color-white;
-        writing-mode: vertical-rl;
-    }
+  &__text {
+    display: inline-block;
+    font-family: $font-Body-Grotesque;
+    font-weight: 800;
+    font-size: pxToRem(70);
+    line-height: 108.5%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: $color-white;
+    writing-mode: vertical-rl;
+  }
 }
 
 .button {
-
-    &__container {
-        // display: inline-flex;
-        // flex-direction: column;
-        // justify-content: center;
-        border-radius: 50%;
-        background: $color-red;
-		color: $color-white;
-    }
+  &__container {
+    // display: inline-flex;
+    // flex-direction: column;
+    // justify-content: center;
+    border-radius: 50%;
+    background: $color-red;
+    color: $color-white;
+  }
 }
 
 .scroll-nav {
+  &__container {
+    display: inline-block;
+    transform: rotate(-90deg);
+    padding: pxToRem(15);
+  }
 
-    &__container {
-        display: inline-block;
-        transform: rotate(-90deg);
-		padding: pxToRem(15);
+  &__text {
+    position: relative;
+    font-size: pxToRem(20);
+    line-height: 132.4%;
+    padding-left: pxToRem(95);
+    color: $color-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% + 2px);
+      left: 0;
+      width: pxToRem(70);
+      height: pxToRem(1);
+      background: $color-white;
     }
-
-    &__text {
-        position: relative;
-        font-size: pxToRem(20);
-        line-height: 132.4%;
-        padding-left: pxToRem(95);
-        color: $color-white;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: calc(50% + 2px);
-            left: 0;
-            width: pxToRem(70);
-            height: pxToRem(1);
-            background: $color-white;
-        }
-    }
+  }
 }
 
-.stap-slider {
-
-    &__container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: pxToRem(23.8);
-    }
-
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: pxToRem(14);
-        height: pxToRem(14);
-
-        &:hover .stap-slider__btn{
-            width: pxToRem(14);
-            height: pxToRem(14);
-            background: $color-red;
-        }
-    }
-
-    &__btn {
-        width: pxToRem(8.4);
-        height: pxToRem(8.4);
-        background: $color-white;
-        border-radius: 50%;
-    }
+.main {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
 }
+
+

@@ -1,8 +1,18 @@
 body {
     background: $color-black;
+    
+    @include desktop {
+        overflow: hidden;
+    }
 }
 
 .header {
+
+    @include desktop {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+    }
 
     &__container {
         display: flex;
