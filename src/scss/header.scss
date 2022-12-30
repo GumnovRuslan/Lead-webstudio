@@ -86,6 +86,7 @@ body {
         @include mobile {
             position: absolute;
             top: pxToRem(83);
+            z-index: 20;
             left: -100%;
             width: 100vw;
             padding-top: pxToRem(100);
