@@ -1,5 +1,13 @@
 .hero {
 
+    @include mobile {
+        height: pxToRem(746);
+    }
+
+    @include tablet {
+        height: pxToRem(746);
+    }
+
     @include desktop {
         width: 100vw;
             height: 100vh;
@@ -297,23 +305,4 @@
             box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
         }
     }
-
-    // &__slider {
-
-    //     @include mobile {
-    //         display: none;
-    //     }
-
-    //     @include tablet {
-    //         display: none;
-    //     }
-
-    //     @include desktop {
-    //         position: fixed;
-    //         z-index: 10;
-    //         top: 49.5%;
-    //         right: pxToRem(-25);
-    //         transform: rotate(90deg);
-    //     }
-    // }
 }

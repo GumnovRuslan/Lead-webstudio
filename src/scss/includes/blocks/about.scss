@@ -26,8 +26,7 @@
 
         @include tablet {
             position: relative;
-            padding-top: pxToRem(209);
-            // max-width: pxToRem(968);
+            max-width: pxToRem(968);
             margin: 0 auto;
 
             &::before {
@@ -40,6 +39,8 @@
         @include desktop {
             height: 100vh;
             padding-top: pxToRem(209);
+            max-width: pxToRem(1920);
+            margin: 0 auto;
 
             &::before {
                 left: pxToRem(97);

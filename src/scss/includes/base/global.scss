@@ -199,11 +199,14 @@ a {
 }
 
 .main {
-  position: fixed;
   left: 0;
   width: 100%;
   height: 100%;
   transition: all 1s;
+
+  @include desktop {
+    position: fixed;
+  }
 }
 
 
