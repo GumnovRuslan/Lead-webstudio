@@ -1,5 +1,18 @@
 .hero {
 
+    @include mobile {
+        height: pxToRem(746);
+    }
+
+    @include tablet {
+        height: pxToRem(746);
+    }
+
+    @include desktop {
+        width: 100vw;
+            height: 100vh;
+    }
+
     &__container {
         position: relative;
 
@@ -19,10 +32,11 @@
 
         @include desktop {
             display: flex;
-            max-width: pxToRem(1920);
+            align-items: center;
+            width: 1920px;
             height: 100vh;
             margin: 0 auto;
-            padding: pxToRem(0) pxToRem(170)pxToRem(0) pxToRem(165);
+            padding: 0 pxToRem(170) 0 pxToRem(165);
         }
     }
 
@@ -33,7 +47,7 @@
         }
         
         @include desktop {
-            margin-top: pxToRem(263);
+            padding-top: pxToRem(135);
         }
     }
 
@@ -242,8 +256,8 @@
         }
 
         @include desktop {
-            top: pxToRem(23);
-            right: pxToRem(121);
+            top: 14.8%;
+            right: 6.35%;
         }
     }
 
@@ -289,24 +303,6 @@
             top: 0;
             right: 45%;
             box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
-        }
-    }
-
-    &__slider {
-
-        @include mobile {
-            display: none;
-        }
-
-        @include tablet {
-            display: none;
-        }
-
-        @include desktop {
-            position: absolute;
-            top: pxToRem(399);
-            right: pxToRem(-25);
-            transform: rotate(-90deg);
         }
     }
 }
