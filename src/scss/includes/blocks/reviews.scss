@@ -4,6 +4,7 @@
     @include desktop {
         position: relative;
         padding-top: pxToRem(136);
+        width: 100vw;
         height: 100vh;
     }
 
@@ -15,6 +16,11 @@
             gap: pxToRem(40);
             padding-top: pxToRem(3);
             padding-bottom: pxToRem(87);
+        }
+
+        @include tablet {
+            gap: pxToRem(60);
+            padding: pxToRem(87) 0;
         }
         
         @include desktop {
@@ -36,6 +42,10 @@
             margin-bottom: pxToRem(18);
         }
 
+        @include tablet {
+            margin-bottom: pxToRem(18);
+        }
+
         @include desktop {
             margin-bottom: pxToRem(20);
         }
@@ -50,6 +60,11 @@
         color: $color-white;
 
         @include mobile {
+            font-size: pxToRem(20);
+            letter-spacing: 0.170em;
+        }
+
+        @include tablet {
             font-size: pxToRem(20);
             letter-spacing: 0.170em;
         }
@@ -97,6 +112,20 @@
             }
         }
 
+        @include tablet {
+            margin-bottom: pxToRem(25);
+
+            &::before {
+                right: pxToRem(296);
+                top: 45%;
+            }
+    
+            &::after {
+                left: pxToRem(296);
+                top: 45%;
+            }
+        }
+
         @include desktop {
             margin-bottom: pxToRem(25);
 
@@ -119,6 +148,11 @@
             height: pxToRem(75);
         }
 
+        @include tablet {
+            width: pxToRem(251);
+            height: pxToRem(85);
+        }
+
         @include desktop {
             width: pxToRem(251);
             height: pxToRem(85);
@@ -129,6 +163,10 @@
 
         @include mobile {
             margin-bottom: pxToRem(17);
+        }
+
+        @include tablet {
+            margin-bottom: pxToRem(30);
         }
         
         @include desktop {
@@ -144,10 +182,6 @@
         text-align: center;
         letter-spacing: 0.365em;
         text-transform: uppercase;
-
-        @include desktop {
-            
-        }
     }
 
     &__stars {
@@ -155,6 +189,10 @@
 
         @include mobile {
             gap: pxToRem(11);
+        }
+
+        @include tablet {
+            gap: pxToRem(13);
         }
 
         @include desktop {
@@ -169,6 +207,11 @@
             height: pxToRem(25);
         }
 
+        @include tablet {
+            width: pxToRem(30);
+            height: pxToRem(30);
+        }
+
         @include desktop {
             width: pxToRem(30);
             height: pxToRem(30);
@@ -178,6 +221,10 @@
     &__scroll-nav {
 
         @include mobile {
+            display: none;
+        }
+
+        @include tablet {
             display: none;
         }
 
@@ -195,6 +242,11 @@
         @include mobile {
             gap: pxToRem(57);
             padding: 0 pxToRem(15);
+        }
+
+        @include tablet {
+            gap: pxToRem(57);
+            padding: 0 pxToRem(30);
         }
 
         @include desktop {
@@ -219,6 +271,10 @@
             gap: pxToRem(30);
         }
 
+        @include tablet {
+            gap: pxToRem(30);
+        }
+
         @include desktop {
             gap: pxToRem(54.76);
         }
@@ -234,6 +290,13 @@
             width: pxToRem(284);
             min-height: pxToRem(222);
             padding: pxToRem(31) pxToRem(34) pxToRem(27) pxToRem(35.6);
+        }
+
+        @include tablet {
+            gap: pxToRem(19);
+            min-width: pxToRem(350);
+            min-height: pxToRem(222);
+            padding: pxToRem(30);
         }
 
         @include desktop {
@@ -258,6 +321,10 @@
             gap: pxToRem(13);
         }
 
+        @include tablet {
+            gap: pxToRem(13);
+        }
+
         @include desktop {
             gap: pxToRem(23);
         }
@@ -271,6 +338,11 @@
         @include mobile {
             width: pxToRem(21);
             height: pxToRem(21);
+        }
+
+        @include tablet {
+            width: pxToRem(36.14);
+            height: pxToRem(36.14);
         }
 
         @include desktop {
@@ -287,6 +359,10 @@
             gap: pxToRem(4.5);
         }
 
+        @include tablet {
+            gap: pxToRem(4.5);
+        }
+
         @include desktop {
             gap: pxToRem(6.5);
         }
@@ -297,6 +373,11 @@
         @include mobile {
             width: pxToRem(9.5);
             height: pxToRem(9);
+        }
+
+        @include tablet {
+            width: pxToRem(12);
+            height: pxToRem(12);
         }
 
         @include desktop {
@@ -319,21 +400,19 @@
             font-size: pxToRem(10);
         }
 
+        @include tablet {
+            font-size: pxToRem(14);
+        }
+
         @include desktop {
             font-size: pxToRem(15);
         }
     }
 
     &__content {
-
-        @include desktop {
-        }
     }
 
     &__comment {
-
-        @include mobile {
-        }
 
         @include desktop {
             min-height: pxToRem(162);
