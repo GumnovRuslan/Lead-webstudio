@@ -10,8 +10,8 @@
   @include desktop {
     position: fixed;
     z-index: 20;
-    top: 49.5%;
-    right: pxToRem(-25);
+    top: 48.3%;
+    right: pxToRem(-38);
     transform: rotate(90deg);
   }
 
@@ -19,15 +19,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: pxToRem(23.8);
   }
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: pxToRem(14);
-    height: pxToRem(14);
+    width: pxToRem(38);
+    height: pxToRem(38);
+
+    &:hover .stap-slider__btn {
+      background: $color-red;
+    }
   }
 
   &__btn {
@@ -79,7 +82,7 @@
 
       &[id="radio_4"] {
         ~ .main {
-          top: calc(100vh * 2 * -1);
+          top: calc(100vh * 3 * -1);
           .stap-slider_4 {
             background: $color-red;
             width: pxToRem(14);
@@ -90,7 +93,7 @@
 
       &[id="radio_5"] {
         ~ .main {
-          top: calc(100vh * 2 * -1);
+          top: calc(100vh * 4 * -1);
           .stap-slider_5 {
             background: $color-red;
             width: pxToRem(14);
@@ -101,7 +104,7 @@
 
       &[id="radio_6"] {
         ~ .main {
-          top: calc(100vh * 2 * -1);
+          top: calc(100vh * 5 * -1);
           .stap-slider_6 {
             background: $color-red;
             width: pxToRem(14);
