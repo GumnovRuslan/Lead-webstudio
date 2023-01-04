@@ -148,24 +148,32 @@ a {
 }
 
 .heading-vertical {
+
   &__text {
-    display: inline-block;
     font-family: $font-Body-Grotesque;
     font-weight: 800;
-    font-size: pxToRem(70);
     line-height: 108.5%;
-    letter-spacing: 0.13em;
+    letter-spacing: 0.19em;
     text-transform: uppercase;
     color: $color-white;
-    writing-mode: vertical-rl;
+    transform: rotate(-90deg);
+
+    @include mobile {
+      font-size: pxToRem(30);
+    }
+
+    @include tablet {
+      font-size: pxToRem(50);
+    }
+
+    @include desktop {
+      font-size: pxToRem(70);
+    }
   }
 }
 
 .button {
   &__container {
-    // display: inline-flex;
-    // flex-direction: column;
-    // justify-content: center;
     border-radius: 50%;
     background: $color-red;
     color: $color-white;
@@ -209,4 +217,22 @@ a {
   }
 }
 
+.scrollbar {
 
+  &__track {
+      position: relative;
+      height: pxToRem(687);
+      width: pxToRem(1);
+      background: $color-white;
+  }
+
+  &__thumb {
+      position: absolute;
+      right: calc(50% - 14px);
+      top: pxToRem(46);
+      width: pxToRem(27);
+      height: pxToRem(27);
+      border-radius: 50%;
+      background: $color-red;
+  }
+}
