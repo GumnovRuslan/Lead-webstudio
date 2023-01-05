@@ -1,0 +1,253 @@
+.contacts {
+
+    &__container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: pxToRem(85);
+    }
+
+    &__heading {
+        position: absolute;
+        left: -3.9%;
+        bottom: 29%;
+    }
+
+    &__heading-text {
+    }
+
+    &__scroll-nav {
+        position: absolute;
+        right: 5.8%;
+        bottom: 10%;
+    }
+
+    // =====================================================
+
+    &__us {
+        
+    }
+
+    &__us-container {
+        display: flex;
+        gap: pxToRem(70);
+    }
+
+    &__us-form {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(50);
+    }
+
+    &__us-heading {
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(10);
+    }
+
+    &__us-title-text {
+        font-family: $font-Body-Grotesque;
+        font-weight: 800;
+        font-size: pxToRem(30);
+        line-height: 108.5%;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    &__us-subtitle-text {
+        font-size: pxToRem(20);
+        line-height: 108.5%;
+        letter-spacing: 0.105em;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(34);
+    }
+
+    &__form-line {
+        padding: pxToRem(20);
+        width: pxToRem(598);
+        background: $color-black;
+        border: pxToRem(1) solid $color-white;
+        font-size: pxToRem(25);
+        line-height: 108.5%;
+        letter-spacing: 0.105em;
+        color: $color-white;
+
+        &:placeholder-shown {
+            padding: pxToRem(20) pxToRem(54);
+            font-size: pxToRem(20);
+            font-family: $font-Montserrat;
+            color: #535353;
+        }
+    }
+
+    &__form-name {
+        height: pxToRem(70);
+    }
+
+    &__form-email {
+        height: pxToRem(72);
+    }
+
+    &__form-help {
+        height: pxToRem(142);
+    }
+
+    &__btn-send {
+        width: pxToRem(251);
+        height: pxToRem(51);
+        font-family: $font-Montserrat;
+        font-weight: 800;
+        font-size: pxToRem(20);
+        line-height: 108.5%;
+        letter-spacing: 0.105em;
+        text-align: center;
+        color: $color-white;
+        background: $color-red;
+    }
+
+    // =====================================================================
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(40);
+        padding-top: pxToRem(102);
+    }
+
+    &__addresses-container {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(8);
+    }
+
+    &__addresses-content {
+        display: flex;
+        gap: pxToRem(29);
+        padding: pxToRem(10) 0;
+    }
+
+    &__addresses-img {
+        width: pxToRem(20);
+        height: pxToRem(20);
+    }
+
+    &__addresses-info {
+        font-size: pxToRem(20);
+        line-height: 132.4%;
+        text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+        color: $color-white;
+    }
+
+    &__network-container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        column-gap: pxToRem(62);
+        row-gap: pxToRem(60);
+    }
+
+//===Сard-normal
+
+    &__network-card {
+        display: flex;
+        align-items: center;
+        width: pxToRem(266);
+        height: pxToRem(174);
+        padding: pxToRem(25);
+        border: pxToRem(2) solid $color-white;
+    }
+
+    &__card-services {
+        margin-bottom: pxToRem(8);
+        font-weight: 600;
+        font-size: pxToRem(20);
+        line-height: 132.4%;
+        color: $color-white;
+    }
+
+    &__card-mail {
+        margin-bottom: pxToRem(25);
+        font-weight: 500;
+        line-height: 132.4%;
+        color: $color-white;
+    }
+
+//===Card-different
+
+    &__network-card--different {
+        display: flex;
+        align-items: center;
+        width: pxToRem(266);
+        height: pxToRem(174);
+        padding: pxToRem(25);
+        border: pxToRem(2) solid $color-white;
+        background: $color-white;
+    }
+
+    &__card-services--different {
+        margin-bottom: pxToRem(8);
+        font-weight: 600;
+        font-size: pxToRem(20);
+        line-height: 132.4%;
+        color: $color-black;
+    }
+
+    &__card-mail--different {
+        margin-bottom: pxToRem(25);
+        font-weight: 500;
+        line-height: 132.4%;
+        color: $color-black;
+    }
+
+    &__arrow-black {
+        width: pxToRem(152);
+    }
+
+    &__arrow-white {
+        width: pxToRem(152);
+    }
+
+    //==========================================================
+
+    &__follow {
+        align-self: end;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(26);
+    }
+
+    &__follow-text {
+        font-size: pxToRem(20);
+        line-height: 108.5%;
+        letter-spacing: 0.105em;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+
+    &__follow-items {
+        display: flex;
+        gap: pxToRem(16);
+    }
+
+    &__follow-link {
+        padding: pxToRem(10);
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+
+    &__follow-image {
+        width: pxToRem(60);
+        height: pxToRem(60);
+    }
+}
