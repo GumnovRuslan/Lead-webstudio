@@ -37,10 +37,12 @@
         }
 
         @include desktop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
             height: 100vh;
             padding-top: pxToRem(209);
-            max-width: pxToRem(1920);
-            margin: 0 auto;
 
             &::before {
                 left: pxToRem(97);
@@ -63,6 +65,7 @@
         }
 
         @include desktop {
+            width: 100vw;
             padding: 0 pxToRem(97);
         }
     }
@@ -116,6 +119,7 @@
 
         @include desktop {
             display: flex;
+            justify-content: center;
             gap: pxToRem(37);
             padding: 0 pxToRem(97);
         }
@@ -133,28 +137,19 @@
         }
 
         @include desktop {
+            flex: auto;
+            width: 50%;
             padding: pxToRem(77) pxToRem(66);
         }
     }
 
 	&__content-text {
+        line-height: 169%;
+        letter-spacing: 0.105em;
         color: $color-white;
 
-        @include mobile {
-            line-height: 169%;
-            letter-spacing: 0.105em;
-        }
-
-        @include tablet {
-            line-height: 169%;
-            letter-spacing: 0.105em;
-        }
-
         @include desktop {
-            max-width: pxToRem(1081);
             font-size: pxToRem(20);
-            line-height: 169%;
-            letter-spacing: 0.105em;
         }
 	}
 
@@ -176,6 +171,7 @@
         }
 
         @include desktop {
+            width: 27.5%;
             padding: pxToRem(93) 0;
         }
 	}
@@ -255,8 +251,9 @@
         }
 
         @include desktop {
-            padding: 0 pxToRem(163);
-            margin-top: pxToRem(53);
+            position: absolute;
+            left: 8.5%;
+            bottom: 10%;
         }
     }
 
