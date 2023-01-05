@@ -236,3 +236,29 @@ a {
       background: $color-red;
   }
 }
+
+.form__text {
+  position: absolute;
+  left: 5.5%;
+  font-weight: 500;
+  font-size: pxToRem(20);
+  line-height: 108.5%;
+  letter-spacing: 0.105em;
+  color: $color-white;
+  background: $color-black;
+
+  @include mobile {
+      top: pxToRem(-5);
+      padding: 0 pxToRem(13);
+  }
+
+  @include tablet {
+      top: pxToRem(-8);
+      padding: 0 pxToRem(21);
+  }
+
+  @include desktop {
+      top: pxToRem(-8);
+      padding: 0 pxToRem(21);
+  }
+}
