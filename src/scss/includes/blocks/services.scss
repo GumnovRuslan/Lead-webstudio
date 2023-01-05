@@ -1,359 +1,360 @@
 .services {
+  @include mobile {
+    padding: 0 pxToRem(15);
+  }
+
+  @include tablet {
+    padding: 0 pxToRem(40);
+  }
+
+  @include desktop {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__container {
+    position: relative;
 
     @include mobile {
-        padding: 0 pxToRem(15);
+      padding-bottom: pxToRem(107);
+      border-left: pxToRem(1) solid $color-white;
     }
 
     @include tablet {
-        padding: 0 pxToRem(40);
+      padding-top: pxToRem(50);
+      padding-bottom: pxToRem(50);
+      border-left: pxToRem(1) solid $color-white;
     }
-    
+
     @include desktop {
-        width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 5%;
+        top: 0;
         height: 100vh;
+        width: pxToRem(1);
+        background: $color-white;
+      }
+    }
+  }
+
+  &__heading {
+    @include mobile {
+      position: absolute;
+      top: pxToRem(80);
+      left: pxToRem(-63);
+      transform: rotate(-90deg);
     }
 
-    &__container {
-        position: relative;
-
-        @include mobile {
-            padding-bottom: pxToRem(107);
-            border-left: pxToRem(1) solid $color-white;
-        }
-
-        @include tablet {
-            padding-top: pxToRem(50);
-            padding-bottom: pxToRem(50);
-            border-left: pxToRem(1) solid $color-white;
-        }
-
-        @include desktop {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 5%;
-                top: 0;
-                height: 100vh;
-                width: pxToRem(1);
-                background: $color-white;
-            }
-        }
+    @include tablet {
+      position: absolute;
+      top: pxToRem(185);
+      left: pxToRem(-100);
+      transform: rotate(-90deg);
     }
 
-    &__heading {
+    @include desktop {
+      position: absolute;
+      bottom: 24.5%;
+      left: -3.3%;
+      transform: rotate(-90deg);
+    }
+  }
 
-        @include mobile {
-            position: absolute;
-            top: pxToRem(80);
-            left: pxToRem(-63);
-            transform: rotate(-90deg);
-        }
+  &__title-text {
+    font-family: $font-Body-Grotesque;
+    font-weight: 800;
+    line-height: 108.5%;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: $color-white;
 
-        @include tablet {
-            position: absolute;
-            top: pxToRem(185);
-            left: pxToRem(-100);
-            transform: rotate(-90deg);
-        }
-
-        @include desktop {
-            position: absolute;
-            bottom: 24.5%;
-            left: -3.3%;
-            transform: rotate(-90deg);
-        }
+    @include mobile {
+      font-size: pxToRem(30);
     }
 
-    &__title-text {
-        font-family: $font-Body-Grotesque;
-        font-weight: 800;
-        line-height: 108.5%;
-        letter-spacing: 0.19em;
-        text-transform: uppercase;
-        color: $color-white;
-
-        @include mobile {
-            font-size: pxToRem(30);
-        }
-
-        @include tablet {
-            font-size: pxToRem(50);
-        }
-
-        @include desktop {
-            font-size: pxToRem(70);
-        }
+    @include tablet {
+      font-size: pxToRem(50);
     }
 
-    &__tabs {
+    @include desktop {
+      font-size: pxToRem(70);
+    }
+  }
 
-        @include mobile {
-            display: flex;
-            flex-direction: column;
-            gap: pxToRem(10);
-            max-width: pxToRem(500);
-            margin: 0 auto;
-        }
-
-        @include tablet {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: pxToRem(10);
-            max-width: pxToRem(900);
-            margin: 0 auto;
-        }
-
-        @include desktop {
-            position: relative;
-            padding-top: pxToRem(60);
-            padding-left: pxToRem(20);
-        }
+  &__tabs {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: pxToRem(10);
+      max-width: pxToRem(500);
+      margin: 0 auto;
     }
 
-    &__button {
-
-        @include mobile {
-            padding: pxToRem(10);
-        }
-
-        @include tablet {
-            position: absolute;
-            left: pxToRem(160);
-            bottom: pxToRem(40);
-            padding: pxToRem(10);
-        }
-
-        @include desktop {
-            position: absolute;
-            left: pxToRem(0);
-            bottom: pxToRem(-53);
-            padding: pxToRem(20);
-        }
+    @include tablet {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: pxToRem(10);
+      max-width: pxToRem(900);
+      margin: 0 auto;
     }
 
-    &__button-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    @include desktop {
+      position: relative;
+      padding-top: pxToRem(60);
+      padding-left: pxToRem(20);
+    }
+  }
 
-        @include mobile {
-            width: pxToRem(149);
-            height: pxToRem(146);
-            padding: 0 pxToRem(20);
-            gap: pxToRem(12);
-        }
-
-        @include tablet {
-            width: pxToRem(149);
-            height: pxToRem(146);
-            padding: 0 pxToRem(20);
-            gap: pxToRem(12);
-        }
-
-        @include desktop {
-            width: pxToRem(225);
-            height: pxToRem(221);
-            padding: 0 pxToRem(36);
-        }
+  &__button {
+    @include mobile {
+      padding: pxToRem(10);
     }
 
-    &__button-text {
-        font-weight: 800;
-        line-height: 108.5%;
-        letter-spacing: 0.13em;
-        color: $color-white;
-        text-transform: uppercase;
-
-        @include desktop {
-            font-size: pxToRem(20);
-        }
+    @include tablet {
+      position: absolute;
+      left: pxToRem(160);
+      bottom: pxToRem(40);
+      padding: pxToRem(10);
     }
 
-    &__scroll-nav {
-
-        @include mobile {
-            display: none;
-        }
-
-        @include tablet {
-            display: none;
-        }
-
-        @include desktop {
-            position: absolute;
-            right: 9.3%;
-            bottom: 9.7%;
-        }
+    @include desktop {
+      position: absolute;
+      left: pxToRem(0);
+      bottom: pxToRem(-53);
+      padding: pxToRem(20);
     }
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mobile {
+      width: pxToRem(149);
+      height: pxToRem(146);
+      padding: 0 pxToRem(20);
+      gap: pxToRem(12);
+    }
+
+    @include tablet {
+      width: pxToRem(149);
+      height: pxToRem(146);
+      padding: 0 pxToRem(20);
+      gap: pxToRem(12);
+    }
+
+    @include desktop {
+      width: pxToRem(225);
+      height: pxToRem(221);
+      padding: 0 pxToRem(36);
+    }
+  }
+
+  &__button-text {
+    font-weight: 800;
+    line-height: 108.5%;
+    letter-spacing: 0.13em;
+    color: $color-white;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: pxToRem(20);
+    }
+  }
+
+  &__scroll-nav {
+    @include mobile {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      position: absolute;
+      right: 9.3%;
+      bottom: 9.7%;
+    }
+  }
 }
 
 .tabs {
+  &__container {
+    display: flex;
 
-    &__container {
-        display: flex;
-
-        @include mobile {
-            flex-direction: column;
-            gap: pxToRem(40);
-        }
-
-        @include tablet {
-            gap: pxToRem(40);
-            padding-left: pxToRem(140);
-        }
-
-        @include desktop {
-            gap: pxToRem(168);
-        }
+    @include mobile {
+      flex-direction: column;
+      gap: pxToRem(40);
     }
 
-    &__nav {
-        display: flex;
-
-        @include mobile {
-            justify-content: center;
-            gap: pxToRem(36);
-            padding-left: pxToRem(82);
-        }
-
-        @include tablet {
-            gap: pxToRem(36);
-        }
-
-        @include desktop {
-            flex-direction: column;
-            gap: pxToRem(78);
-            padding: pxToRem(67) 0;
-        }
+    @include tablet {
+      gap: pxToRem(40);
+      padding-left: pxToRem(140);
     }
 
-    &__nav-items {
-        display: flex;
-        flex-direction: column;
+    @include desktop {
+      min-height: pxToRem(584);
+      gap: pxToRem(168);
+    }
+  }
 
-        @include mobile {
-            width: 100%;
-            gap: pxToRem(18.5);
-        }
+  &__nav {
+    display: flex;
 
-        @include tablet {
-            width: 100%;
-            gap: pxToRem(18.5);
-        }
-
-        @include desktop {
-            gap: pxToRem(25);
-        }
+    @include mobile {
+      justify-content: center;
+      gap: pxToRem(36);
+      padding-left: pxToRem(82);
     }
 
-    &__nav-item {
-        font-weight: 500;
-        line-height: 108.5%;
-        letter-spacing: 0.105em;
-        text-transform: uppercase;
-        color: $color-white;
-
-        &:hover {
-            background: $color-white;
-            color: $color-black;
-        }
-
-        @include mobile {
-            padding: pxToRem(20) pxToRem(25) pxToRem(16) pxToRem(29);
-        }
-
-        @include tablet {
-            padding: pxToRem(10) pxToRem(20);
-            font-size: pxToRem(20);
-        }
-
-        @include desktop {
-            padding: pxToRem(10) pxToRem(20);
-            font-size: pxToRem(30);
-        }
+    @include tablet {
+      gap: pxToRem(36);
     }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
+    @include desktop {
+      flex-direction: column;
+      gap: pxToRem(78);
+      padding: pxToRem(67) 0;
+    }
+  }
 
-        @include mobile {
-            gap: pxToRem(28);
-            padding-left: pxToRem(10);
-        }
+  &__nav-items {
+    display: flex;
+    flex-direction: column;
 
-        @include tablet {
-            gap: pxToRem(28);
-        }
-
-        @include desktop {
-            gap: pxToRem(35);
-        }
+    @include mobile {
+      width: 100%;
+      gap: pxToRem(18.5);
     }
 
-    &__content-img {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        background-image: url('../../../img/Serviced-image-2.png'), url('../../../img/Serviced-image-1.png');
-        background-repeat: no-repeat;
-
-        @include mobile {
-            height: pxToRem(210);
-            background-position: 36% 50%, top left;
-            background-size: pxToRem(290) pxToRem(165), pxToRem(276) pxToRem(165);
-        }
-
-        @include tablet {
-            height: pxToRem(310);
-            background-position: 36% 50%, top left;
-            background-size: 80%, 80%;
-        }
-
-        @include desktop {
-            width: pxToRem(743);
-            height: pxToRem(422);
-            background-position: 37% 50%, top left;
-        }
+    @include tablet {
+      width: 100%;
+      gap: pxToRem(18.5);
     }
 
-    &__content-name {
-        font-weight: 600;
-        line-height: 108.5%;
-        text-align: center;
-        text-transform: uppercase;
-        color: $color-white;
+    @include desktop {
+      gap: pxToRem(25);
+    }
+  }
 
-        @include mobile {
-            font-size: pxToRem(50);
-        }
+  &__nav-item {
+    font-weight: 500;
+    line-height: 108.5%;
+    letter-spacing: 0.105em;
+    text-transform: uppercase;
+    color: $color-white;
 
-        @include tablet {
-            font-size: pxToRem(50);
-        }
-
-        @include desktop {
-            font-size: pxToRem(100);
-        }
+    &:hover {
+      background: $color-white;
+      color: $color-black;
     }
 
-    &__content-text {
-        line-height: 168%;
-        letter-spacing: 0.105em;
-        color: $color-white;
-
-        @include mobile {
-            padding-left: pxToRem(9);
-        }
-
-        @include desktop {
-            width: pxToRem(684);
-        }
+    @include mobile {
+      padding: pxToRem(20) pxToRem(25) pxToRem(16) pxToRem(29);
     }
+
+    @include tablet {
+      padding: pxToRem(10) pxToRem(20);
+      font-size: pxToRem(20);
+    }
+
+    @include desktop {
+      padding: pxToRem(10) pxToRem(20);
+      font-size: pxToRem(30);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+    &:target {
+      display: block;
+    }
+
+    @include mobile {
+      gap: pxToRem(28);
+      padding-left: pxToRem(10);
+    }
+
+    @include tablet {
+      gap: pxToRem(28);
+    }
+
+    @include desktop {
+      gap: pxToRem(35);
+    }
+  }
+
+  &__content-img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-image: url("../../../img/Serviced-image-2.png"),
+      url("../../../img/Serviced-image-1.png");
+    background-repeat: no-repeat;
+
+    @include mobile {
+      height: pxToRem(210);
+      background-position: 36% 50%, top left;
+      background-size: pxToRem(290) pxToRem(165), pxToRem(276) pxToRem(165);
+    }
+
+    @include tablet {
+      height: pxToRem(310);
+      background-position: 36% 50%, top left;
+      background-size: 80%, 80%;
+    }
+
+    @include desktop {
+      width: pxToRem(743);
+      height: pxToRem(422);
+      background-position: 37% 50%, top left;
+    }
+  }
+
+  &__content-name {
+    font-weight: 600;
+    line-height: 108.5%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+
+    @include mobile {
+      font-size: pxToRem(50);
+    }
+
+    @include tablet {
+      font-size: pxToRem(50);
+    }
+
+    @include desktop {
+      font-size: pxToRem(100);
+    }
+  }
+
+  &__content-text {
+    line-height: 168%;
+    letter-spacing: 0.105em;
+    color: $color-white;
+
+    @include mobile {
+      padding-left: pxToRem(9);
+    }
+
+    @include desktop {
+      width: pxToRem(684);
+    }
+  }
 }
