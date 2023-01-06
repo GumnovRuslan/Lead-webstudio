@@ -128,7 +128,6 @@
         @include tablet {
             display: flex;
             flex-direction: column;
-            align-items: center;
             gap: pxToRem(45);
             padding: 0 pxToRem(20);
         }
@@ -141,6 +140,64 @@
             row-gap: pxToRem(45);
             align-items: center;
             justify-content: center;
+        }
+    }
+
+    &__slider-content {
+
+        &::-webkit-scrollbar {
+            height: pxToRem(15);
+        }
+
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 pxToRem(5) grey; 
+            border-radius: pxToRem(10);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $color-red; 
+            border-radius: pxToRem(10);
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #b30000; 
+        }
+
+        @include mobile {
+            max-height: pxToRem(515.5);
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        @include tablet {
+            max-height: pxToRem(792.5);
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        @include desktop {
+            max-height: pxToRem(753);
+            overflow: hidden;
+        }
+    }
+
+    &__slider-content-themes {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transition: all 1.5s;
+
+        @include mobile {
+            gap: pxToRem(40);
+        }
+
+        @include tablet {
+            gap: pxToRem(40);
+        }
+
+        @include desktop {
+            gap: pxToRem(20);
+            max-height: pxToRem(753);
         }
     }
 
@@ -191,8 +248,8 @@
         }
 
         @include tablet {
-            width: pxToRem(531);
-            max-height: pxToRem(336);
+            min-width: pxToRem(531);
+            height: pxToRem(336);
         }
     }
 
@@ -229,6 +286,102 @@
             position: absolute;
             right: 5%;
             bottom: 11.2%;
+        }
+    }
+}
+
+.portfolio__radio {
+    display: none;
+
+    &:checked {
+        &[id="portfolio-slider_1"] {
+            ~ .portfolio__slider {
+                .btn-item-1 {
+                    background: $color-red;
+                    height: pxToRem(10);
+                }
+                .scrollbar__thumb {
+                    top: calc(0% - 13.5px);
+                }
+
+                @include mobile {
+                    .portfolio__slider-content-themes {
+                        top: calc((480.5px  + 40px) * 0 * -1);
+                    }
+                }
+
+                @include tablet {
+                    .portfolio__slider-content-themes {
+                        top: calc((762.5px + 40px) * 0 * -1);
+                    }
+                }
+
+                @include desktop {
+                    .portfolio__slider-content-themes {
+                        top: calc((754px + 20px) * 0 * -1);
+                    }
+                }
+            }
+        }
+
+        &[id="portfolio-slider_2"] {
+            ~ .portfolio__slider {
+                .btn-item-2 {
+                    background: $color-red;
+                    height: pxToRem(10);
+                }
+                .scrollbar__thumb {
+                    top: calc(50% - 13.5px);
+                }
+
+                @include mobile {
+                    .portfolio__slider-content-themes {
+                        top: calc((480.5px  + 40px) * 1 * -1);
+                    }
+                }
+
+                @include tablet {
+                    .portfolio__slider-content-themes {
+                        top: calc((762.5px + 40px) * 1 * -1);
+                    }
+                }
+
+                @include desktop {
+                    .portfolio__slider-content-themes {
+                        top: calc((754px + 20px) * 1 * -1);
+                    }
+                }
+            }
+        }
+
+        &[id="portfolio-slider_3"] {
+            ~ .portfolio__slider {
+                .btn-item-3 {
+                    background: $color-red;
+                    height: pxToRem(10);
+                }
+                .scrollbar__thumb {
+                    top: calc(100% - 13.5px);
+                }
+
+                @include mobile {
+                    .portfolio__slider-content-themes {
+                        top: calc((480.5px  + 40px) * 2 * -1);
+                    }
+                }
+
+                @include tablet {
+                    .portfolio__slider-content-themes {
+                        top: calc((762.5px + 40px) * 2 * -1);
+                    }
+                }
+
+                @include desktop {
+                    .portfolio__slider-content-themes {
+                        top: calc((754px + 20px) * 2 * -1);
+                    }
+                }
+            }
         }
     }
 }

@@ -255,6 +255,17 @@
             margin: 0 auto;
         }
     }
+
+    &__slider-btn {
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
 }
 
 //==============================================================
@@ -466,14 +477,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        @include mobile {
-            display: none;
-        }
-
-        @include tablet {
-            display: none;
-        }
     }
 
     &__btn-container {
