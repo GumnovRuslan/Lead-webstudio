@@ -20,6 +20,9 @@
                 <img src="../../favicon/star.svg" alt="rating-stars" class="reviews__star-image">
             </div>
         </div>
+        <input type="radio" class="reviews__radio" name="reviews-slider" id="reviews-slider_1" checked>
+        <input type="radio" class="reviews__radio" name="reviews-slider" id="reviews-slider_2">
+        <input type="radio" class="reviews__radio" name="reviews-slider" id="reviews-slider_3">
         <div class="slider reviews__slider">
             <div class="slider__container">
                 <div class="slider__cards">
@@ -263,10 +266,16 @@
                     </div>
                 </div>
             </div>
-            <div class="slider__btn-container">
-                <a href="#" class="slider__btn-item"></a>
-                <a href="#" class="slider__btn-item"></a>
-                <a href="#" class="slider__btn-item"></a>
+            <div class="slider__btn">
+                <label for="reviews-slider_1" class="slider__btn-container">
+                    <div class="slider__btn-item btn-item-1"></div>
+                </label>
+                <label for="reviews-slider_2" class="slider__btn-container">
+                    <div class="slider__btn-item btn-item-2"></div>
+                </label>
+                <label for="reviews-slider_3" class="slider__btn-container">
+                    <div class="slider__btn-item btn-item-3"></div>
+                </label>
             </div>
         </div>
         <a href="#" class="scroll-nav reviews__scroll-nav">

@@ -25,7 +25,6 @@
         
         @include desktop {
             gap: pxToRem(67);
-            padding: 0 pxToRem(163);
             padding-top: pxToRem(63);
         }
     }
@@ -238,29 +237,67 @@
     &__slider {
         display: flex;
         flex-direction: column;
+        overflow: hidden;
 
         @include mobile {
-            gap: pxToRem(57);
+            gap: pxToRem(45);
             padding: 0 pxToRem(15);
         }
 
         @include tablet {
-            gap: pxToRem(57);
+            gap: pxToRem(45);
             padding: 0 pxToRem(30);
         }
 
         @include desktop {
-            gap: pxToRem(82.5);
+            gap: pxToRem(70.5);
+            max-width: pxToRem(1573);
+            margin: 0 auto;
         }
     }
 }
+
+//==============================================================
 
 .slider {
 
     &__container {
         display: flex;
-        gap: pxToRem(50);
-        overflow: auto;
+        transition: all ease-in-out 1s;
+
+        &::-webkit-scrollbar {
+            height: pxToRem(15);
+        }
+
+        &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 pxToRem(5) grey; 
+        border-radius: pxToRem(10);
+        }
+
+        &::-webkit-scrollbar-thumb {
+        background: $color-red; 
+        border-radius: pxToRem(10);
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+        background: #b30000; 
+        }
+
+        @include mobile {
+            gap: pxToRem(30);
+            overflow: auto;
+        }
+
+        @include tablet {
+            gap: pxToRem(30);
+            overflow: auto;
+            
+        }
+
+        @include desktop {
+            position: relative;
+            gap: pxToRem(50);
+        }
     }
 
     &__cards {
@@ -269,14 +306,17 @@
 
         @include mobile {
             gap: pxToRem(30);
+            margin-bottom: pxToRem(48);
         }
 
         @include tablet {
             gap: pxToRem(30);
+            margin-bottom: pxToRem(50);
         }
 
         @include desktop {
-            gap: pxToRem(54.76);
+            width: pxToRem(1573);
+            gap: pxToRem(50);
         }
     }
 
@@ -309,6 +349,8 @@
 
     &__card-heading {
         display: flex;
+        left: 0;
+        display: flex;
         align-items: center;
         justify-content: space-between;
     }
@@ -328,9 +370,6 @@
         @include desktop {
             gap: pxToRem(23);
         }
-    }
-
-    &__card-user {
     }
 
     &__card-photo {
@@ -386,9 +425,6 @@
         }
     }
 
-    &__card-date {
-    }
-
     &__card-data-correction {
         line-height: 108.5%;
         text-align: right;
@@ -409,9 +445,6 @@
         }
     }
 
-    &__content {
-    }
-
     &__comment {
 
         @include desktop {
@@ -429,10 +462,26 @@
         }
     }
 
-    &__btn-container {
+    &__btn {
         display: flex;
         justify-content: center;
-        gap: pxToRem(13);
+        align-items: center;
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: pxToRem(50);
+        height: pxToRem(30);
     }
 
     &__btn-item {
@@ -440,9 +489,48 @@
         height: pxToRem(5);
         border-radius: pxToRem(100);
         background: $color-white;
+        transition: all 1s;
+    }
+}
 
-        &:hover {
-            background: $color-red;
+.reviews__radio {
+    display: none;
+
+    &:checked {
+        &[id="reviews-slider_1"] {
+            ~ .slider {
+                .slider__container {
+                    left: calc((100% + 50px) * 0 * -1);
+                }
+                .btn-item-1 {
+                    background: $color-red;
+                    height: pxToRem(10);
+                }
+            }
+        }
+
+        &[id="reviews-slider_2"] {
+            ~ .slider {
+                .slider__container {
+                    left: calc((100% + 50px) * 1 * -1);
+                }
+                .btn-item-2 {
+                    background: $color-red;
+                    height: pxToRem(10);
+                }
+            }
+        }
+
+        &[id="reviews-slider_3"] {
+            ~ .slider {
+                .slider__container {
+                    left: calc((100% + 50px) * 2 * -1);
+                }
+                .btn-item-3 {
+                    background: $color-red;
+                    height: pxToRem(10);
+                }
+            }
         }
     }
 }
