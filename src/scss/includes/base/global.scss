@@ -229,10 +229,11 @@ a {
   &__thumb {
       position: absolute;
       right: calc(50% - 14px);
-      top: pxToRem(46);
+      top: 0;
       width: pxToRem(27);
       height: pxToRem(27);
       border-radius: 50%;
+      transition: all 1.5s;
       background: $color-red;
   }
 }
