@@ -8,8 +8,15 @@ body {
 
 .header {
 
+    @include mobile {
+        position: relative;
+        z-index: 9999;
+    }
+
     @include desktop {
         position: fixed;
+        left: 0;
+        top: 6.5%;
         z-index: 10;
         width: 100%;
     }
@@ -27,20 +34,25 @@ body {
         }
 
         @include tablet {
-            flex-direction: column;
+            flex-wrap: wrap;
             align-items: center;
-            padding-top: pxToRem(20);
-            gap: pxToRem(10);
+            justify-content: center;
+            gap: pxToRem(20);
+            padding: pxToRem(20);
         }
 
         @include desktop {
             justify-content: center;
             gap: pxToRem(72);
-            padding: pxToRem(70) pxToRem(10) pxToRem(0) pxToRem(30);
-            max-width: pxToRem(1920);
-            margin: 0 auto;
+            margin-left: pxToRem(10);
         }
     }
+
+@media (min-width: $desktop) and (max-width: 1800px) {
+    .header__container {
+        margin-left: pxToRem(90);
+    }
+}
 
     &__navigation {
         display: flex;
@@ -52,15 +64,17 @@ body {
         }
 
         @include tablet {
-            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
             align-items: center;
-            gap: pxToRem(10);
+            gap: pxToRem(20);
         }
 
         @include desktop {
-            max-width: pxToRem(1307);
+            max-width: pxToRem(1317);
             flex: auto;
             justify-content: space-between;
+            align-items: center;
         }
     }
 
@@ -89,7 +103,9 @@ body {
             z-index: 20;
             left: -100%;
             width: 100vw;
+            min-height: 100vh;
             padding-top: pxToRem(100);
+            padding-bottom: pxToRem(50);
             background: $color-black;
             transition: 0.5s all;
         }
@@ -107,7 +123,7 @@ body {
     &__logo {
 
         @include desktop {
-            padding-top: pxToRem(5);
+            padding: pxToRem(0) pxToRem(10) pxToRem(15) pxToRem(10);
         }
     }
 
@@ -427,6 +443,10 @@ body {
             &:checked ~ .header .burger__line {
                 background: transparent;
                 transition: 0.6s all;
+            }
+
+            &:checked ~ .main {
+                overflow: hidden;
             }
         }
     }
