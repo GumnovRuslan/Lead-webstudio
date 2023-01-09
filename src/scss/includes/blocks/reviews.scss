@@ -2,8 +2,10 @@
     overflow: hidden;
 
     @include desktop {
+        display: flex;
         position: relative;
-        padding-top: pxToRem(136);
+        justify-content: center;
+        align-items: center;
         width: 100vw;
         height: 100vh;
     }
@@ -25,7 +27,7 @@
         
         @include desktop {
             gap: pxToRem(67);
-            padding-top: pxToRem(63);
+            padding-top: pxToRem(58);
         }
     }
 
