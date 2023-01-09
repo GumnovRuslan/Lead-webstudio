@@ -26,8 +26,6 @@
 
         @include tablet {
             position: relative;
-            max-width: pxToRem(968);
-            margin: 0 auto;
 
             &::before {
                 left: pxToRem(40);
@@ -45,7 +43,7 @@
             padding-top: pxToRem(209);
 
             &::before {
-                left: pxToRem(97);
+                left: 5%;
                 width: pxToRem(1);
                 min-height: 100%;
             }
@@ -335,3 +333,19 @@
         }
     }
 }
+
+@media (min-width: $desktop) and (max-width: 1700px) {
+    .about__follow {
+        transform: rotate(-90deg);
+        bottom: 10%;
+        left: 0;
+    }
+
+    .follow__image {
+        transform: rotate(90deg);
+    }
+
+    .about__scroll-nav {
+      right: pxToRem(-40);
+    }
+  }
