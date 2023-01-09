@@ -290,6 +290,15 @@
     }
 }
 
+@media (min-width: $desktop) and (max-width: 1700px) {
+    .portfolio__title-text {
+      left: pxToRem(-225);
+    }
+    .portfolio__scroll-nav {
+      right: pxToRem(-40);
+    }
+  }
+
 .portfolio__radio {
     display: none;
 
