@@ -677,3 +677,12 @@
         }
     }
 }
+
+@media (min-width: $desktop) and (max-width: 1700px) {
+    .contacts__heading {
+      left: pxToRem(-205);
+    }
+    .contacts__scroll-nav {
+      right: pxToRem(-40);
+    }
+  }
