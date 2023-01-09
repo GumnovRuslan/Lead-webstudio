@@ -19,6 +19,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: $color-black;
+    box-shadow: 0 0 pxToRem(40) pxToRem(15) $color-black;
   }
 
   &__item {

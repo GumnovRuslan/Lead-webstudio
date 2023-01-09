@@ -21,7 +21,7 @@
             align-items: center;
             max-width: pxToRem(414);
             margin: 0 auto;
-            padding: pxToRem(177) pxToRem(15)pxToRem(0) pxToRem(15);
+            padding: 0 pxToRem(15);
         }
 
         @include tablet {
@@ -33,7 +33,7 @@
         @include desktop {
             display: flex;
             align-items: center;
-            width: 1920px;
+            width: pxToRem(1920);
             height: 100vh;
             margin: 0 auto;
             padding: 0 pxToRem(170) 0 pxToRem(165);
@@ -56,6 +56,7 @@
         flex-direction: column;
 
         @include mobile {
+            margin-top: pxToRem(177);
             gap: pxToRem(34);
         }
 
@@ -247,7 +248,7 @@
 
         @include mobile {
             top: pxToRem(17);
-            right: pxToRem(9);
+            right: 2%;
         }
 
         @include tablet {
@@ -256,8 +257,8 @@
         }
 
         @include desktop {
-            top: 14.8%;
-            right: 6.35%;
+            top: calc(50% - 381px);
+            left: calc(50% - 611px);
         }
     }
 
