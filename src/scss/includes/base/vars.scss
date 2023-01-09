@@ -9,6 +9,7 @@ $color-red: #FB1B3D;
 $color-white: #ffffff;
 
 // Media queries
+$desktop-extra: pxToRem(1620, em);
 $desktop: pxToRem(1441, em);
 $tablet: pxToRem(769, em);
 $mobile: pxToRem(767, em);
