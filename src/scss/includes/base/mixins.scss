@@ -51,7 +51,13 @@
 }
 
 @mixin desktop() {
-	@media (min-width: $desktop) {
+	@media (min-width: $desktop-extra) {
+		@content;
+	}
+}
+
+@mixin desktop-light() {
+	@media (min-width: $desktop) and (max-width: $desktop-extra) {
 		@content;
 	}
 }
