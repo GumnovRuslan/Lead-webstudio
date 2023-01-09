@@ -385,6 +385,15 @@
   }
 }
 
+@media (min-width: $desktop) and (max-width: 1700px) {
+  .services__heading {
+    left: pxToRem(-195);
+  }
+  .services__scroll-nav {
+    right: pxToRem(-40);
+  }
+}
+
 .tabs__window {
   overflow-x: hidden;
   overflow-y: auto;
