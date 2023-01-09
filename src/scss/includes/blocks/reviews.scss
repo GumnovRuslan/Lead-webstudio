@@ -477,6 +477,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__btn-container {
@@ -495,6 +503,12 @@
         transition: all 1s;
     }
 }
+
+@media (min-width: $desktop) and (max-width: 1800px) {
+    .slider__container {
+        max-width: pxToRem(1032);
+    }
+  }
 
 .reviews__radio {
     display: none;
