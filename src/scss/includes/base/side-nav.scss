@@ -7,6 +7,14 @@
     display: none;
   }
 
+  @include desktop-light {
+    position: fixed;
+    z-index: 20;
+    top: 48.3%;
+    right: pxToRem(-38);
+    transform: rotate(90deg);
+  }
+
   @include desktop {
     position: fixed;
     z-index: 20;
