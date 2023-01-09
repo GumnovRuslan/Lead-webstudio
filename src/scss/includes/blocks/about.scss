@@ -26,8 +26,6 @@
 
         @include tablet {
             position: relative;
-            max-width: pxToRem(968);
-            margin: 0 auto;
 
             &::before {
                 left: pxToRem(40);
