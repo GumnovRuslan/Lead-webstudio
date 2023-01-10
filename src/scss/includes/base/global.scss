@@ -212,6 +212,10 @@ a {
   height: 100%;
   transition: all 1s;
 
+  @include desktop-light {
+    position: fixed;
+  }
+
   @include desktop {
     position: fixed;
   }
