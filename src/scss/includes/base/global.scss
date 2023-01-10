@@ -267,3 +267,28 @@ a {
       padding: 0 pxToRem(21);
   }
 }
+
+.slider {
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+&__btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: pxToRem(50);
+    height: pxToRem(30);
+}
+
+&__btn-item {
+    width: pxToRem(38);
+    height: pxToRem(5);
+    border-radius: pxToRem(100);
+    background: $color-white;
+    transition: all 1s;
+}
+}
