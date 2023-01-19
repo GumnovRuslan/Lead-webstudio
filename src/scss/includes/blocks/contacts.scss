@@ -65,6 +65,7 @@
     }
 
     &__heading {
+        position: absolute;
 
         @include mobile {
             display: none;
@@ -75,13 +76,11 @@
         }
 
         @include desktop-light {
-            position: absolute;
             left: pxToRem(-80);
             bottom: 29%;
         }
 
         @include desktop {
-            position: absolute;
             left: pxToRem(-63);
             bottom: 31%;
         }
@@ -145,7 +144,7 @@
 
         @include tablet {
             justify-content: center;
-            width: 600px;
+            width: pxToRem(600);
             gap: pxToRem(35);
         }
 
@@ -158,22 +157,6 @@
         }
     }
 
-    &__us-heading {
-        color: $color-white;
-
-        @include mobile {
-            
-        }
-
-        @include tablet {
-            
-        }
-
-        @include desktop {
-            
-        }
-    }
-
     &__us-title-text {
         font-family: $font-Body-Grotesque;
         font-weight: 800;
@@ -181,6 +164,7 @@
         line-height: 108.5%;
         letter-spacing: 0.14em;
         text-transform: uppercase;
+        color: $color-white;
 
         @include mobile {
             margin-bottom: pxToRem(4);
@@ -200,19 +184,13 @@
     }
 
     &__us-subtitle-text {
+        font-size: pxToRem(20);
         line-height: 108.5%;
         letter-spacing: 0.105em;
+        color: $color-white;
 
-        @include tablet {
-            font-size: pxToRem(20);
-        }
-
-        @include desktop-light {
-            font-size: pxToRem(20);
-        }
-
-        @include desktop {
-            font-size: pxToRem(20);
+        @include mobile {
+            font-size: pxToRem(16);
         }
     }
 
@@ -294,10 +272,10 @@
 
         @include desktop-light {
             width: pxToRem(500);
-            font-size: pxToRem(25);
+            font-size: pxToRem(20);
 
             &:placeholder-shown {
-                padding: pxToRem(20) pxToRem(54);
+                padding: pxToRem(20) pxToRem(30);
                 font-size: pxToRem(20);
                 color: #535353;
             }
@@ -372,7 +350,7 @@
             height: pxToRem(142);
 
             &:placeholder-shown {
-                padding: pxToRem(25) pxToRem(54);
+                padding: pxToRem(25) pxToRem(30);
             }
         }
 
@@ -536,7 +514,7 @@
         }
     }
 
-//===Сard-normal
+//===Сard=============
 
     &__network-card {
         display: flex;
@@ -571,7 +549,6 @@
     &__card-services {
         font-weight: 600;
         line-height: 132.4%;
-        color: $color-white;
 
         @include mobile {
             margin-bottom: pxToRem(10);
@@ -597,7 +574,6 @@
     &__card-mail {
         font-weight: 500;
         line-height: 132.4%;
-        color: $color-white;
 
         @include mobile {
             margin-bottom: pxToRem(15);
@@ -616,129 +592,44 @@
             margin-bottom: pxToRem(25);
         }
     }
+
+//===Card-normal
+
+&__network-card--normal {
+    background: $color-black;
+}
+
+&__card-services--normal {
+    color: $color-white;
+}
+
+&__card-mail--normal {
+    color: $color-white;
+}
 
 //===Card-different
 
     &__network-card--different {
-        display: flex;
-        align-items: center;
-        border: pxToRem(2) solid $color-white;
         background: $color-white;
-
-        @include mobile {
-            width: pxToRem(169);
-            height: pxToRem(110);
-            padding: pxToRem(15);
-        }
-
-        @include tablet {
-            width: pxToRem(266);
-            height: pxToRem(174);
-            padding: pxToRem(25);
-        }
-
-        @include desktop-light {
-            justify-content: center;
-            width: pxToRem(230);
-            height: pxToRem(150);
-        }
-
-        @include desktop {
-            width: pxToRem(266);
-            height: pxToRem(174);
-            padding: pxToRem(25);
-        }
     }
 
     &__card-services--different {
-        margin-bottom: pxToRem(8);
-        font-weight: 600;
-        line-height: 132.4%;
         color: $color-black;
-
-        @include mobile {
-            margin-bottom: pxToRem(10);
-            font-size: pxToRem(12);
-        }
-
-        @include tablet {
-            margin-bottom: pxToRem(8);
-            font-size: pxToRem(20);
-        }
-
-        @include desktop-light {
-            margin-bottom: pxToRem(5);
-            font-size: pxToRem(18);
-        }
-
-        @include desktop {
-            margin-bottom: pxToRem(8);
-            font-size: pxToRem(20);
-        }
     }
 
     &__card-mail--different {
-        font-weight: 500;
-        line-height: 132.4%;
         color: $color-black;
-
-        @include mobile {
-            margin-bottom: pxToRem(15);
-            font-size: pxToRem(12);
-        }
-
-        @include tablet {
-            margin-bottom: pxToRem(20);
-        }
-
-        @include desktop-light {
-            margin-bottom: pxToRem(15);
-        }
-
-        @include desktop {
-            margin-bottom: pxToRem(25);
-        }
     }
 
     &__arrow-black {
-
-        @include mobile {
-            width: pxToRem(95);
-        }
-
-        @include tablet {
-            width: 100%;
-        }
-
-        @include desktop-light {
-            width: pxToRem(152);
-        }
-
-        @include desktop {
-            width: pxToRem(152);
-        }
+        width: 80%;
     }
 
     &__arrow-white {
-
-        @include mobile {
-            width: pxToRem(95);
-        }
-
-        @include tablet {
-            width: 100%;
-        }
-
-        @include desktop-light {
-            width: pxToRem(152);
-        }
-
-        @include desktop {
-            width: pxToRem(152);
-        }
+        width: 80%;
     }
 
-    //==========================================================
+    //=====Follow=us=====================================================
 
     &__follow {
         align-self: end;
