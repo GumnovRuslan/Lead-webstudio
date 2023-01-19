@@ -47,7 +47,7 @@
             padding-top: pxToRem(130);
 
             &::before {
-                left: 5%;
+                left: pxToRem(80);
                 width: pxToRem(1);
                 min-height: 100%;
             }
@@ -62,7 +62,7 @@
             padding-top: pxToRem(209);
 
             &::before {
-                left: 5%;
+                left: pxToRem(100);
                 width: pxToRem(1);
                 min-height: 100%;
             }

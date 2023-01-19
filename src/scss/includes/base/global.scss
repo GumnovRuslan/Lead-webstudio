@@ -300,6 +300,11 @@ a {
       padding: 0 pxToRem(21);
   }
 
+  @include desktop-light {
+    top: pxToRem(-10);
+    padding: 0 pxToRem(10);
+}
+
   @include desktop {
       top: pxToRem(-8);
       padding: 0 pxToRem(21);
