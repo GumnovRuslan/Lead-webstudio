@@ -228,13 +228,25 @@ a {
 .scrollbar {
 
   &__track {
+
+    @include desktop {
       position: relative;
       height: pxToRem(687);
       width: pxToRem(1);
       background: $color-white;
+    }
+
+    @include desktop-light {
+      position: relative;
+      height: pxToRem(400);
+      width: pxToRem(1);
+      background: $color-white;
+    }
   }
 
   &__thumb {
+
+    @include desktop-light {
       position: absolute;
       right: calc(50% - 14px);
       top: 0;
@@ -243,6 +255,7 @@ a {
       border-radius: 50%;
       transition: all 1.5s;
       background: $color-red;
+    }
   }
 }
 

@@ -26,6 +26,29 @@
             border-left: pxToRem(1) solid $color-white;
         }
 
+        @include desktop-light {
+            position: relative;
+            height: 100vh;
+            max-width: 100vw;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: pxToRem(128);
+            padding-left: pxToRem(80);
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: pxToRem(80);
+                top: 0;
+                height: 100vh;
+                width: pxToRem(1);
+                background: $color-white;
+            }
+        }
+
         @include desktop {
             position: relative;
             height: 100vh;
@@ -86,6 +109,11 @@
             top: calc(50% - 27px);
         }
 
+        @include desktop-light {
+            left: pxToRem(-80);
+            bottom: 30%;
+        }
+
         @include desktop {
             left: -5.2%;
             bottom: 31%;
@@ -106,6 +134,10 @@
         @include tablet {
             width: pxToRem(500);
             font-size: pxToRem(25);
+        }
+
+        @include desktop-light {
+            display: none;
         }
         
         @include desktop {
@@ -132,6 +164,16 @@
             padding: 0 pxToRem(20);
         }
 
+        @include desktop-light {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            column-gap: pxToRem(50);
+            row-gap: pxToRem(45);
+            align-items: center;
+            justify-content: center;
+        }
+
         @include desktop {
             display: grid;
             grid-template-columns: repeat(2, auto);
@@ -145,24 +187,6 @@
 
     &__slider-content {
 
-        &::-webkit-scrollbar {
-            height: pxToRem(15);
-        }
-
-        &::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 pxToRem(5) grey; 
-            border-radius: pxToRem(10);
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: $color-red; 
-            border-radius: pxToRem(10);
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background: #b30000; 
-        }
-
         @include mobile {
             max-height: pxToRem(515.5);
             overflow-x: auto;
@@ -173,6 +197,11 @@
             max-height: pxToRem(792.5);
             overflow-x: auto;
             overflow-y: hidden;
+        }
+
+        @include desktop-light {
+            max-height: pxToRem(475);
+            overflow: hidden;
         }
 
         @include desktop {
@@ -195,8 +224,13 @@
             gap: pxToRem(40);
         }
 
+        @include desktop-light {
+            gap: pxToRem(40);
+            max-height: pxToRem(475);
+        }
+
         @include desktop {
-            gap: pxToRem(20);
+            gap: pxToRem(40);
             max-height: pxToRem(753);
         }
     }
@@ -217,6 +251,11 @@
             row-gap: pxToRem(40);
         }
 
+        @include desktop-light {
+            column-gap: pxToRem(25);
+            row-gap: pxToRem(25);
+        }
+
         @include desktop {
             column-gap: pxToRem(46);
             row-gap: pxToRem(32);
@@ -235,6 +274,10 @@
             gap: pxToRem(8);
         }
 
+        @include desktop-light {
+            gap: pxToRem(7.66);
+        }
+
         @include desktop {
             gap: pxToRem(7.66);
         }
@@ -250,6 +293,11 @@
         @include tablet {
             min-width: pxToRem(531);
             height: pxToRem(336);
+        }
+
+        @include desktop-light {
+            min-width: pxToRem(311);
+            height: pxToRem(200);
         }
     }
 
@@ -282,6 +330,12 @@
             display: none;
         }
 
+        @include desktop-light {
+            position: absolute;
+            right: 2%;
+            bottom: 12%;
+        }
+
         @include desktop {
             position: absolute;
             right: 5%;
@@ -289,15 +343,6 @@
         }
     }
 }
-
-@media (min-width: $desktop) and (max-width: 1700px) {
-    .portfolio__title-text {
-      left: pxToRem(-225);
-    }
-    .portfolio__scroll-nav {
-      right: pxToRem(-40);
-    }
-  }
 
 .portfolio__radio {
     display: none;
@@ -325,9 +370,15 @@
                     }
                 }
 
+                @include desktop-light {
+                    .portfolio__slider-content-themes {
+                        top: calc((475px + 40px) * 0 * -1);
+                    }
+                }
+
                 @include desktop {
                     .portfolio__slider-content-themes {
-                        top: calc((754px + 20px) * 0 * -1);
+                        top: calc((754px + 40px) * 0 * -1);
                     }
                 }
             }
@@ -355,9 +406,15 @@
                     }
                 }
 
+                @include desktop-light {
+                    .portfolio__slider-content-themes {
+                        top: calc((475px + 40px) * 1 * -1);
+                    }
+                }
+
                 @include desktop {
                     .portfolio__slider-content-themes {
-                        top: calc((754px + 20px) * 1 * -1);
+                        top: calc((754px + 40px) * 1 * -1);
                     }
                 }
             }
@@ -385,9 +442,15 @@
                     }
                 }
 
+                @include desktop-light {
+                    .portfolio__slider-content-themes {
+                        top: calc((475px + 40px) * 2 * -1);
+                    }
+                }
+
                 @include desktop {
                     .portfolio__slider-content-themes {
-                        top: calc((754px + 20px) * 2 * -1);
+                        top: calc((754px + 40px) * 2 * -1);
                     }
                 }
             }
