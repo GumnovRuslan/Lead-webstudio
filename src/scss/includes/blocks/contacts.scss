@@ -249,9 +249,12 @@
         color: $color-white;
         background: $color-black;
 
-        &:focus, &:hover {
-            border: pxToRem(1) solid $color-red !important;
-            border-radius: pxToRem(10);
+        &:focus {
+            border-radius: pxToRem(15);
+        }
+
+        &:invalid {
+            border-color: $color-red;
         }
 
         @include mobile {
@@ -441,6 +444,21 @@
         display: flex;
         padding: pxToRem(10) 0;
 
+        path {
+            transition: all 0.3s ease;
+            fill: $color-white;
+        }
+
+        &:hover {
+
+            path {
+                fill: $color-red;
+            }
+            .contacts__addresses-info {
+                text-shadow: 0 0 pxToRem(4) $color-red;
+            }
+        }
+
         @include mobile {
             gap: pxToRem(25);
         }
@@ -455,36 +473,13 @@
 
         @include desktop {
             gap: pxToRem(29);
-        }
-    }
-
-    &__addresses-img {
-
-        @include mobile {
-            width: pxToRem(26);
-            height: pxToRem(26);
-        }
-
-        @include tablet {
-            width: pxToRem(26);
-            height: pxToRem(26);
-        }
-
-        @include desktop-light {
-            width: pxToRem(26);
-            height: pxToRem(26);
-        }
-
-        @include desktop {
-            width: pxToRem(20);
-            height: pxToRem(20);
         }
     }
 
     &__addresses-info {
         font-size: pxToRem(20);
         line-height: 132.4%;
-        text-shadow: 0px 0px pxToRem(4) rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 pxToRem(4) rgba(255, 255, 255, 0.5);
         color: $color-white;
     }
 
@@ -597,6 +592,23 @@
 
 &__network-card--normal {
     background: $color-black;
+    transition: all 0.5s ease;
+
+    &:hover {
+        background: $color-white;
+        .contacts__card-services--normal {
+            color: $color-black;
+        }
+        .contacts__card-mail--normal {
+            color: $color-black;
+        }
+        .arrow-white__item {
+            background-color: $color-black;
+            &::before {
+                border-color: $color-black;
+            }
+        }
+    }
 }
 
 &__card-services--normal {
@@ -611,6 +623,23 @@
 
     &__network-card--different {
         background: $color-white;
+        transition: all 0.5s ease;
+
+        &:hover {
+            background: $color-black;
+            .contacts__card-services--different {
+                color: $color-white;
+            }
+            .contacts__card-mail--different {
+                color: $color-white;
+            }
+            .arrow-black__item {
+                background-color: $color-white;
+                &::before {
+                    border-color: $color-white;
+                }
+            }
+        }
     }
 
     &__card-services--different {
@@ -678,6 +707,16 @@
     }
 
     &__follow-link {
+        path {
+            transition: all 0.3s ease;
+            fill: $color-white;
+        }
+
+        &:hover {
+            path {
+                fill: $color-red;
+            }
+        }
 
         &:first-child {
             padding-left: 0;
@@ -699,27 +738,50 @@
             padding: pxToRem(10);
         }
     }
+}
 
-    &__follow-image {
+#image-behance, #image-facebook, #image-instagram {
+    
+    @include mobile {
+        width: pxToRem(38);
+        height: pxToRem(38);
+    }
 
-        @include mobile {
-            width: pxToRem(38);
-            height: pxToRem(38);
-        }
+    @include tablet {
+        width: pxToRem(60);
+        height: pxToRem(60);
+    }
 
-        @include tablet {
-            width: pxToRem(60);
-            height: pxToRem(60);
-        }
+    @include desktop-light {
+        width: pxToRem(60);
+        height: pxToRem(60);
+    }
 
-        @include desktop-light {
-            width: pxToRem(60);
-            height: pxToRem(60);
-        }
+    @include desktop {
+        width: pxToRem(60);
+        height: pxToRem(60);
+    }
+}
 
-        @include desktop {
-            width: pxToRem(60);
-            height: pxToRem(60);
-        }
+#contacts-cell, #contacts-email, #contacts-tool {
+
+    @include mobile {
+        width: pxToRem(26);
+        height: pxToRem(26);
+    }
+
+    @include tablet {
+        width: pxToRem(26);
+        height: pxToRem(26);
+    }
+
+    @include desktop-light {
+        width: pxToRem(26);
+        height: pxToRem(26);
+    }
+
+    @include desktop {
+        width: pxToRem(20);
+        height: pxToRem(20);
     }
 }
