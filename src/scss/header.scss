@@ -1,11 +1,3 @@
-body {
-    background: $color-black;
-    
-    @include desktop {
-        overflow: hidden;
-    }
-}
-
 .header {
 
     @include mobile {
@@ -126,7 +118,7 @@ body {
             padding-top: pxToRem(100);
             padding-bottom: pxToRem(50);
             background: $color-black;
-            transition: 0.5s all;
+            transition: all 0.7s ease-in-out;
         }
 
         @include tablet {
@@ -155,53 +147,51 @@ body {
         }
     }
 
-    &__logo-image {
+#logo-desktop {
 
-        @include mobile {
-            width: pxToRem(144);
-            height: pxToRem(54);
-        }
-
-        @include tablet {
-            width: pxToRem(290);
-            height: pxToRem(42);
-        }
-
-        @include desktop-light {
-            width: pxToRem(200);
-            height: pxToRem(80);
-        }
-
-        @include desktop {
-            width: pxToRem(290);
-            height: pxToRem(42);
-        }
+    @include mobile {
+        display: none;
     }
 
-    &__logo-mobile {
+    @include tablet {
+        width: pxToRem(290);
+        height: pxToRem(42);
+    }
 
-        @include tablet {
-            display: none;
-        }
+    @include desktop-light {
+        display: none;
+    }
 
-        @include desktop {
-            display: none;
-        }
+    @include desktop {
+        width: pxToRem(290);
+        height: pxToRem(42);
+    }
+}
+
+#logo-mobile {
+
+    @include mobile {
+        width: pxToRem(144);
+        height: pxToRem(54);
     }
     
-    &__logo-desktop {
-
-        @include mobile {
-            display: none;
-        }
-
-        @include desktop-light {
-            display: none;
-        }
+    @include tablet {
+        display: none;
     }
+
+    @include desktop-light {
+        width: pxToRem(200);
+        height: pxToRem(80);
+    }
+
+    @include desktop {
+        display: none;
+    }
+}
 
     &__dop-service {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
 
         @include mobile {
@@ -209,21 +199,19 @@ body {
         }
 
         @include tablet {
-            flex-direction: column;
             align-items: center;
             gap: pxToRem(10);
         }
 
         @include desktop-light {
-            flex-direction: column;
             align-items: center;
-            gap: pxToRem(14);
+            gap: pxToRem(15);
         }
 
         @include desktop {
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            gap: pxToRem(14);
+            gap: pxToRem(20);
         }
     }
 
@@ -242,6 +230,9 @@ body {
     }
 
     &__switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: pxToRem(60);
         height: pxToRem(25);
     }
@@ -329,11 +320,8 @@ body {
     }
 
     &__btn {
-
-        @include desktop-light {
-            display: flex;
-            align-items: center;
-        }
+        display: flex;
+        align-items: center;
     }
 
     &__btn-link {
@@ -344,11 +332,10 @@ body {
         }
 
         @include tablet {
-            display: block;
-            padding: pxToRem(10);
-            background: $color-red;
-            border-radius: pxToRem(15);
-            box-shadow: inset 0 0 pxToRem(10) pxToRem(5) $color-white;
+            display: flex;
+            align-items: center;
+            gap: pxToRem(18);
+            padding: pxToRem(15) pxToRem(10);
         }
 
         @include desktop-light {
@@ -375,10 +362,6 @@ body {
             display: none;
         }
 
-        @include tablet {
-            text-shadow: 0 0 pxToRem(5) #2B2B2D;
-        }
-
         @include desktop-light {
             font-size: pxToRem(20);
         }
@@ -399,7 +382,9 @@ body {
         }
 
         @include tablet {
-            display: none;
+            border-top: pxToRem(12) solid transparent;
+            border-left: pxToRem(22) solid $color-red;
+            border-bottom: pxToRem(12) solid transparent;
         }
 
         @include desktop-light {
@@ -416,167 +401,8 @@ body {
     }
 }
 
-
-.switch {
-    position: relative;    
-
-    &__checkbox {
-        display: none;
-
-        &:checked + .switch__slider {
-            background-color: $color-red;
-        }
-
-        @include mobile {
-            &:checked + .switch__slider:before {
-                transform: translateX(37px);
-            }
-        }
-
-        @include tablet {
-            &:checked + .switch__slider:before {
-                transform: translateX(30px);
-            }
-        }
-
-        @include desktop-light {
-            &:checked + .switch__slider:before {
-                transform: translateX(30px);
-            }
-        }
-
-        @include desktop {
-            &:checked + .switch__slider:before {
-                transform: translateX(30px);
-            }
-        }
-    }
-
-    &__slider {
-        position: absolute;
-        cursor: pointer;
-        -webkit-transition: .4s;
-        transition: .4s;
-        background-color: $color-black;
-
-        @include mobile {
-            width: pxToRem(60);
-            height: pxToRem(24);
-            border: pxToRem(2) solid $color-white;
-            border-radius: pxToRem(100);
-        }
-
-        @include tablet {
-            width: pxToRem(49);
-            height: pxToRem(18);
-            border-radius: pxToRem(100);
-        }
-
-        @include desktop-light {
-            width: pxToRem(49);
-            height: pxToRem(18);
-            border-radius: pxToRem(100);
-        }
-
-        @include desktop {
-            width: pxToRem(49);
-            height: pxToRem(18);
-            border-radius: pxToRem(100);
-        }
-
-        &:before {
-            position: absolute;
-            content: "";
-            height: pxToRem(27);
-            width: pxToRem(27);
-            left: pxToRem(-5);
-            bottom: calc(50% - 13.5px);
-            border-radius: 50%;
-            background-color: #2B2B2D;
-            background-image: url(/src/favicon/moon.svg);
-            background-size: pxToRem(14) pxToRem(14);
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-    }
-}
-
-.burger {
-
-    &__checkbox {
-        display: none;
-
-        @include mobile {
-            &:checked ~ .header .header__main {
-                left: 0;
-            }
-
-            &:checked ~ .header .burger__line::before {
-                top: 0;
-                transform: rotate(-45deg);
-                transition: 0.6s all;
-                background: $color-red;
-            }
-
-            &:checked ~ .header .burger__line::after {
-                top: 0;
-                transform: rotate(45deg);
-                transition: 0.6s all;
-                background: $color-red;
-            }
-
-            &:checked ~ .header .burger__line {
-                background: transparent;
-                transition: 0.6s all;
-            }
-
-            &:checked ~ .main {
-                overflow: hidden;
-            }
-        }
-    }
-
-    &__btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: pxToRem(71);
-        height: pxToRem(54);
-    }
-
-    &__line {
-        position: relative;
-        width: pxToRem(41);
-        height: pxToRem(4);
-        background: $color-white;
-        transition: 0.6s all;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: pxToRem(14);
-            width: pxToRem(41);
-            height: pxToRem(4);
-            background: $color-white;
-            transition: 0.6s all;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: pxToRem(14);
-            width: pxToRem(41);
-            height: pxToRem(4);
-            background: $color-white;
-            transition: 0.6s all;
-        }
-    }
-}
-
-@media (min-width: 1621px) and (max-width: 1800px) {
-    .header__container {
-        padding-left: pxToRem(90);
-    }
-}
+// @media (min-width: 1621px) and (max-width: 1800px) {
+//     .header__container {
+//         padding-left: pxToRem(90);
+//     }
+// }
