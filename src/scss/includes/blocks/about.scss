@@ -70,8 +70,8 @@
     }
 
     &__heading {
-        border-top: 1px solid $color-white;
-        border-bottom: 1px solid $color-white;
+        border-top: pxToRem(1) solid $color-white;
+        border-bottom: pxToRem(1) solid $color-white;
 
         @include mobile {
             padding-left: pxToRem(15);
