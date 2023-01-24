@@ -253,8 +253,9 @@
             border-radius: pxToRem(15);
         }
 
-        &:invalid {
+        &:invalid:not(:placeholder-shown) {
             border-color: $color-red;
+            border-radius: pxToRem(15);
         }
 
         @include mobile {
@@ -295,6 +296,8 @@
             }
         }
     }
+
+    // input:invalid:not(:placeholder-shown) {border-color: $color-red;}
 
     &__form-name {
 
