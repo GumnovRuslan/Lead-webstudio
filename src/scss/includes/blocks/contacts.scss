@@ -297,8 +297,6 @@
         }
     }
 
-    // input:invalid:not(:placeholder-shown) {border-color: $color-red;}
-
     &__form-name {
 
         @include mobile {
@@ -739,7 +737,9 @@
     }
 }
 
-#image-behance, #image-facebook, #image-instagram {
+#image-behance, 
+#image-facebook, 
+#image-instagram {
     
     @include mobile {
         width: pxToRem(38);
@@ -762,7 +762,9 @@
     }
 }
 
-#contacts-cell, #contacts-email, #contacts-tool {
+#contacts-cell, 
+#contacts-email, 
+#contacts-tool {
 
     @include mobile {
         width: pxToRem(26);
