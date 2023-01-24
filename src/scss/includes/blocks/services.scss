@@ -1,10 +1,16 @@
 .services {
+
   @include mobile {
     padding: 0 pxToRem(15);
   }
 
   @include tablet {
     padding: 0 pxToRem(40);
+  }
+
+  @include desktop-light {
+    width: 100vw;
+    height: 100vh;
   }
 
   @include desktop {
@@ -26,7 +32,7 @@
       border-left: pxToRem(1) solid $color-white;
     }
 
-    @include desktop {
+    @include desktop-light {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -35,7 +41,25 @@
       &::before {
         content: "";
         position: absolute;
-        left: 5%;
+        left: pxToRem(80);
+        top: 0;
+        height: 100vh;
+        width: pxToRem(1);
+        background: $color-white;
+      }
+    }
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding-right: pxToRem(18);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: pxToRem(100);
         top: 0;
         height: 100vh;
         width: pxToRem(1);
@@ -45,50 +69,34 @@
   }
 
   &__heading {
+
     @include mobile {
       position: absolute;
       top: pxToRem(80);
       left: pxToRem(-63);
-      transform: rotate(-90deg);
     }
 
     @include tablet {
       position: absolute;
       top: pxToRem(185);
       left: pxToRem(-100);
-      transform: rotate(-90deg);
+    }
+
+    @include desktop-light {
+      position: absolute;
+      bottom: 30%;
+      left: pxToRem(-80);
     }
 
     @include desktop {
       position: absolute;
-      bottom: 24.5%;
-      left: -3.3%;
-      transform: rotate(-90deg);
-    }
-  }
-
-  &__title-text {
-    font-family: $font-Body-Grotesque;
-    font-weight: 800;
-    line-height: 108.5%;
-    letter-spacing: 0.19em;
-    text-transform: uppercase;
-    color: $color-white;
-
-    @include mobile {
-      font-size: pxToRem(30);
-    }
-
-    @include tablet {
-      font-size: pxToRem(50);
-    }
-
-    @include desktop {
-      font-size: pxToRem(70);
+      bottom: 31%;
+      left: pxToRem(-63);
     }
   }
 
   &__tabs {
+
     @include mobile {
       display: flex;
       flex-direction: column;
@@ -106,18 +114,30 @@
       margin: 0 auto;
     }
 
+    @include desktop-light {
+      position: relative;
+    }
+
     @include desktop {
       position: relative;
     }
   }
 
   &__button {
+
     @include mobile {
       padding: pxToRem(10);
     }
 
     @include tablet {
       display: none;
+    }
+
+    @include desktop-light {
+      position: absolute;
+      left: pxToRem(0);
+      bottom: pxToRem(-43);
+
     }
 
     @include desktop {
@@ -148,6 +168,13 @@
       gap: pxToRem(12);
     }
 
+    @include desktop-light {
+      width: pxToRem(180);
+      height: pxToRem(180);
+      padding: 0 pxToRem(30);
+      gap: pxToRem(15);
+    }
+
     @include desktop {
       width: pxToRem(225);
       height: pxToRem(221);
@@ -162,6 +189,10 @@
     color: $color-white;
     text-transform: uppercase;
 
+    @include desktop-light {
+      font-size: pxToRem(18);
+    }
+
     @include desktop {
       font-size: pxToRem(20);
     }
@@ -171,6 +202,10 @@
 
     @include mobile {
       width: pxToRem(105);
+    }
+
+    @include desktop-light {
+      width: pxToRem(100);
     }
 
     @include desktop {
@@ -190,6 +225,12 @@
       display: none;
     }
 
+    @include desktop-light {
+      position: absolute;
+      right: 3%;
+      bottom: 12%;
+    }
+
     @include desktop {
       position: absolute;
       right: 9.3%;
@@ -199,11 +240,13 @@
 }
 
 .tabs {
+
   &__container {
     display: flex;
 
     @include mobile {
       flex-direction: column;
+      align-items: center;
       gap: pxToRem(40);
     }
 
@@ -212,6 +255,11 @@
       justify-content: center;
       gap: pxToRem(40);
       padding-left: pxToRem(140);
+    }
+
+    @include desktop-light {
+      gap: pxToRem(150);
+      padding-top: pxToRem(60);
     }
 
     @include desktop {
@@ -236,6 +284,12 @@
       gap: pxToRem(36);
     }
 
+    @include desktop-light {
+      flex-direction: column;
+      gap: pxToRem(78);
+      padding: pxToRem(67) 0;
+    }
+
     @include desktop {
       flex-direction: column;
       gap: pxToRem(78);
@@ -256,6 +310,10 @@
       gap: pxToRem(18.5);
     }
 
+    @include desktop-light {
+      gap: pxToRem(25);
+    }
+
     @include desktop {
       gap: pxToRem(25);
     }
@@ -269,6 +327,10 @@
     color: $color-white;
     transition: all 0.5s;
 
+    &:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
     @include mobile {
       padding: pxToRem(20) pxToRem(25) pxToRem(16) pxToRem(29);
     }
@@ -278,9 +340,23 @@
       font-size: pxToRem(20);
     }
 
+    @include desktop-light {
+      padding: pxToRem(10) pxToRem(30);
+      font-size: pxToRem(20);
+    }
+
     @include desktop {
       padding: pxToRem(10) pxToRem(30);
       font-size: pxToRem(30);
+    }
+  }
+
+  &__window {
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    @include mobile {
+      padding-left: 10px;
     }
   }
 
@@ -291,15 +367,19 @@
     transition: all 1s;
 
     @include mobile {
-      min-width: pxToRe(384);
+      max-width: pxToRem(373);
     }
 
     @include tablet {
       max-width: pxToRem(514);
     }
 
+    @include desktop-light {
+      max-width: pxToRem(514);
+    }
+
     @include desktop {
-      width: pxToRem(760);
+      max-width: pxToRem(743);
     }
   }
 
@@ -308,15 +388,22 @@
     flex-direction: column;
 
     @include mobile {
+      min-width: pxToRem(373);
       gap: pxToRem(28);
-      padding-left: pxToRem(10);
     }
 
     @include tablet {
+      min-width: pxToRem(514);
       gap: pxToRem(28);
     }
 
+    @include desktop-light {
+      min-width: pxToRem(514);
+      gap: pxToRem(20);
+    }
+
     @include desktop {
+      min-width: pxToRem(743);
       gap: pxToRem(35);
     }
   }
@@ -330,21 +417,24 @@
     background-repeat: no-repeat;
 
     @include mobile {
-      min-width: pxToRem(373.4);
-      min-height: pxToRem(210);
+      height: pxToRem(210);
       background-position: 36% 50%, top left;
       background-size: pxToRem(290) pxToRem(165), pxToRem(276) pxToRem(165);
     }
 
     @include tablet {
-      min-width: pxToRem(514);
       min-height: pxToRem(310);
       background-position: 36% 50%, top left;
       background-size: 80%, 80%;
     }
 
+    @include desktop-light {
+      min-height: pxToRem(280);
+      background-position: 36% 50%, top left;
+      background-size: 80%, 80%;
+    }
+
     @include desktop {
-      min-width: pxToRem(743);
       min-height: pxToRem(422);
       background-position: 37% 50%, top left;
     }
@@ -365,6 +455,10 @@
       font-size: pxToRem(50);
     }
 
+    @include desktop-light {
+      font-size: pxToRem(50);
+    }
+
     @include desktop {
       font-size: pxToRem(100);
     }
@@ -379,48 +473,15 @@
       padding-left: pxToRem(9);
     }
 
+    @include desktop-light {
+      width: pxToRem(514);
+    }
+
     @include desktop {
       width: pxToRem(684);
     }
   }
 }
-
-@media (min-width: $desktop) and (max-width: 1700px) {
-  .services__heading {
-    left: pxToRem(-195);
-  }
-  .services__scroll-nav {
-    right: pxToRem(-40);
-  }
-}
-
-.tabs__window {
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  @include mobile {
-    max-width: pxToRem(384.4);
-  }
-  
-  &::-webkit-scrollbar {
-    width: pxToRem(15);
-  }
-
-  &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 pxToRem(5) grey; 
-      border-radius: pxToRem(10);
-  }
-
-  &::-webkit-scrollbar-thumb {
-      background: $color-red; 
-      border-radius: pxToRem(10);
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-      background: #b30000; 
-  }
-}
-
 
 .services__radio {
   display: none;
@@ -433,17 +494,7 @@
           color: $color-black;
         }
         .tabs__content-container {
-          @include mobile {
-            left: calc((383.4px + 100px) * 0 * -1);
-          }
-
-          @include tablet {
-            left: calc((513px + 100px) * 0 * -1);
-          }
-
-          @include desktop {
-            left: calc((743px + 100px) * 0 * -1);
-          }
+          left: calc((100% + 100px) * 0 * -1);
         }
       }
     }
@@ -455,17 +506,7 @@
           color: $color-black;
         }
         .tabs__content-container {
-          @include mobile {
-            left: calc((383.4px + 100px) * 1 * -1);
-          }
-
-          @include tablet {
-            left: calc((514px + 100px) * 1 * -1);
-          }
-
-          @include desktop {
-            left: calc((743px + 100px) * 1 * -1);
-          }
+          left: calc((100% + 100px) * 1 * -1);
         }
       }
     }
@@ -477,17 +518,7 @@
           color: $color-black;
         }
         .tabs__content-container {
-          @include mobile {
-            left: calc((383.4px + 100px) * 2 * -1);
-          }
-
-          @include tablet {
-            left: calc((514px + 100px) * 2 * -1);
-          }
-
-          @include desktop {
-            left: calc((743px + 100px) * 2 * -1);
-          }
+          left: calc((100% + 100px) * 2 * -1);
         }
       }
     }
@@ -499,17 +530,7 @@
           color: $color-black;
         }
         .tabs__content-container {
-          @include mobile {
-            left: calc((383.4px + 100px) * 3 * -1);
-          }
-
-          @include tablet {
-            left: calc((514px + 100px) * 3 * -1);
-          }
-
-          @include desktop {
-            left: calc((743px + 100px) * 3 * -1);
-          }
+          left: calc((100% + 100px) * 3 * -1);
         }
       }
     }

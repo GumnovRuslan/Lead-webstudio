@@ -1,9 +1,18 @@
 .reviews {
     overflow: hidden;
 
-    @include desktop {
-        display: flex;
+    @include desktop-light {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    @include desktop {
+        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
@@ -23,6 +32,11 @@
         @include tablet {
             gap: pxToRem(60);
             padding: pxToRem(87) 0;
+        }
+
+        @include desktop-light {
+            gap: pxToRem(40);
+            padding-top: pxToRem(80);
         }
         
         @include desktop {
@@ -47,6 +61,10 @@
             margin-bottom: pxToRem(18);
         }
 
+        @include desktop-light {
+            margin-bottom: pxToRem(15);
+        }
+
         @include desktop {
             margin-bottom: pxToRem(20);
         }
@@ -68,6 +86,11 @@
         @include tablet {
             font-size: pxToRem(20);
             letter-spacing: 0.170em;
+        }
+
+        @include desktop-light {
+            font-size: pxToRem(25);
+            letter-spacing: 0.105em;
         }
 
         @include desktop {
@@ -127,6 +150,20 @@
             }
         }
 
+        @include desktop-light {
+            margin-bottom: pxToRem(15);
+
+            &::before {
+                right: pxToRem(253);
+                top: 45%;
+            }
+    
+            &::after {
+                left: pxToRem(253);
+                top: 45%;;
+            }
+        }
+
         @include desktop {
             margin-bottom: pxToRem(25);
 
@@ -154,6 +191,11 @@
             height: pxToRem(85);
         }
 
+        @include desktop-light {
+            width: pxToRem(222);
+            height: pxToRem(75);
+        }
+
         @include desktop {
             width: pxToRem(251);
             height: pxToRem(85);
@@ -168,6 +210,10 @@
 
         @include tablet {
             margin-bottom: pxToRem(30);
+        }
+
+        @include desktop-light {
+            margin-bottom: pxToRem(20);
         }
         
         @include desktop {
@@ -196,6 +242,10 @@
             gap: pxToRem(13);
         }
 
+        @include desktop-light {
+            gap: pxToRem(13);
+        }
+
         @include desktop {
             gap: pxToRem(13);
         }
@@ -209,6 +259,11 @@
         }
 
         @include tablet {
+            width: pxToRem(30);
+            height: pxToRem(30);
+        }
+
+        @include desktop-light {
             width: pxToRem(30);
             height: pxToRem(30);
         }
@@ -227,6 +282,12 @@
 
         @include tablet {
             display: none;
+        }
+
+        @include desktop-light {
+            position: absolute;
+            bottom: 12%;
+            left: -4%;
         }
 
         @include desktop {
@@ -251,6 +312,12 @@
             padding: 0 pxToRem(30);
         }
 
+        @include desktop-light {
+            gap: pxToRem(40);
+            max-width: pxToRem(1573);
+            margin: 0 auto;
+        }
+
         @include desktop {
             gap: pxToRem(70.5);
             max-width: pxToRem(1573);
@@ -259,6 +326,9 @@
     }
 
     &__slider-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         @include mobile {
             display: none;
@@ -307,6 +377,12 @@
             
         }
 
+        @include desktop-light {
+            width: 1201px;
+            position: relative;
+            gap: pxToRem(50);
+        }
+
         @include desktop {
             position: relative;
             gap: pxToRem(50);
@@ -325,6 +401,10 @@
         @include tablet {
             gap: pxToRem(30);
             margin-bottom: pxToRem(50);
+        }
+
+        @include desktop-light {
+            gap: pxToRem(50);
         }
 
         @include desktop {
@@ -352,6 +432,12 @@
             padding: pxToRem(30);
         }
 
+        @include desktop-light {
+            gap: pxToRem(15);
+            min-width: pxToRem(367);
+            padding: pxToRem(30);
+        }
+
         @include desktop {
             gap: pxToRem(34.5);
             width: pxToRem(491);
@@ -361,7 +447,6 @@
     }
 
     &__card-heading {
-        display: flex;
         left: 0;
         display: flex;
         align-items: center;
@@ -380,6 +465,10 @@
             gap: pxToRem(13);
         }
 
+        @include desktop-light {
+            gap: pxToRem(23);
+        }
+
         @include desktop {
             gap: pxToRem(23);
         }
@@ -393,6 +482,11 @@
         }
 
         @include tablet {
+            width: pxToRem(36.14);
+            height: pxToRem(36.14);
+        }
+
+        @include desktop-light {
             width: pxToRem(36.14);
             height: pxToRem(36.14);
         }
@@ -415,6 +509,10 @@
             gap: pxToRem(4.5);
         }
 
+        @include desktop-light {
+            gap: pxToRem(6.5);
+        }
+
         @include desktop {
             gap: pxToRem(6.5);
         }
@@ -430,6 +528,11 @@
         @include tablet {
             width: pxToRem(12);
             height: pxToRem(12);
+        }
+
+        @include desktop-light {
+            width: pxToRem(14);
+            height: pxToRem(14);
         }
 
         @include desktop {
@@ -453,6 +556,10 @@
             font-size: pxToRem(14);
         }
 
+        @include desktop-light {
+            font-size: pxToRem(15);
+        }
+
         @include desktop {
             font-size: pxToRem(15);
         }
@@ -474,43 +581,29 @@
             font-size: pxToRem(12);
         }
     }
-
-    &__btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @include mobile {
-            display: none;
-        }
-
-        @include tablet {
-            display: none;
-        }
-    }
-
-    &__btn-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: pxToRem(50);
-        height: pxToRem(30);
-    }
-
-    &__btn-item {
-        width: pxToRem(38);
-        height: pxToRem(5);
-        border-radius: pxToRem(100);
-        background: $color-white;
-        transition: all 1s;
-    }
 }
 
-@media (min-width: $desktop) and (max-width: 1800px) {
-    .slider__container {
-        max-width: pxToRem(1032);
+@media (min-width: $desktop-extra) and (max-width: 1800px) {
+
+    .reviews {
+        &__container {
+            gap: pxToRem(30);
+        }
+        &__slider {
+            gap: pxToRem(20);
+        }
     }
-  }
+    
+    .slider{
+        &__container {
+        max-width: pxToRem(1032);
+        }
+        &__card {
+            padding: pxToRem(20);
+            height: auto;
+        }
+    }
+}
 
 .reviews__radio {
     display: none;

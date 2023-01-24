@@ -7,9 +7,10 @@ $font-Potra: "Potra", sans-serif;
 $color-black: #131313;
 $color-red: #FB1B3D;
 $color-white: #ffffff;
+$color-gray: rgba(255, 255, 255, 0.5);
 
 // Media queries
-$desktop-extra: pxToRem(1621, em);
+$desktop-extra: pxToRem(1800, em);
 $desktop: pxToRem(1441, em);
 $tablet: pxToRem(769, em);
 $mobile: pxToRem(767, em);
@@ -18,8 +19,3 @@ $mobile: pxToRem(767, em);
 $typography-font-size: pxToRem(15);
 $typography-font-weight: 400;
 $typography-letter-spacing: 0.13em;
-
-
-$hsl: 762.5px;
-$gsl: 40px;
-$nsl: 1;
