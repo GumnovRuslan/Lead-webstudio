@@ -63,12 +63,12 @@
             flex: auto;
             display: flex;
             align-items: center;
-            padding-left: pxToRem(100);
-            padding-top: pxToRem(100);
+            margin-left: pxToRem(100);
+            margin-top: pxToRem(100);
         }
         
         @include desktop {
-            padding-top: pxToRem(135);
+            margin-top: pxToRem(135);
         }
     }
 
@@ -285,7 +285,7 @@
         line-height: 132.4%;
     }
 
-    &__arrow {
+    &__button-arrow {
         position: absolute;
 
         @include mobile {
@@ -309,7 +309,7 @@
         }
     }
 
-    &__image {
+    &__background-image {
         position: absolute;
 
         @include mobile {
@@ -333,7 +333,7 @@
         }
     }
 
-    &__img-mobile {
+    &__background-img-mobile {
 
         @include desktop-light {
             display: none;
@@ -344,7 +344,7 @@
         }
     }
 
-    &__img-desktop {
+    &__background-img-desktop {
 
         @include tablet {
             display: none;
@@ -361,36 +361,26 @@
         }
     }
 
-    &__shadow {
-        position: absolute;
-        z-index: -1;
-        width: pxToRem(1);
-        height: pxToRem(1);
-        border-radius: 50%;
-        opacity: 0.3;
+    &__shadow-light {
 
         @include mobile {
             bottom: 10%;
             right: 10%;
-            box-shadow: 0 0 pxToRem(1000) pxToRem(150) $color-white;
         }
 
         @include tablet {
             top: 30%;
             right: 10%;
-            box-shadow: 0 0 pxToRem(1000) pxToRem(200) $color-white;
         }
 
         @include desktop-light {
             top: 0;
             right: 45%;
-            box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
         }
 
         @include desktop {
             top: 0;
             right: 45%;
-            box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
         }
     }
 }

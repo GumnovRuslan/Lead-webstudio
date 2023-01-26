@@ -267,3 +267,28 @@ a {
       padding: 0 pxToRem(21);
   }
 }
+
+.shadow-light {
+  position: absolute;
+  z-index: -1;
+  width: pxToRem(1);
+  height: pxToRem(1);
+  border-radius: 50%;
+  opacity: 0.3;
+
+  @include mobile {
+      box-shadow: 0 0 pxToRem(1000) pxToRem(150) $color-white;
+  }
+
+  @include tablet {
+      box-shadow: 0 0 pxToRem(1000) pxToRem(200) $color-white;
+  }
+
+  @include desktop-light {
+      box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
+  }
+
+  @include desktop {
+      box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
+  }
+}

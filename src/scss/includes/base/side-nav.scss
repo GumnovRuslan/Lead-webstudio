@@ -1,4 +1,10 @@
 .stap-slider {
+  position: fixed;
+    z-index: 20;
+    top: 48.3%;
+    right: pxToRem(-38);
+    transform: rotate(90deg);
+
   @include mobile {
     display: none;
   }
@@ -7,28 +13,10 @@
     display: none;
   }
 
-  @include desktop-light {
-    position: fixed;
-    z-index: 20;
-    top: 48.3%;
-    right: pxToRem(-38);
-    transform: rotate(90deg);
-  }
-
-  @include desktop {
-    position: fixed;
-    z-index: 20;
-    top: 48.3%;
-    right: pxToRem(-38);
-    transform: rotate(90deg);
-  }
-
   &__container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $color-black;
-    box-shadow: 0 0 pxToRem(40) pxToRem(15) $color-black;
   }
 
   &__item {
