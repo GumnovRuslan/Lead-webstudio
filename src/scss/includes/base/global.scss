@@ -274,6 +274,17 @@ a {
       transition: all 1.5s;
       background: $color-red;
     }
+
+    @include desktop {
+      position: absolute;
+      right: calc(50% - 14px);
+      top: 0;
+      width: pxToRem(27);
+      height: pxToRem(27);
+      border-radius: 50%;
+      transition: all 1.5s;
+      background: $color-red;
+    }
   }
 }
 
@@ -405,7 +416,7 @@ a {
           bottom: calc(50% - 13.5px);
           border-radius: 50%;
           background-color: #2B2B2D;
-          background-image: url(/src/favicon/moon.svg);
+          background-image: url(../../favicon/moon.svg);
           background-size: pxToRem(14) pxToRem(14);
           background-repeat: no-repeat;
           background-position: 50% 50%;
