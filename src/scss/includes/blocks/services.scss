@@ -493,7 +493,7 @@
           background: $color-white;
           color: $color-black;
         }
-        .tabs__content-container {
+        .tabs__slider-container {
           left: calc((100% + 100px) * 0 * -1);
         }
       }
@@ -505,7 +505,7 @@
           background: $color-white;
           color: $color-black;
         }
-        .tabs__content-container {
+        .tabs__slider-container {
           left: calc((100% + 100px) * 1 * -1);
         }
       }
@@ -517,7 +517,7 @@
           background: $color-white;
           color: $color-black;
         }
-        .tabs__content-container {
+        .tabs__slider-container {
           left: calc((100% + 100px) * 2 * -1);
         }
       }
@@ -529,7 +529,7 @@
           background: $color-white;
           color: $color-black;
         }
-        .tabs__content-container {
+        .tabs__slider-container {
           left: calc((100% + 100px) * 3 * -1);
         }
       }
