@@ -516,32 +516,32 @@ a {
 
 // ====ANIMATION======
 
-.heading-vertical {
-  position: relative;
-  animation: jump 4s ease-in-out 0s normal running none;
+// .heading-vertical {
+//   position: relative;
+//   animation: jump 4s ease-in-out 0s normal running none;
 
-  @keyframes jump {
+//   @keyframes jump {
     
-    0% {
-      bottom: 100%;
-    }
-    20% {
-      bottom: 24.5%;
-    }
-    40% {
-      bottom: 50%;
-    }
-    60% {
-      bottom: 24.5%;
-    }
-    80% {
-      bottom: 30%;
-    }
-    100% {
-      bottom: 24.5%;
-    }
-  }
-}
+//     0% {
+//       bottom: 100%;
+//     }
+//     20% {
+//       bottom: 24.5%;
+//     }
+//     40% {
+//       bottom: 50%;
+//     }
+//     60% {
+//       bottom: 24.5%;
+//     }
+//     80% {
+//       bottom: 30%;
+//     }
+//     100% {
+//       bottom: 24.5%;
+//     }
+//   }
+// }
 
 .button, .scroll-nav {
   animation: emergence 2s linear 0s normal running none;
