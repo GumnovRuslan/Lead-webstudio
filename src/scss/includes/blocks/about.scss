@@ -70,8 +70,8 @@
     }
 
     &__heading {
-        border-top: 1px solid $color-white;
-        border-bottom: 1px solid $color-white;
+        border-top: pxToRem(1) solid $color-white;
+        border-bottom: pxToRem(1) solid $color-white;
 
         @include mobile {
             padding-left: pxToRem(15);
@@ -308,7 +308,7 @@
         @include mobile {
             position: absolute;
             right: pxToRem(17);
-            bottom: calc(107px);
+            bottom: pxToRem(107);
         }
 
         @include tablet {
@@ -326,7 +326,7 @@
 
         @include desktop {
             position: absolute;
-            left: 8.5%;
+            left: 8%;
             bottom: 10%;
         }
     }
@@ -365,49 +365,62 @@
 
         @include mobile {
             font-size: pxToRem(13);
-            margin-bottom: pxToRem(15);
+            margin-bottom: pxToRem(7);
+            margin-left: pxToRem(8);
         }
 
         @include tablet {
             font-size: pxToRem(20);
-            margin-bottom: pxToRem(15);
+            margin-bottom: pxToRem(2);
+            margin-left: pxToRem(13);
         }
 
         @include desktop-light {
             font-size: pxToRem(20);
-            margin-bottom: pxToRem(35);
+            margin-bottom: pxToRem(22);
+            margin-left: pxToRem(13);
         }
 
         @include desktop {
             font-size: pxToRem(20);
-            margin-bottom: pxToRem(35);
+            margin-bottom: pxToRem(22);
+            margin-left: pxToRem(13);
         }
     }
 
     &__items {
+        display: flex;
+    }
+
+    &__item-link {
+
+        &:hover {
+            path {
+                transition: all 0.5s ease;
+                fill: $color-red;
+            }
+        }
 
         @include mobile {
-            display: flex;
-            gap: pxToRem(16.86);
+            padding: pxToRem(8);
         }
 
         @include tablet {
-            display: flex;
-            gap: pxToRem(26.57);
+            padding: pxToRem(13);
         }
 
         @include desktop-light {
-            display: flex;
-            gap: pxToRem(26.57);
+            padding: pxToRem(13);
         }
 
         @include desktop {
-            display: flex;
-            gap: pxToRem(26.57);
+            padding: pxToRem(13);
         }
     }
 
-    &__image {
+#about-favicon-behance, 
+#about-favicon-facebook, 
+#about-favicon-instagram {
 
         @include mobile {
             width: pxToRem(28.11);
@@ -430,19 +443,3 @@
         }
     }
 }
-
-@media (min-width: $desktop-extra) and (max-width: 1700px) {
-    .about__follow {
-        transform: rotate(-90deg);
-        bottom: 10%;
-        left: 0;
-    }
-
-    .follow__image {
-        transform: rotate(90deg);
-    }
-
-    .about__scroll-nav {
-      right: pxToRem(-40);
-    }
-  }

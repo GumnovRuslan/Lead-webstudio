@@ -198,7 +198,7 @@
     }
   }
 
-  &__arrow-white {
+  &__button-arrow-white {
 
     @include mobile {
       width: pxToRem(105);
@@ -351,7 +351,7 @@
     }
   }
 
-  &__window {
+  &__slider {
     overflow-x: hidden;
     overflow-y: auto;
   
@@ -360,7 +360,7 @@
     }
   }
 
-  &__content-container {
+  &__slider-container {
     position: relative;
     display: flex;
     gap: pxToRem(100);
@@ -383,7 +383,7 @@
     }
   }
 
-  &__content {
+  &__slide-content {
     display: flex;
     flex-direction: column;
 

@@ -481,22 +481,65 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__btn-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: pxToRem(50);
+      height: pxToRem(30);
+  }
+
+  &__btn-item {
+      width: pxToRem(38);
+      height: pxToRem(5);
+      border-radius: pxToRem(100);
+      background: $color-white;
+      transition: all 1s;
+  }
 }
 
-&__btn-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: pxToRem(50);
-    height: pxToRem(30);
+// ====ANIMATION======
+
+.heading-vertical {
+  position: relative;
+  animation: jump 4s ease-in-out 0s normal running none;
+
+  @keyframes jump {
+    
+    0% {
+      bottom: 100%;
+    }
+    20% {
+      bottom: 24.5%;
+    }
+    40% {
+      bottom: 50%;
+    }
+    60% {
+      bottom: 24.5%;
+    }
+    80% {
+      bottom: 30%;
+    }
+    100% {
+      bottom: 24.5%;
+    }
+  }
 }
 
-&__btn-item {
-    width: pxToRem(38);
-    height: pxToRem(5);
-    border-radius: pxToRem(100);
-    background: $color-white;
-    transition: all 1s;
-}
+.button, .scroll-nav {
+  animation: emergence 2s linear 0s normal running none;
 
+  @keyframes emergence {
+    
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }
