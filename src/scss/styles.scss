@@ -1,20 +1,19 @@
 // General
-@import 'includes/base/functions.scss';
-@import 'includes/base/vars.scss';
-@import 'includes/base/mixins.scss';
-@import 'includes/base/fonts.scss';
-@import 'includes/base/utils.scss';
-@import 'includes/base/global.scss';
-@import 'includes/base/side-nav.scss';
-
+@import "includes/base/functions.scss";
+@import "includes/base/vars.scss";
+@import "includes/base/mixins.scss";
+@import "includes/base/fonts.scss";
+@import "includes/base/utils.scss";
+@import "includes/base/global.scss";
+@import "includes/base/side-nav.scss";
 
 // Blocks
-@import 'includes/blocks/hero.scss';
-@import 'includes/blocks/about.scss';
-@import 'includes/blocks/reviews.scss';
-@import 'includes/blocks/services.scss';
-@import 'includes/blocks/portfolio.scss';
-@import 'includes/blocks/contacts.scss';
+@import "includes/blocks/hero.scss";
+@import "includes/blocks/about.scss";
+@import "includes/blocks/reviews.scss";
+@import "includes/blocks/services.scss";
+@import "includes/blocks/portfolio.scss";
+@import "includes/blocks/contacts.scss";
 
 // Vendor
 //@import 'includes/vendor/**/*';
@@ -23,5 +22,5 @@
 // @import 'templates/*';
 
 // Core Templates
-@import 'header.scss';
-@import 'footer.scss';
+@import "header.scss";
+@import "footer.scss";

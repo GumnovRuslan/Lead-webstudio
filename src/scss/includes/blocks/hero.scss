@@ -1,396 +1,390 @@
 .hero {
+  @include mobile {
+    height: pxToRem(746);
+  }
+
+  @include tablet {
+    height: pxToRem(746);
+  }
+
+  @include desktop-light {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @include desktop {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__container {
+    position: relative;
 
     @include mobile {
-        height: pxToRem(746);
+      display: flex;
+      align-items: center;
+      max-width: pxToRem(414);
+      margin: 0 auto;
+      padding: 0 pxToRem(15);
     }
 
     @include tablet {
-        height: pxToRem(746);
+      max-width: pxToRem(768);
+      margin: 0 auto;
+      padding: pxToRem(50) pxToRem(30);
     }
 
     @include desktop-light {
-        width: 100vw;
-        height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 0 pxToRem(100);
     }
 
     @include desktop {
-        width: 100vw;
-        height: 100vh;
+      display: flex;
+      align-items: center;
+      width: pxToRem(1920);
+      height: 100vh;
+      margin: 0 auto;
+      padding: 0 pxToRem(170) 0 pxToRem(165);
+    }
+  }
+
+  &__content {
+    @include tablet {
+      margin-top: pxToRem(150);
     }
 
-    &__container {
-        position: relative;
-
-        @include mobile {
-            display: flex;
-            align-items: center;
-            max-width: pxToRem(414);
-            margin: 0 auto;
-            padding: 0 pxToRem(15);
-        }
-
-        @include tablet {
-            max-width: pxToRem(768);
-            margin: 0 auto;
-            padding: pxToRem(50) pxToRem(30);
-        }
-
-        @include desktop-light {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 0 pxToRem(100);
-        }
-
-        @include desktop {
-            display: flex;
-            align-items: center;
-            width: pxToRem(1920);
-            height: 100vh;
-            margin: 0 auto;
-            padding: 0 pxToRem(170) 0 pxToRem(165);
-        }
+    @include desktop-light {
+      flex: auto;
+      display: flex;
+      align-items: center;
+      padding-left: pxToRem(100);
+      padding-top: pxToRem(100);
     }
 
-    &__content {
+    @include desktop {
+      padding-top: pxToRem(135);
+    }
+  }
 
-        @include tablet {
-            margin-top: pxToRem(150);
-        }
+  &__heading {
+    display: flex;
+    flex-direction: column;
 
-        @include desktop-light {
-            flex: auto;
-            display: flex;
-            align-items: center;
-            padding-left: pxToRem(100);
-            padding-top: pxToRem(100);
-        }
-        
-        @include desktop {
-            padding-top: pxToRem(135);
-        }
+    @include mobile {
+      margin-top: pxToRem(177);
+      gap: pxToRem(34);
     }
 
-    &__heading {
-        display: flex;
-        flex-direction: column;
-
-        @include mobile {
-            margin-top: pxToRem(177);
-            gap: pxToRem(34);
-        }
-
-        @include tablet {
-            gap: pxToRem(20);
-        }
-
-        @include desktop-light {
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        @include desktop {
-            position: relative;
-        }
+    @include tablet {
+      gap: pxToRem(20);
     }
 
-    &__heading-container {
-        display: flex;
-        flex-direction: column;
-
-        @include mobile {
-            gap: pxToRem(48);
-            max-width: pxToRem(320);
-        }
-
-        @include tablet {
-            gap: pxToRem(40);
-            max-width: pxToRem(500);
-        }
-        @include desktop-light {
-            gap: pxToRem(25);
-            max-width: pxToRem(800);
-        }
-
-        @include desktop {
-            gap: pxToRem(25);
-            max-width: pxToRem(1135);
-        }
+    @include desktop-light {
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
 
-    &__subtitle {
-        color: $color-white;
-        position: relative;
+    @include desktop {
+      position: relative;
+    }
+  }
 
-        ::before {
-            content: "";
-            position: absolute;
-            width: pxToRem(4);
-            height: pxToRem(4);
-            border-radius: 50%;
-            box-shadow: 0 0 pxToRem(1) pxToRem(1) $color-white;
-            background: $color-white;
-        }
+  &__heading-container {
+    display: flex;
+    flex-direction: column;
 
-        @include mobile {
-            padding-left: pxToRem(15);
-
-            ::before {
-                top: pxToRem(6);
-                left: 0;
-            }
-        }
-
-        @include tablet {
-            padding-left: pxToRem(15);
-
-            ::before {
-                top: pxToRem(6);
-                left: 0;
-            }
-        }
-
-        @include desktop-light {
-            max-width: pxToRem(631);
-            padding-left: pxToRem(19);
-
-            ::before {
-                top: pxToRem(16);
-                left: pxToRem(-1);
-            }
-        }
-
-        @include desktop {
-            max-width: pxToRem(631);
-            padding-left: pxToRem(19);
-
-            ::before {
-                top: pxToRem(16);
-                left: pxToRem(-1);
-            }
-        }
+    @include mobile {
+      gap: pxToRem(48);
+      max-width: pxToRem(320);
     }
 
-    &__subtitle-text {
-        line-height: 132.4%;
-
-        @include mobile {
-            font-size: pxToRem(12);
-        }
-
-        @include desktop-light {
-            font-size: pxToRem(20);
-        }
-
-        @include desktop {
-            font-size: pxToRem(20);
-        }
+    @include tablet {
+      gap: pxToRem(40);
+      max-width: pxToRem(500);
+    }
+    @include desktop-light {
+      gap: pxToRem(25);
+      max-width: pxToRem(800);
     }
 
-    &__title {
-        color: $color-white;
-        
-        @include mobile {
-            padding: 0 pxToRem(2);
-        }
+    @include desktop {
+      gap: pxToRem(25);
+      max-width: pxToRem(1135);
+    }
+  }
 
-        @include desktop {
-            padding: 0 pxToRem(5);
-        }
+  &__subtitle {
+    color: $color-white;
+    position: relative;
+
+    ::before {
+      content: "";
+      position: absolute;
+      width: pxToRem(4);
+      height: pxToRem(4);
+      border-radius: 50%;
+      box-shadow: 0 0 pxToRem(1) pxToRem(1) $color-white;
+      background: $color-white;
     }
 
-    &__title-text {
-        font-family: $font-Potra;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
+    @include mobile {
+      padding-left: pxToRem(15);
 
-        span {
-            font-family: $font-Body-Grotesque;
-            letter-spacing: 0.16em;
-        }
-
-        @include mobile {
-            font-size: pxToRem(40);
-            line-height: 108.5%;
-        }
-
-        @include tablet {
-            font-size: pxToRem(50);
-            line-height: 108.5%;
-        }
-
-        @include desktop-light {
-            font-size: pxToRem(100);
-            line-height: 109.5%;
-        }
-
-        @include desktop {
-            font-size: pxToRem(150);
-            line-height: 109.5%;
-        }
+      ::before {
+        top: pxToRem(6);
+        left: 0;
+      }
     }
 
+    @include tablet {
+      padding-left: pxToRem(15);
 
-    &__button {
-        padding: 0 pxToRem(7);
-        z-index: 2;
-
-        @include desktop-light {
-            position: absolute;
-            left: pxToRem(-1);
-            bottom: pxToRem(-120);
-        }
-
-        @include desktop {
-            position: absolute;
-            left: 0;
-            bottom: pxToRem(-108);
-        }
+      ::before {
+        top: pxToRem(6);
+        left: 0;
+      }
     }
 
-    &__button-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: pxToRem(-15) pxToRem(-15) pxToRem(20) rgba(0, 0, 0, 0.8);;
+    @include desktop-light {
+      max-width: pxToRem(631);
+      padding-left: pxToRem(19);
 
-        @include mobile {
-            width: pxToRem(153);
-            height: pxToRem(153);
-        }
-
-        @include tablet {
-            width: pxToRem(153);
-            height: pxToRem(153);
-        }
-        
-        @include desktop-light {
-            width: pxToRem(170);
-            height: pxToRem(170);
-        }
-
-        @include desktop {
-            width: pxToRem(170);
-            height: pxToRem(170);
-        }
+      ::before {
+        top: pxToRem(16);
+        left: pxToRem(-1);
+      }
     }
 
-    &__button-text {
-        font-weight: 700;
-        font-size: pxToRem(20);
-        line-height: 132.4%;
+    @include desktop {
+      max-width: pxToRem(631);
+      padding-left: pxToRem(19);
+
+      ::before {
+        top: pxToRem(16);
+        left: pxToRem(-1);
+      }
+    }
+  }
+
+  &__subtitle-text {
+    line-height: 132.4%;
+
+    @include mobile {
+      font-size: pxToRem(12);
     }
 
-    &__arrow {
-        position: absolute;
-
-        @include mobile {
-            bottom: pxToRem(55);
-            width: pxToRem(100);
-        }
-
-        @include tablet {
-            bottom: pxToRem(50);
-            width: pxToRem(100);
-        }
-
-        @include desktop-light {
-            bottom: pxToRem(60);
-            width: pxToRem(110);
-        }
-
-        @include desktop {
-            bottom: pxToRem(60);
-            width: pxToRem(110);
-        }
+    @include desktop-light {
+      font-size: pxToRem(20);
     }
 
-    &__image {
-        position: absolute;
+    @include desktop {
+      font-size: pxToRem(20);
+    }
+  }
 
-        @include mobile {
-            top: pxToRem(17);
-            right: 2%;
-        }
+  &__title {
+    color: $color-white;
 
-        @include tablet {
-            top: pxToRem(20);
-            right: pxToRem(40);
-        }
-
-        @include desktop-light {
-            top: calc(50% - 280px);
-            left: calc(50% - 580px);
-        }
-
-        @include desktop {
-            top: calc(50% - 381px);
-            left: calc(50% - 611px);
-        }
+    @include mobile {
+      padding: 0 pxToRem(2);
     }
 
-    &__img-mobile {
+    @include desktop {
+      padding: 0 pxToRem(5);
+    }
+  }
 
-        @include desktop-light {
-            display: none;
-        }
+  &__title-text {
+    font-family: $font-Potra;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 
-        @include desktop {
-            display: none;
-        }
+    span {
+      font-family: $font-Body-Grotesque;
+      letter-spacing: 0.16em;
     }
 
-    &__img-desktop {
-
-        @include tablet {
-            display: none;
-        }
-
-        @include desktop-light {
-
-            width: pxToRem(1200);
-            height: pxToRem(600);
-        }
-
-        @include mobile {
-            display: none;
-        }
+    @include mobile {
+      font-size: pxToRem(40);
+      line-height: 108.5%;
     }
 
-    &__shadow {
-        position: absolute;
-        z-index: -1;
-        width: pxToRem(1);
-        height: pxToRem(1);
-        border-radius: 50%;
-        opacity: 0.3;
-
-        @include mobile {
-            bottom: 10%;
-            right: 10%;
-            box-shadow: 0 0 pxToRem(1000) pxToRem(150) $color-white;
-        }
-
-        @include tablet {
-            top: 30%;
-            right: 10%;
-            box-shadow: 0 0 pxToRem(1000) pxToRem(200) $color-white;
-        }
-
-        @include desktop-light {
-            top: 0;
-            right: 45%;
-            box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
-        }
-
-        @include desktop {
-            top: 0;
-            right: 45%;
-            box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
-        }
+    @include tablet {
+      font-size: pxToRem(50);
+      line-height: 108.5%;
     }
+
+    @include desktop-light {
+      font-size: pxToRem(100);
+      line-height: 109.5%;
+    }
+
+    @include desktop {
+      font-size: pxToRem(150);
+      line-height: 109.5%;
+    }
+  }
+
+  &__button {
+    padding: 0 pxToRem(7);
+    z-index: 2;
+
+    @include desktop-light {
+      position: absolute;
+      left: pxToRem(-1);
+      bottom: pxToRem(-120);
+    }
+
+    @include desktop {
+      position: absolute;
+      left: 0;
+      bottom: pxToRem(-108);
+    }
+  }
+
+  &__button-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: pxToRem(-15) pxToRem(-15) pxToRem(20) rgba(0, 0, 0, 0.8);
+
+    @include mobile {
+      width: pxToRem(153);
+      height: pxToRem(153);
+    }
+
+    @include tablet {
+      width: pxToRem(153);
+      height: pxToRem(153);
+    }
+
+    @include desktop-light {
+      width: pxToRem(170);
+      height: pxToRem(170);
+    }
+
+    @include desktop {
+      width: pxToRem(170);
+      height: pxToRem(170);
+    }
+  }
+
+  &__button-text {
+    font-weight: 700;
+    font-size: pxToRem(20);
+    line-height: 132.4%;
+  }
+
+  &__arrow {
+    position: absolute;
+
+    @include mobile {
+      bottom: pxToRem(55);
+      width: pxToRem(100);
+    }
+
+    @include tablet {
+      bottom: pxToRem(50);
+      width: pxToRem(100);
+    }
+
+    @include desktop-light {
+      bottom: pxToRem(60);
+      width: pxToRem(110);
+    }
+
+    @include desktop {
+      bottom: pxToRem(60);
+      width: pxToRem(110);
+    }
+  }
+
+  &__image {
+    position: absolute;
+
+    @include mobile {
+      top: pxToRem(17);
+      right: 2%;
+    }
+
+    @include tablet {
+      top: pxToRem(20);
+      right: pxToRem(40);
+    }
+
+    @include desktop-light {
+      top: calc(50% - 280px);
+      left: calc(50% - 580px);
+    }
+
+    @include desktop {
+      top: calc(50% - 381px);
+      left: calc(50% - 611px);
+    }
+  }
+
+  &__img-mobile {
+    @include desktop-light {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__img-desktop {
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop-light {
+      width: pxToRem(1200);
+      height: pxToRem(600);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    z-index: -1;
+    width: pxToRem(1);
+    height: pxToRem(1);
+    border-radius: 50%;
+    opacity: 0.3;
+
+    @include mobile {
+      bottom: 10%;
+      right: 10%;
+      box-shadow: 0 0 pxToRem(1000) pxToRem(150) $color-white;
+    }
+
+    @include tablet {
+      top: 30%;
+      right: 10%;
+      box-shadow: 0 0 pxToRem(1000) pxToRem(200) $color-white;
+    }
+
+    @include desktop-light {
+      top: 0;
+      right: 45%;
+      box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
+    }
+
+    @include desktop {
+      top: 0;
+      right: 45%;
+      box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
+    }
+  }
 }

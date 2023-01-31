@@ -1,445 +1,432 @@
 .about {
+  @include desktop-light {
+    position: relative;
+  }
+
+  @include desktop {
+    position: relative;
+  }
+
+  &__container {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: pxToRem(1);
+      background: #fff;
+    }
+
+    @include mobile {
+      position: relative;
+      padding-bottom: pxToRem(107);
+
+      &::before {
+        left: pxToRem(15);
+        min-height: pxToRem(489);
+      }
+    }
+
+    @include tablet {
+      position: relative;
+
+      &::before {
+        left: pxToRem(40);
+        width: pxToRem(1);
+        min-height: 100%;
+      }
+    }
 
     @include desktop-light {
-        position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      padding-top: pxToRem(130);
+
+      &::before {
+        left: pxToRem(80);
+        width: pxToRem(1);
+        min-height: 100%;
+      }
     }
 
     @include desktop {
-        position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      padding-top: pxToRem(209);
+
+      &::before {
+        left: pxToRem(100);
+        width: pxToRem(1);
+        min-height: 100%;
+      }
+    }
+  }
+
+  &__heading {
+    border-top: pxToRem(1) solid $color-white;
+    border-bottom: pxToRem(1) solid $color-white;
+
+    @include mobile {
+      padding-left: pxToRem(15);
     }
 
-    &__container {
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: pxToRem(1);
-            background: #fff;
-        }
-
-        @include mobile {
-            position: relative;
-            padding-bottom: pxToRem(107);
-
-            &::before {
-                left: pxToRem(15);
-                min-height: pxToRem(489);
-            }
-        }
-
-        @include tablet {
-            position: relative;
-
-            &::before {
-                left: pxToRem(40);
-                width: pxToRem(1);
-                min-height: 100%;
-            }
-        }
-
-        @include desktop-light {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            padding-top: pxToRem(130);
-
-            &::before {
-                left: pxToRem(80);
-                width: pxToRem(1);
-                min-height: 100%;
-            }
-        }
-
-        @include desktop {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            padding-top: pxToRem(209);
-
-            &::before {
-                left: pxToRem(100);
-                width: pxToRem(1);
-                min-height: 100%;
-            }
-        }
+    @include tablet {
+      padding: 0 pxToRem(40);
     }
 
-    &__heading {
-        border-top: pxToRem(1) solid $color-white;
-        border-bottom: pxToRem(1) solid $color-white;
-
-        @include mobile {
-            padding-left: pxToRem(15);
-        }
-
-        @include tablet {
-            padding: 0 pxToRem(40);
-        }
-
-        @include desktop-light {
-            width: 100vw;
-            padding: 0 pxToRem(95) 0 pxToRem(73);
-        }
-
-        @include desktop {
-            width: 100vw;
-            padding: 0 pxToRem(97);
-        }
+    @include desktop-light {
+      width: 100vw;
+      padding: 0 pxToRem(95) 0 pxToRem(73);
     }
 
-    &__title {
+    @include desktop {
+      width: 100vw;
+      padding: 0 pxToRem(97);
+    }
+  }
 
-        @include mobile {
-            padding: pxToRem(42) pxToRem(0) pxToRem(34) pxToRem(15);
-        }
-
-        @include tablet {
-            padding: pxToRem(20) pxToRem(40);
-        }
-
-        @include desktop-light {
-            padding: pxToRem(20) pxToRem(40);
-        }
-
-        @include desktop {
-            padding: pxToRem(35) pxToRem(66) pxToRem(42) pxToRem(66);
-        }
+  &__title {
+    @include mobile {
+      padding: pxToRem(42) pxToRem(0) pxToRem(34) pxToRem(15);
     }
 
-    &__title-text {
-        font-weight: 800;
-        line-height: 108.5%;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        color: $color-white;
-
-        @include mobile {
-            font-size: pxToRem(40);
-        }
-
-        @include tablet {
-            font-size: pxToRem(40);
-        }
-
-        @include desktop-light {
-            font-size: pxToRem(70);
-        }
-
-        @include desktop {
-            font-size: pxToRem(100);
-        }
+    @include tablet {
+      padding: pxToRem(20) pxToRem(40);
     }
 
-	&__content {
-
-        @include mobile {
-            padding-left: pxToRem(15);
-        }
-
-        @include tablet {
-            display: flex;
-            gap: pxToRem(20);
-            padding: 0 pxToRem(40);
-        }
-
-        @include desktop-light {
-            display: flex;
-            justify-content: center;
-            gap: pxToRem(37);
-            padding: 0 pxToRem(95) 0 pxToRem(73);
-        }
-
-        @include desktop {
-            display: flex;
-            justify-content: center;
-            gap: pxToRem(37);
-            padding: 0 pxToRem(97);
-        }
-        
-	}
-
-    &__content-info {
-
-        @include mobile {
-            padding: pxToRem(11) pxToRem(15) pxToRem(17) pxToRem(15);
-        }
-
-        @include tablet {
-            padding: pxToRem(20) pxToRem(40);
-        }
-
-        @include desktop-light {
-            flex: auto;
-            width: 50%;
-            padding: pxToRem(20) pxToRem(40);
-        }
-
-        @include desktop {
-            flex: auto;
-            width: 50%;
-            padding: pxToRem(77) pxToRem(66);
-        }
+    @include desktop-light {
+      padding: pxToRem(20) pxToRem(40);
     }
 
-	&__content-text {
-        line-height: 169%;
-        letter-spacing: 0.105em;
-        color: $color-white;
+    @include desktop {
+      padding: pxToRem(35) pxToRem(66) pxToRem(42) pxToRem(66);
+    }
+  }
 
-        @include desktop-light {
-            font-size: pxToRem(18);
-        }
+  &__title-text {
+    font-weight: 800;
+    line-height: 108.5%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: $color-white;
 
-        @include desktop {
-            font-size: pxToRem(20);
-        }
-	}
-
-    &__text-desktop {
-
-        @include mobile {
-            display: none;
-        }
+    @include mobile {
+      font-size: pxToRem(40);
     }
 
-	&__button {
-
-        @include mobile {
-            padding: 0 pxToRem(5);
-        }
-
-        @include tablet {
-            padding: pxToRem(60) pxToRem(15);
-        }
-
-        @include desktop-light {
-            width: 27.5%;
-            padding: pxToRem(40) pxToRem(20);
-        }
-
-        @include desktop {
-            width: 27.5%;
-            padding: pxToRem(93) 0;
-        }
-	}
-
-	&__button-content {
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        @include mobile {
-            flex-direction: column;
-            justify-content: center;
-            gap: pxToRem(11);
-            padding: pxToRem(20);
-            width: pxToRem(149);
-            height: pxToRem(146);
-        }
-
-        @include tablet {
-            padding: pxToRem(23);
-            width: pxToRem(149);
-            height: pxToRem(146);
-        }
-
-        @include desktop-light {
-            padding: pxToRem(36);
-            width: pxToRem(225);
-            height: pxToRem(221);
-        }
-
-        @include desktop {
-            padding: pxToRem(36);
-            width: pxToRem(225);
-            height: pxToRem(221);
-        }
-	}
-
-    &__button-text {
-        font-weight: 800;
-        line-height: 108.5%;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-
-        @include desktop-light {
-            font-size: pxToRem(20);
-        }
-
-        @include desktop {
-            font-size: pxToRem(20);
-        }
+    @include tablet {
+      font-size: pxToRem(40);
     }
 
-    &__arrow {
-
-        @include mobile {
-            bottom: pxToRem(50);
-            width: pxToRem(104);
-        }
-
-        @include tablet {
-            position: absolute;
-            bottom: pxToRem(40);
-            width: pxToRem(104);
-        }
-
-        @include desktop-light {
-            position: absolute;
-            bottom: pxToRem(79);
-            width: pxToRem(132);
-        }
-
-        @include desktop {
-            position: absolute;
-            bottom: pxToRem(79);
-            width: pxToRem(132);
-        }
+    @include desktop-light {
+      font-size: pxToRem(70);
     }
 
-    &__follow {
-        display: inline-block;
+    @include desktop {
+      font-size: pxToRem(100);
+    }
+  }
 
-        @include mobile {
-            position: absolute;
-            right: pxToRem(17);
-            bottom: pxToRem(107);
-        }
-
-        @include tablet {
-            padding: pxToRem(20) pxToRem(40);
-            right: pxToRem(40);
-            bottom: pxToRem(40);
-            margin-left: pxToRem(40);
-        }
-
-        @include desktop-light {
-            position: absolute;
-            left: 8%;
-            bottom: 5%;
-        }
-
-        @include desktop {
-            position: absolute;
-            left: 8%;
-            bottom: 5%;
-        }
+  &__content {
+    @include mobile {
+      padding-left: pxToRem(15);
     }
 
-    &__scroll-nav {
-
-        @include mobile {
-            display: none;
-        }
-
-        @include tablet {
-            display: none;
-        }
-
-        @include desktop-light {
-            position: absolute;
-            right: 2%;
-            bottom: 12%;
-        }
-
-        @include desktop {
-            position: absolute;
-            right: 3%;
-            bottom: pxToRem(102);
-        }
+    @include tablet {
+      display: flex;
+      gap: pxToRem(20);
+      padding: 0 pxToRem(40);
     }
+
+    @include desktop-light {
+      display: flex;
+      justify-content: center;
+      gap: pxToRem(37);
+      padding: 0 pxToRem(95) 0 pxToRem(73);
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      gap: pxToRem(37);
+      padding: 0 pxToRem(97);
+    }
+  }
+
+  &__content-info {
+    @include mobile {
+      padding: pxToRem(11) pxToRem(15) pxToRem(17) pxToRem(15);
+    }
+
+    @include tablet {
+      padding: pxToRem(20) pxToRem(40);
+    }
+
+    @include desktop-light {
+      flex: auto;
+      width: 50%;
+      padding: pxToRem(20) pxToRem(40);
+    }
+
+    @include desktop {
+      flex: auto;
+      width: 50%;
+      padding: pxToRem(77) pxToRem(66);
+    }
+  }
+
+  &__content-text {
+    line-height: 169%;
+    letter-spacing: 0.105em;
+    color: $color-white;
+
+    @include desktop-light {
+      font-size: pxToRem(18);
+    }
+
+    @include desktop {
+      font-size: pxToRem(20);
+    }
+  }
+
+  &__text-desktop {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__button {
+    @include mobile {
+      padding: 0 pxToRem(5);
+    }
+
+    @include tablet {
+      padding: pxToRem(60) pxToRem(15);
+    }
+
+    @include desktop-light {
+      width: 27.5%;
+      padding: pxToRem(40) pxToRem(20);
+    }
+
+    @include desktop {
+      width: 27.5%;
+      padding: pxToRem(93) 0;
+    }
+  }
+
+  &__button-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      gap: pxToRem(11);
+      padding: pxToRem(20);
+      width: pxToRem(149);
+      height: pxToRem(146);
+    }
+
+    @include tablet {
+      padding: pxToRem(23);
+      width: pxToRem(149);
+      height: pxToRem(146);
+    }
+
+    @include desktop-light {
+      padding: pxToRem(36);
+      width: pxToRem(225);
+      height: pxToRem(221);
+    }
+
+    @include desktop {
+      padding: pxToRem(36);
+      width: pxToRem(225);
+      height: pxToRem(221);
+    }
+  }
+
+  &__button-text {
+    font-weight: 800;
+    line-height: 108.5%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    @include desktop-light {
+      font-size: pxToRem(20);
+    }
+
+    @include desktop {
+      font-size: pxToRem(20);
+    }
+  }
+
+  &__arrow {
+    @include mobile {
+      bottom: pxToRem(50);
+      width: pxToRem(104);
+    }
+
+    @include tablet {
+      position: absolute;
+      bottom: pxToRem(40);
+      width: pxToRem(104);
+    }
+
+    @include desktop-light {
+      position: absolute;
+      bottom: pxToRem(79);
+      width: pxToRem(132);
+    }
+
+    @include desktop {
+      position: absolute;
+      bottom: pxToRem(79);
+      width: pxToRem(132);
+    }
+  }
+
+  &__follow {
+    display: inline-block;
+
+    @include mobile {
+      position: absolute;
+      right: pxToRem(17);
+      bottom: pxToRem(107);
+    }
+
+    @include tablet {
+      padding: pxToRem(20) pxToRem(40);
+      right: pxToRem(40);
+      bottom: pxToRem(40);
+      margin-left: pxToRem(40);
+    }
+
+    @include desktop-light {
+      position: absolute;
+      left: 8%;
+      bottom: 5%;
+    }
+
+    @include desktop {
+      position: absolute;
+      left: 8%;
+      bottom: 5%;
+    }
+  }
+
+  &__scroll-nav {
+    @include mobile {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop-light {
+      position: absolute;
+      right: 2%;
+      bottom: 12%;
+    }
+
+    @include desktop {
+      position: absolute;
+      right: 3%;
+      bottom: pxToRem(102);
+    }
+  }
 }
 
 .follow {
+  &__text {
+    line-height: 108.5%;
+    letter-spacing: 0.105em;
+    text-transform: uppercase;
+    color: $color-white;
 
-    &__text {
-        line-height: 108.5%;
-        letter-spacing: 0.105em;
-        text-transform: uppercase;
-        color: $color-white;
-
-        @include mobile {
-            font-size: pxToRem(13);
-            margin-bottom: pxToRem(7);
-            margin-left: pxToRem(8);
-        }
-
-        @include tablet {
-            font-size: pxToRem(20);
-            margin-bottom: pxToRem(2);
-            margin-left: pxToRem(13);
-        }
-
-        @include desktop-light {
-            font-size: pxToRem(20);
-            margin-bottom: pxToRem(22);
-            margin-left: pxToRem(13);
-        }
-
-        @include desktop {
-            font-size: pxToRem(20);
-            margin-bottom: pxToRem(22);
-            margin-left: pxToRem(13);
-        }
+    @include mobile {
+      font-size: pxToRem(13);
+      margin-bottom: pxToRem(7);
+      margin-left: pxToRem(8);
     }
 
-    &__items {
-        display: flex;
+    @include tablet {
+      font-size: pxToRem(20);
+      margin-bottom: pxToRem(2);
+      margin-left: pxToRem(13);
     }
 
-    &__item-link {
-
-        &:hover {
-            path {
-                transition: all 0.5s ease;
-                fill: $color-red;
-            }
-        }
-
-        @include mobile {
-            padding: pxToRem(8);
-        }
-
-        @include tablet {
-            padding: pxToRem(13);
-        }
-
-        @include desktop-light {
-            padding: pxToRem(13);
-        }
-
-        @include desktop {
-            padding: pxToRem(13);
-        }
+    @include desktop-light {
+      font-size: pxToRem(20);
+      margin-bottom: pxToRem(22);
+      margin-left: pxToRem(13);
     }
 
-#about-favicon-behance, 
-#about-favicon-facebook, 
-#about-favicon-instagram {
-
-        @include mobile {
-            width: pxToRem(28.11);
-            height: pxToRem(28.11);
-        }
-
-        @include tablet {
-            width: pxToRem(44.29);
-            height: pxToRem(44.29);
-        }
-
-        @include desktop-light {
-            width: pxToRem(44.29);
-            height: pxToRem(44.29);
-        }
-
-        @include desktop {
-            width: pxToRem(44.29);
-            height: pxToRem(44.29);
-        }
+    @include desktop {
+      font-size: pxToRem(20);
+      margin-bottom: pxToRem(22);
+      margin-left: pxToRem(13);
     }
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__item-link {
+    &:hover {
+      path {
+        transition: all 0.5s ease;
+        fill: $color-red;
+      }
+    }
+
+    @include mobile {
+      padding: pxToRem(8);
+    }
+
+    @include tablet {
+      padding: pxToRem(13);
+    }
+
+    @include desktop-light {
+      padding: pxToRem(13);
+    }
+
+    @include desktop {
+      padding: pxToRem(13);
+    }
+  }
+
+  #about-favicon-behance,
+  #about-favicon-facebook,
+  #about-favicon-instagram {
+    @include mobile {
+      width: pxToRem(28.11);
+      height: pxToRem(28.11);
+    }
+
+    @include tablet {
+      width: pxToRem(44.29);
+      height: pxToRem(44.29);
+    }
+
+    @include desktop-light {
+      width: pxToRem(44.29);
+      height: pxToRem(44.29);
+    }
+
+    @include desktop {
+      width: pxToRem(44.29);
+      height: pxToRem(44.29);
+    }
+  }
 }

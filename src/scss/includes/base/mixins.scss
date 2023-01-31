@@ -1,42 +1,42 @@
 // Media queries
 @mixin media($min, $max) {
-	@media (min-width: $min) and (max-width: $max) {
-		@content;
-	}
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
 }
 
 @mixin media-min($size) {
-	@media (min-width: $size) {
-		@content;
-	}
+  @media (min-width: $size) {
+    @content;
+  }
 }
 
 @mixin media-max($size) {
-	@media (max-width: $size) {
-		@content;
-	}
+  @media (max-width: $size) {
+    @content;
+  }
 }
 
 @mixin desktop() {
-	@media (min-width: $desktop-extra) {
-		@content;
-	}
+  @media (min-width: $desktop-extra) {
+    @content;
+  }
 }
 
 @mixin desktop-light() {
-	@media (min-width: $desktop) and (max-width: $desktop-extra) {
-		@content;
-	}
+  @media (min-width: $desktop) and (max-width: $desktop-extra) {
+    @content;
+  }
 }
 
 @mixin tablet() {
-	@media (min-width: $tablet) and (max-width: $desktop) {
-		@content;
-	}
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    @content;
+  }
 }
 
 @mixin mobile() {
-	@media (max-width: $tablet) {
-		@content;
-	}
+  @media (max-width: $tablet) {
+    @content;
+  }
 }

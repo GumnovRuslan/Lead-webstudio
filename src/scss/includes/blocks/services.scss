@@ -1,5 +1,4 @@
 .services {
-
   @include mobile {
     padding: 0 pxToRem(15);
   }
@@ -69,7 +68,6 @@
   }
 
   &__heading {
-
     @include mobile {
       position: absolute;
       top: pxToRem(80);
@@ -96,7 +94,6 @@
   }
 
   &__tabs {
-
     @include mobile {
       display: flex;
       flex-direction: column;
@@ -124,7 +121,6 @@
   }
 
   &__button {
-
     @include mobile {
       padding: pxToRem(10);
     }
@@ -137,7 +133,6 @@
       position: absolute;
       left: pxToRem(0);
       bottom: pxToRem(-43);
-
     }
 
     @include desktop {
@@ -199,7 +194,6 @@
   }
 
   &__button-arrow-white {
-
     @include mobile {
       width: pxToRem(105);
     }
@@ -240,7 +234,6 @@
 }
 
 .tabs {
-
   &__container {
     display: flex;
 
@@ -354,7 +347,7 @@
   &__slider {
     overflow-x: hidden;
     overflow-y: auto;
-  
+
     @include mobile {
       padding-left: 10px;
     }
