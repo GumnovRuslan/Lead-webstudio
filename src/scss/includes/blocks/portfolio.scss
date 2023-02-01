@@ -151,6 +151,8 @@
       gap: pxToRem(45);
       overflow: auto;
       padding: 0 pxToRem(9);
+      max-width: pxToRem(671);
+      margin: 0 auto;
     }
 
     @include tablet {
@@ -158,6 +160,8 @@
       flex-direction: column;
       gap: pxToRem(45);
       padding: 0 pxToRem(20);
+      max-width: pxToRem(1132);
+      margin: 0 auto;
     }
 
     @include desktop-light {
@@ -221,6 +225,7 @@
 
     @include desktop-light {
       gap: pxToRem(40);
+      max-width: pxToRem(646);
       max-height: pxToRem(475);
     }
 
@@ -280,7 +285,7 @@
   &__theme-image {
     @include mobile {
       min-width: pxToRem(311);
-      height: pxToRem(197);
+      height: pxToRem(199.4);
     }
 
     @include tablet {
@@ -291,6 +296,28 @@
     @include desktop-light {
       min-width: pxToRem(311);
       height: pxToRem(200);
+    }
+  }
+
+  &__image-mask {
+    @include mobile {
+      min-width: pxToRem(311);
+      height: pxToRem(196.8);
+    }
+  }
+
+  &__image-pearce {
+    @include mobile {
+      min-width: pxToRem(311);
+      height: pxToRem(204.6);
+    }
+    @include tablet {
+      min-width: pxToRem(509);
+      height: pxToRem(335);
+    }
+    @include desktop {
+      min-width: pxToRem(509);
+      height: pxToRem(335);
     }
   }
 
@@ -351,7 +378,7 @@
 
         @include mobile {
           .portfolio__slider-content-themes {
-            top: calc((480.5px + 40px) * 0 * -1);
+            top: calc((490.55px + 40px) * 0 * -1);
           }
         }
 
@@ -387,7 +414,7 @@
 
         @include mobile {
           .portfolio__slider-content-themes {
-            top: calc((480.5px + 40px) * 1 * -1);
+            top: calc((490.55px + 40px) * 1 * -1);
           }
         }
 
@@ -423,7 +450,7 @@
 
         @include mobile {
           .portfolio__slider-content-themes {
-            top: calc((480.5px + 40px) * 2 * -1);
+            top: calc((490.55px + 40px) * 2 * -1);
           }
         }
 
