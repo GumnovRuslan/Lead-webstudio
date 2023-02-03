@@ -237,6 +237,11 @@
     position: relative;
   }
 
+  &__form-error {
+    display: none;
+    color: $color-red;
+  }
+
   &__form-line {
     padding: pxToRem(20);
     font-family: $font-Montserrat;
@@ -253,6 +258,10 @@
     &:invalid:not(:placeholder-shown) {
       border-color: $color-red;
       border-radius: pxToRem(15);
+      + .contacts__form-error {
+        display: block;
+        margin-top: pxToRem(10);
+        }
     }
 
     @include mobile {
