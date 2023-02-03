@@ -244,16 +244,16 @@ a {
 
   &__track {
 
-    @include desktop {
+    @include desktop-light {
       position: relative;
-      height: pxToRem(687);
+      height: pxToRem(400);
       width: pxToRem(1);
       background: $color-white;
     }
 
-    @include desktop-light {
+    @include desktop {
       position: relative;
-      height: pxToRem(400);
+      height: pxToRem(550);
       width: pxToRem(1);
       background: $color-white;
     }
