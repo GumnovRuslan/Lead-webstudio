@@ -195,12 +195,10 @@ a {
     padding: pxToRem(15);
 
     &:hover {
-      .scroll-nav__text {
-        color: $color-red;
-        text-shadow: 0 0 pxToRem(4) $color-white;
+      .scroll-nav__link-text {
+        text-shadow: 0 0 pxToRem(4) $color-red;
         &::before {
           background: $color-red;
-          box-shadow: 0 0 pxToRem(4) $color-white;
         }
       }
     }
