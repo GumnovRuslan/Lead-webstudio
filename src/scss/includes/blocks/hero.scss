@@ -306,7 +306,7 @@
     }
   }
 
-  &__image {
+  &__image-background {
     position: absolute;
 
     @include mobile {
@@ -330,7 +330,7 @@
     }
   }
 
-  &__img-mobile {
+  &__image-background--mobile {
     @include desktop-light {
       display: none;
     }
@@ -340,7 +340,7 @@
     }
   }
 
-  &__img-desktop {
+  &__image-background--desktop {
     @include tablet {
       display: none;
     }

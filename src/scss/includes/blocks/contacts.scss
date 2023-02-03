@@ -596,7 +596,7 @@
       .contacts__card-mail--normal {
         color: $color-black;
       }
-      .arrow-white__item {
+      .arrow__item--white {
         background-color: $color-black;
         &::before {
           border-color: $color-black;
@@ -627,7 +627,7 @@
       .contacts__card-mail--different {
         color: $color-white;
       }
-      .arrow-black__item {
+      .arrow__item--black {
         background-color: $color-white;
         &::before {
           border-color: $color-white;
@@ -644,11 +644,11 @@
     color: $color-black;
   }
 
-  &__arrow-black {
+  &__arrow {
     width: 80%;
   }
 
-  &__arrow-white {
+  &__arrow {
     width: 80%;
   }
 

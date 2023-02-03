@@ -1,59 +1,39 @@
-<section id="section_2" class="about">
-	<!--не содержательное название id (нельзя использовать нейминг в духе первый, второй и т.д.)-->
+<section id="section_about" class="about">
 	<div class="about__container">
-		<div class="about__heading">
-			<!--Heading характерно для именования заголовка статьи, но не секции. Для секций используем title. В твоем случае это вообще обёртка заголовка, и такой нейминг в корне не верен  -->
-			<div class="about__title">
-				<h2 class="about__title-text">Informa<wbr />tion about</h2>
-				<!--Перенос через wbr переделать-->
-				<!--Тебе не нужна доп. обёртка для задания паддингов у заголовка. Убрать и перенеймить более адекватно (title-text - не верно по логие, т.к. твой title уже и есть по сути своей текст, плюс text здесь не является элементом по БЭМ)-->
-			</div>
-		</div>
+		<h2 class="about__title">Informa&shy;tion about</h2>
 		<div class="about__content">
-			<div class="about__content-info">
-				<p class="about__content-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					Duis aute irure dolor in reprehenderit in voluptate velit
-					esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non
-					<span class="about__text-desktop"
-						>proident, sunt in culpa qui officia deserunt mollit
-						anim id est laborum.Lorem ipsum dolor sit amet,
-						consectetur adipiscing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua. Ut enim ad
-						minim veniam, quis nostrud exercitation ullamco
-						labori</span
-					>
-					<!--desktop - модификатор. Учи БЭМ-->
-				</p>
-			</div>
-			<div class="about__button button">
-				<!--Зачем для элемента button нужен еще и доп класс button?????-->
-				<a href="#" class="button__container about__button-content">
-					<!--Неправильно организована вложенность в ссылку. Исправить и еще раз изучить этот вопрос-->
-					<p class="about__button-text">Start project</p>
-					<div class="about__arrow arrow-white">
-						<!--Нельзя сперва писать первым класс about__button а потом резко во вложенности менять его на about__arrow. Передлелать весь блок!!!-->
-						<div class="arrow-white__item"></div>
-						<!--та же история - первым идет класс высшего уровня, после - элементы или модификаторы и только потом новые классы-->
-					</div>
+			<p class="about__content-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non
+        <span class="about__text--desktop">
+          proident, sunt in culpa qui officia deserunt mollit
+          anim id est laborum.Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco
+          labori
+        </span>
+      </p>
+			<div class="about__button">
+				<a href="#" class="about__button-content">
+					<span class="about__button-text">Start project</span>
+					<div class="about__button-arrow arrow__item--white"></div>
 				</a>
 			</div>
 		</div>
-		<div class="about__follow follow">
-			<!--та же история - дублирование имени класса. Исправить-->
-			<p class="follow__text">follow us</p>
-			<!--тег р используется для больших объемов текста. для коротких текстовок используется span. Исправить-->
+		<div class="about__follow">
+			<span class="follow__text">follow us</span>
 			<div class="follow__items">
 				<a
 					href="https://www.behance.net/"
-					class="follow__item-link"
+					class="follow__items-link"
 					aria-label="about-favicon-behance"
 				>
-					<!--исправить нейминг класса-->
 					<svg
 						id="about-favicon-behance"
 						xmlns="http://www.w3.org/2000/svg"
@@ -89,10 +69,9 @@
 				</a>
 				<a
 					href="https://ru-ru.facebook.com/"
-					class="follow__item-link"
+					class="follow__items-link"
 					aria-label="about-favicon-facebook"
 				>
-					<!-- Та же история, что и с предыдущей ссылкой-->
 					<svg
 						id="about-favicon-facebook"
 						xmlns="http://www.w3.org/2000/svg"
@@ -116,10 +95,9 @@
 				</a>
 				<a
 					href="https://www.instagram.com/"
-					class="follow__item-link"
+					class="follow__items-link"
 					aria-label="about-favicon-instagram"
 				>
-					<!-- Та же история, что и с предыдущей ссылкой-->
 					<svg
 						id="about-favicon-instagram"
 						xmlns="http://www.w3.org/2000/svg"
@@ -151,13 +129,8 @@
 				</a>
 			</div>
 		</div>
-		<div class="scroll-nav about__scroll-nav">
-			<!--Повторения в именовании классов. Родительский класс не на первом месте-->
-			<label for="radio_6" class="scroll-nav__container">
-				<!--НЕ ИСПОЛЬЗУЕМ в именовании классов/атрибутов слова типа "первый, второй, один, два" и т.д. именуем СОДЕРЖАТЕЛЬНО  отражая СУТЬ элемента/секции/etc.-->
-				<span class="scroll-nav__text"> scroll down </span>
-				<!--Родительский класс не на первом месте. Хаотичный нейминг. Исправлять!-->
-			</label>
-		</div>
+		<label for="radio_contacts" class="about__scroll-nav scroll-nav__link">
+      <span class="scroll-nav__link-text"> scroll down </span>
+    </label>
 	</div>
 </section>

@@ -110,29 +110,9 @@ a {
 
 //===================================
 
-.arrow-black {
-  &__item {
-    position: relative;
-    height: pxToRem(2);
-    background: $color-black;
-    display: flex;
-    align-items: center;
+.arrow {
 
-    &:before {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: pxToRem(10);
-      height: pxToRem(10);
-      border-top: pxToRem(2) solid $color-black;
-      border-right: pxToRem(2) solid $color-black;
-      transform: rotate(45deg);
-    }
-  }
-}
-
-.arrow-white {
-  &__item {
+  &__item--white {
     position: relative;
     height: pxToRem(1);
     background: $color-white;
@@ -147,6 +127,25 @@ a {
       height: pxToRem(7);
       border-top: pxToRem(2) solid $color-white;
       border-right: pxToRem(2) solid $color-white;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__item--black {
+    position: relative;
+    height: pxToRem(2);
+    background: $color-black;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: pxToRem(10);
+      height: pxToRem(10);
+      border-top: pxToRem(2) solid $color-black;
+      border-right: pxToRem(2) solid $color-black;
       transform: rotate(45deg);
     }
   }
@@ -190,7 +189,7 @@ a {
 }
 
 .scroll-nav {
-  &__container {
+  &__link {
     display: inline-block;
     transform: rotate(-90deg);
     padding: pxToRem(15);
@@ -207,7 +206,7 @@ a {
     }
   }
 
-  &__text {
+  &__link-text {
     position: relative;
     font-size: pxToRem(20);
     line-height: 132.4%;
@@ -526,33 +525,6 @@ a {
 }
 
 // ====ANIMATION======
-
-// .heading-vertical {
-//   position: relative;
-//   animation: jump 4s ease-in-out 0s normal running none;
-
-//   @keyframes jump {
-    
-//     0% {
-//       bottom: 100%;
-//     }
-//     20% {
-//       bottom: 24.5%;
-//     }
-//     40% {
-//       bottom: 50%;
-//     }
-//     60% {
-//       bottom: 24.5%;
-//     }
-//     80% {
-//       bottom: 30%;
-//     }
-//     100% {
-//       bottom: 24.5%;
-//     }
-//   }
-// }
 
 .button, .scroll-nav {
   animation: emergence 2s linear 0s normal running none;
