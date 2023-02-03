@@ -196,7 +196,7 @@ a {
     padding: pxToRem(15);
 
     &:hover {
-      .scroll-nav__link-text {
+      .scroll-nav__text {
         text-shadow: 0 0 pxToRem(4) $color-red;
         &::before {
           background: $color-red;
@@ -205,7 +205,7 @@ a {
     }
   }
 
-  &__link-text {
+  &__text {
     position: relative;
     font-size: pxToRem(20);
     line-height: 132.4%;
