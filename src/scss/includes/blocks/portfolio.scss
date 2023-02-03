@@ -71,6 +71,7 @@
   }
 
   &__heading {
+
     @include mobile {
       position: relative;
       display: flex;
@@ -91,7 +92,7 @@
     }
   }
 
-  &__title-text {
+  &__title {
     position: absolute;
     color: $color-white;
 
@@ -116,7 +117,7 @@
     }
   }
 
-  &__subtitle-text {
+  &__subtitle {
     line-height: 169%;
     letter-spacing: 0.105em;
     color: $color-white;

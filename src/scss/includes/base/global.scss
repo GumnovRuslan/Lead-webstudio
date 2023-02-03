@@ -151,40 +151,41 @@ a {
   }
 }
 
-.heading-vertical {
+.title--vertical {
+  font-family: $font-Body-Grotesque;
+  font-weight: 800;
+  line-height: 108.5%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: $color-white;
+  transform: rotate(-90deg);
 
-  &__text {
-    font-family: $font-Body-Grotesque;
-    font-weight: 800;
-    line-height: 108.5%;
-    letter-spacing: 0.19em;
-    text-transform: uppercase;
-    color: $color-white;
-    transform: rotate(-90deg);
+  @include mobile {
+    font-size: pxToRem(30);
+  }
 
-    @include mobile {
-      font-size: pxToRem(30);
-    }
+  @include tablet {
+    font-size: pxToRem(50);
+  }
 
-    @include tablet {
-      font-size: pxToRem(50);
-    }
+  @include desktop-light {
+    font-size: pxToRem(60);
+  }
 
-    @include desktop-light {
-      font-size: pxToRem(60);
-    }
-
-    @include desktop {
-      font-size: pxToRem(70);
-    }
+  @include desktop {
+    font-size: pxToRem(70);
   }
 }
 
 .button {
-  &__container {
+  &__link {
+    display: flex;
+    justify-content: center;
     border-radius: 50%;
     background: $color-red;
     color: $color-white;
+    font-weight: 700;
+    line-height: 132.4%;
   }
 }
 

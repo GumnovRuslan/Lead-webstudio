@@ -62,7 +62,7 @@
     }
   }
 
-  &__heading {
+  &__title {
     position: absolute;
 
     @include mobile {
@@ -132,29 +132,13 @@
   }
 
   &__us-form {
-    display: flex;
-    flex-direction: column;
-
-    @include mobile {
-      gap: pxToRem(35);
-    }
 
     @include tablet {
-      justify-content: center;
       width: pxToRem(600);
-      gap: pxToRem(35);
-    }
-
-    @include desktop-light {
-      gap: pxToRem(30);
-    }
-
-    @include desktop {
-      gap: pxToRem(50);
     }
   }
 
-  &__us-title-text {
+  &__us-title {
     font-family: $font-Body-Grotesque;
     font-weight: 800;
     font-size: pxToRem(30);
@@ -180,7 +164,7 @@
     }
   }
 
-  &__us-subtitle-text {
+  &__us-subtitle {
     font-size: pxToRem(20);
     line-height: 108.5%;
     letter-spacing: 0.105em;
@@ -188,6 +172,19 @@
 
     @include mobile {
       font-size: pxToRem(16);
+      margin-bottom: pxToRem(35);
+    }
+
+    @include tablet {
+      margin-bottom: pxToRem(35);
+    }
+
+    @include desktop-light {
+      margin-bottom: pxToRem(30);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(50);
     }
   }
 
