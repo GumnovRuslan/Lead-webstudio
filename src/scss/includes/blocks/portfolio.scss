@@ -478,3 +478,81 @@
     }
   }
 }
+
+body[dir="rtl"] {
+
+  .portfolio {
+    @include mobile {
+      padding-left: 0;
+      padding-right: pxToRem(15);
+    }
+  
+    @include tablet {
+      padding-left: 0;
+      padding-right: pxToRem(40);
+    }
+  
+    &__title {
+      left: auto;
+      @include mobile {
+        right: pxToRem(-78);
+      }
+
+      @include tablet {
+        right: pxToRem(-126);
+      }
+
+      @include desktop-light {
+        right: pxToRem(-110);
+      }
+
+      @include desktop {
+        right: pxToRem(-90);
+      }
+    }
+
+    &__container {
+
+      @include mobile {
+        border-left: 0;
+        border-right: pxToRem(1) solid $color-white;
+      }
+
+      @include tablet {
+        border-left: 0;
+        border-right: pxToRem(1) solid $color-white;
+      }
+
+      @include desktop-light {
+        padding-left: 0;
+        padding-right: pxToRem(80);
+
+        &::before {
+          left: auto;
+          right: pxToRem(80);
+        }
+      }
+
+      @include desktop {
+        padding-left: 0;
+        padding-right: pxToRem(80);
+
+        &::before {
+          left: auto;
+          right: pxToRem(128);
+        }
+      }
+    }
+
+    &__scroll-nav {
+      right: auto;
+      @include desktop-light {
+        left: 2%;
+      }
+  
+      @include desktop {
+        left: 5%;
+      }
+    }
+  }
+}

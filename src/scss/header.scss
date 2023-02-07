@@ -402,8 +402,13 @@
     }
 }
 
-// @media (min-width: 1621px) and (max-width: 1800px) {
-//     .header__container {
-//         padding-left: pxToRem(90);
-//     }
-// }
+body[dir="rtl"] {
+    .header__nav-item::before {
+        left: auto;
+        right: -0.125rem;
+    }
+
+    .header__main {
+        left: 100vw;
+    }
+}

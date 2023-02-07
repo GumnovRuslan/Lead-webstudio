@@ -621,3 +621,34 @@
     }
   }
 }
+
+body[dir="rtl"] {
+  .reviews__radio {
+  
+    &:checked {
+      &[id="reviews-slider_1"] {
+        ~ .slider {
+          .slider__container {
+            right: calc((100% + 50px) * 0 * -1);
+          }
+        }
+      }
+  
+      &[id="reviews-slider_2"] {
+        ~ .slider {
+          .slider__container {
+            right: calc((100% + 50px) * 1 * -1);
+          }
+        }
+      }
+  
+      &[id="reviews-slider_3"] {
+        ~ .slider {
+          .slider__container {
+            right: calc((100% + 50px) * 2 * -1);
+          }
+        }
+      }
+    }
+  }
+}

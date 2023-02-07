@@ -77,31 +77,31 @@
     border-bottom: pxToRem(1) solid $color-white;
 
     @include mobile {
-      padding: pxToRem(42) pxToRem(15) pxToRem(34) pxToRem(30);
+      padding: pxToRem(42) pxToRem(30) pxToRem(34) pxToRem(30);
       font-size: pxToRem(40);
     }
 
     @include tablet {
-      padding: pxToRem(20) pxToRem(40) pxToRem(20) pxToRem(80);
+      padding: pxToRem(20) pxToRem(80) pxToRem(20) pxToRem(80);
       font-size: pxToRem(40);
     }
 
     @include desktop-light {
       width: 100vw;
-      padding: pxToRem(20) pxToRem(20) pxToRem(20) pxToRem(113);
+      padding: pxToRem(20) pxToRem(113) pxToRem(20) pxToRem(113);
       font-size: pxToRem(70);
     }
 
     @include desktop {
       width: 100vw;
-      padding: pxToRem(35) pxToRem(66) pxToRem(42) pxToRem(163);
+      padding: pxToRem(35) pxToRem(163) pxToRem(42) pxToRem(163);
       font-size: pxToRem(100);
     }
   }
 
   &__content {
     @include mobile {
-      padding-left: pxToRem(15);
+      padding: 0 pxToRem(15);
     }
 
     @include tablet {
@@ -389,5 +389,89 @@
   @include desktop {
     width: pxToRem(44.29);
     height: pxToRem(44.29);
+  }
+}
+
+body[dir="rtl"] {
+
+  .about__follow {
+    @include mobile {
+      right: auto;
+      left: pxToRem(17);
+    }
+
+    @include tablet {
+      margin-left: 0;
+      margin-right: pxToRem(67);
+    }
+
+    @include desktop-light {
+      left: auto;
+      right: 8%;
+    }
+
+    @include desktop {
+      left: auto;
+      right: 8%;
+    }
+  }
+
+  .about__button {
+    @include mobile {
+      margin-left: 0;
+      margin-right: pxToRem(15);
+    }
+  }
+
+  .about__container::before {
+    left: auto;
+
+    @include mobile {
+      right: pxToRem(15);
+    }
+
+    @include tablet {
+      right: pxToRem(40);
+    }
+
+    @include desktop-light {
+      right: pxToRem(80);
+    }
+
+    @include desktop {
+      right: pxToRem(100);
+    }
+  }
+
+  .follow__text {
+    margin-left: 0;
+
+    @include mobile {
+      margin-right: pxToRem(8);
+    }
+
+    @include tablet {
+      margin-right: pxToRem(8);
+    }
+
+    @include desktop-light {
+      margin-right: pxToRem(13);
+    }
+
+    @include desktop {
+      margin-right: pxToRem(13);
+    }
+  }
+
+  .about__scroll-nav {
+    right: auto;
+
+    @include desktop-light {
+      left: 2%;
+    }
+
+    @include desktop {
+      left: 3%;
+    }
   }
 }

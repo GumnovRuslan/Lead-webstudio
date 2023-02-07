@@ -363,7 +363,82 @@
 
 
 body[dir="rtl"] {
+
   .hero__image-background {
       transform: scale(-1, 1);
+
+      @include mobile {
+        right: auto;
+        left: 2%;
+      }
+      
+      @include tablet {
+        right: auto;
+        left: pxToRem(40);
+      }
+
+      @include desktop-light {
+        left: auto;
+        right: calc(50% - 580px);
+      }
+
+      @include desktop {
+        left: auto;
+        right: calc(50% - 611px);
+      }
+  }
+
+  .stap-slider {
+    right: auto;
+    left: -2.375rem;
+    transform: rotate(-90deg);
+  }
+
+  .hero__content {
+
+    @include desktop-light {
+      padding-left: 0;
+      padding-right: pxToRem(100);
+    }
+  }
+
+  .hero__subtitle {
+
+    @include mobile {
+      padding-right: pxToRem(15);
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    @include tablet {
+      padding-right: pxToRem(15);
+
+      &::before {
+        right: 0;
+      }
+    }
+    
+    @include desktop-light {
+      padding-right: pxToRem(19);
+      
+      &::before {
+        right: 0;
+      }
+    }
+
+    @include desktop {
+      padding-right: pxToRem(19);
+      
+      &::before {
+        right: 0;
+      }
+    }
+  }
+
+  .hero__button {
+    right: 0;
+    left: auto;
   }
 }

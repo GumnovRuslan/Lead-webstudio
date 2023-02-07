@@ -328,7 +328,7 @@
     overflow-y: auto;
 
     @include mobile {
-      padding-left: 10px;
+      padding-left: pxToRem(10);
     }
   }
 
@@ -503,6 +503,146 @@
         }
         .tabs__slider-container {
           left: calc((100% + 100px) * 3 * -1);
+        }
+      }
+    }
+  }
+}
+
+body[dir="rtl"] {
+
+  .tabs__slider {
+    @include mobile {
+      padding-right: pxToRem(10);
+    }
+  }
+
+  .tabs__nav {
+    padding-right: pxToRem(82);
+    padding-left: pxToRem(42);
+  }
+
+  .services__title {
+    left: auto;
+
+    @include mobile {
+      right: pxToRem(-63);
+    }
+
+    @include tablet {
+      right: pxToRem(-100);
+    }
+
+    @include desktop-light {
+      right: pxToRem(-80);
+    }
+
+    @include desktop {
+      right: pxToRem(-63);
+    }
+  }
+
+  .services__container {
+
+    @include mobile {
+      border-left: 0;
+      border-right: pxToRem(1) solid $color-white;
+    }
+
+    @include tablet {
+      border-left: 0;
+      border-right: pxToRem(1) solid $color-white;
+    }
+
+    @include desktop-light {
+      &::before {
+        left: auto;
+        right: pxToRem(80);
+      }
+    }
+
+    @include desktop {
+      &::before {
+        left: auto;
+        right: pxToRem(100);
+      }
+    }
+  }
+
+  .services__button {
+    left: auto;
+    @include desktop-light {
+      right: 0;
+    }
+
+    @include desktop {
+      right: pxToRem(26);
+    }
+  }
+
+  .tabs__content-img {
+    @include mobile {
+      background-position: 36% 50%, top right;
+    }
+
+    @include tablet {
+      background-position: 36% 50%, top right;
+    }
+
+    @include desktop-light {
+      background-position: 36% 50%, top right;
+    }
+
+    @include desktop {
+      background-position: 37% 50%, top right;
+    }
+  }
+
+  .services__scroll-nav {
+    right: auto;
+    @include desktop-light {
+      left: 3%;
+    }
+
+    @include desktop {
+      position: absolute;
+      left: 9.3%;
+    }
+  }
+
+  .services__radio {
+    display: none;
+  
+    &:checked {
+      &[id="services-radio_1"] {
+        ~ .tabs {
+          .tabs__slider-container {
+            right: calc((100% + 100px) * 0 * -1);
+          }
+        }
+      }
+  
+      &[id="services-radio_2"] {
+        ~ .tabs {
+          .tabs__slider-container {
+            right: calc((100% + 100px) * 1 * -1);
+          }
+        }
+      }
+  
+      &[id="services-radio_3"] {
+        ~ .tabs {
+          .tabs__slider-container {
+            right: calc((100% + 100px) * 2 * -1);
+          }
+        }
+      }
+  
+      &[id="services-radio_4"] {
+        ~ .tabs {
+          .tabs__slider-container {
+            right: calc((100% + 100px) * 3 * -1);
+          }
         }
       }
     }

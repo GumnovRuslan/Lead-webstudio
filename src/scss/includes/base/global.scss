@@ -151,6 +151,12 @@ a {
   }
 }
 
+body[dir="rtl"] {
+  .arrow__item--white, .arrow__item--black {
+    transform: scale(-1, 1)
+  }
+}
+
 .title--vertical {
   font-family: $font-Body-Grotesque;
   font-weight: 800;
