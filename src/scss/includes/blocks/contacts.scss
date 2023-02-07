@@ -237,6 +237,7 @@
   &__form-error {
     display: none;
     color: $color-red;
+    text-shadow: 0 0 pxToRem(2) $color-red;
   }
 
   &__form-line {

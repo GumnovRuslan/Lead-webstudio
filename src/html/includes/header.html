@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="css/main.min.css">
     <title><%=title%></title>
   </head>
-  <body>
+  <body dir="rtl">
     <input type="checkbox" class="burger__checkbox" id="burger-checkbox">
     <header class="header">
       <div class="header__container">
         <div class="header__navigation">
-          <a href="https://test-task-site-2.netlify.app/" class="header__logo">
+          <a href="https://test-task-site-2.netlify.app/" class="header__logo" tabindex="1">
             <svg class="header__logo--desktop" id="logo-desktop" aria-label="lead web studio logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="290" height="42" viewBox="0 0 290 42" fill="none">
               <rect width="290" height="42" fill="url(#pattern0)"/>
               <defs>
@@ -39,39 +39,39 @@
           <div class="header__main">
             <div class="header__dop-service">
               <div class="header__languages">
-                <select class="header__drop-down" name="languages" id="languages">
+                <select class="header__drop-down" name="languages" id="languages" tabindex="2">
                   <option class="header__drop-list" value="en">en</option>
                   <option class="header__drop-list" value="ru">ru</option>
                   <option class="header__drop-list" value="br">br</option>
                 </select>
               </div>
-              <label class="switch header__switch">
-                <input class="switch__checkbox" type="checkbox">
+              <label for="checkbox" class="header__switch" tabindex="3">
+                <input class="switch__checkbox" type="checkbox" id="checkbox">
                 <span class="switch__slider"></span>
               </label>
             </div>
             <nav class="header__nav">
-              <label for="radio_hero" class="header__nav-item">Home
+              <label for="radio_hero" class="header__nav-item" tabindex="4">Home
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_about" class="header__nav-item">About
+              <label for="radio_about" class="header__nav-item" tabindex="5">About
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_portfolio" class="header__nav-item">Works
+              <label for="radio_portfolio" class="header__nav-item" tabindex="6">Works
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_reviews" class="header__nav-item">Prices
+              <label for="radio_reviews" class="header__nav-item" tabindex="7">Prices
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_services" class="header__nav-item">For clients
+              <label for="radio_services" class="header__nav-item" tabindex="8">For clients
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_contacts" class="header__nav-item">Contacts
+              <label for="radio_contacts" class="header__nav-item" tabindex="9">Contacts
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
@@ -79,12 +79,12 @@
           </div>
         </div>
         <div class="header__btn">
-          <a href="https://test-task-site-2.netlify.app/" class="header__btn-link" aria-label="button start project">
+          <button href="https://test-task-site-2.netlify.app/" class="header__btn-link" aria-label="button start project" tabindex="10">
             <p class="header__btn-text">Start a project</p>
             <div class="header__btn-badge">
               <div class="header__btn-container"></div>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </header>

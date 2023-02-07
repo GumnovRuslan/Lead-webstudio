@@ -325,6 +325,7 @@
     }
 
     &__btn-link {
+        background: inherit;
 
         @include mobile {
             display: block;

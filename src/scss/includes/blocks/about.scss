@@ -135,6 +135,7 @@
     }
 
     @include tablet {
+      width: 70%;
       padding: pxToRem(20) pxToRem(40);
     }
 
@@ -161,7 +162,7 @@
 
   &__button {
     @include mobile {
-      padding: 0 pxToRem(5);
+      margin-left: pxToRem(15);
     }
 
     @include tablet {
@@ -265,11 +266,9 @@
     }
 
     @include tablet {
-      padding: pxToRem(20) pxToRem(40);
-      right: pxToRem(40);
-      bottom: pxToRem(40);
-      margin-left: pxToRem(40);
-      gap: pxToRem(2);
+      margin-top: pxToRem(20);
+      margin-left: pxToRem(67);
+      gap: pxToRem(10);
     }
 
     @include desktop-light {
