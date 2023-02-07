@@ -329,7 +329,7 @@
 
   &__shadow {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     width: pxToRem(1);
     height: pxToRem(1);
     border-radius: 50%;
@@ -358,5 +358,12 @@
       right: 45%;
       box-shadow: 0 0 pxToRem(1000) pxToRem(250) $color-white;
     }
+  }
+}
+
+
+body[dir="rtl"] {
+  .hero__image-background {
+      transform: scale(-1, 1);
   }
 }
