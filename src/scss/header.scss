@@ -147,47 +147,47 @@
         }
     }
 
-#logo-desktop {
+    &__logo--desktop {
 
-    @include mobile {
-        display: none;
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            width: pxToRem(290);
+            height: pxToRem(42);
+        }
+
+        @include desktop-light {
+            display: none;
+        }
+
+        @include desktop {
+            width: pxToRem(290);
+            height: pxToRem(42);
+        }
     }
 
-    @include tablet {
-        width: pxToRem(290);
-        height: pxToRem(42);
-    }
+    &__logo--mobile {
 
-    @include desktop-light {
-        display: none;
-    }
+        @include mobile {
+            width: pxToRem(144);
+            height: pxToRem(54);
+        }
+        
+        @include tablet {
+            display: none;
+        }
 
-    @include desktop {
-        width: pxToRem(290);
-        height: pxToRem(42);
-    }
-}
+        @include desktop-light {
+            width: pxToRem(200);
+            height: pxToRem(80);
+        }
 
-#logo-mobile {
-
-    @include mobile {
-        width: pxToRem(144);
-        height: pxToRem(54);
+        @include desktop {
+            display: none;
+        }
     }
-    
-    @include tablet {
-        display: none;
-    }
-
-    @include desktop-light {
-        width: pxToRem(200);
-        height: pxToRem(80);
-    }
-
-    @include desktop {
-        display: none;
-    }
-}
 
     &__dop-service {
         display: flex;
@@ -325,6 +325,7 @@
     }
 
     &__btn-link {
+        background: inherit;
 
         @include mobile {
             display: block;
@@ -401,8 +402,13 @@
     }
 }
 
-// @media (min-width: 1621px) and (max-width: 1800px) {
-//     .header__container {
-//         padding-left: pxToRem(90);
-//     }
-// }
+body[dir="rtl"] {
+    .header__nav-item::before {
+        left: auto;
+        right: -0.125rem;
+    }
+
+    .header__main {
+        left: 100vw;
+    }
+}

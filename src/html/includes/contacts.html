@@ -1,17 +1,13 @@
-<section id="section_6" class="contacts">
+<section id="section_contacts" class="contacts">
   <div class="contacts__container">
-    <div class="contacts__heading">
-      <h2 class="contacts__heading-text heading-vertical__text">contacts</h2>
-    </div>
+    <h2 class="contacts__title title--vertical">contacts</h2>
     <div class="contacts__us">
       <div class="contacts__us-container">
         <div class="contacts__us-form">
-          <div class="contacts__us-heading">
-            <h3 class="contacts__us-title-text">contact us</h3>
-            <p class="contacts__us-subtitle-text">
-              Let’s get to the nex level together
-            </p>
-          </div>
+          <h3 class="contacts__us-title">contact us</h3>
+          <p class="contacts__us-subtitle">
+            Let’s get to the nex level together
+          </p>
           <form action="#" class="contacts__form">
             <div class="contacts__form-entry-point">
               <div class="contacts__form-container">
@@ -21,7 +17,9 @@
                   required
                   class="contacts__form-name contacts__form-line"
                   placeholder="Enter your first name"
+                  tabindex="31"
                 >
+                <span class="contacts__form-error">Это поле должно содержать Имя</span>
                 <span class="contacts__form-name-text form__text">
                   Full name
                 </span>
@@ -33,7 +31,9 @@
                   required
                   class="contacts__form-email contacts__form-line"
                   placeholder="Enter your email"
+                  tabindex="32"
                 >
+                <span class="contacts__form-error">Это поле должно содержать E-Mail</span>
                 <span class="contacts__form-email-text form__text">
                   Email
                 </span>
@@ -46,18 +46,19 @@
                   cols="30"
                   rows="10"
                   placeholder="Your massage"
+                  tabindex="33"
                 ></textarea>
                 <span class="contacts__form-email-help form__text">
                   How can we help?
                 </span>
               </div>
             </div>
-            <input type="submit" class="contacts__btn-send" value="Send">
+            <input type="submit" class="contacts__btn-send" value="Send" tabindex="34">
           </form>
         </div>
         <div class="contacts__contacts">
           <div class="contacts__addresses-container">
-            <a href="tel:+16475639114" class="contacts__addresses-content">
+            <a href="tel:+16475639114" class="contacts__addresses-content" tabindex="35">
               <svg
                 id="contacts-cell"
                 xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +81,7 @@
               </svg>
               <span class="contacts__addresses-info"> +1 (647)-563-9114 </span>
             </a>
-            <a href="mailto:lead@gmail.com" class="contacts__addresses-content">
+            <a href="mailto:lead@gmail.com" class="contacts__addresses-content" tabindex="36">
               <svg
                 id="contacts-email"
                 xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +116,7 @@
               </svg>
               <span class="contacts__addresses-info"> lead@gmail.com </span>
             </a>
-            <a href="#" class="contacts__addresses-content">
+            <a href="#" class="contacts__addresses-content" tabindex="37">
               <svg
                 id="contacts-tool"
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,6 +146,7 @@
             <a
               href="#"
               class="contacts__network-card contacts__network-card--normal"
+              tabindex="38"
             >
               <div class="contacts__card-content">
                 <p
@@ -155,15 +157,13 @@
                 <p class="contacts__card-mail contacts__card-mail--normal">
                   business@LEAD.com
                 </p>
-                <div class="arrow-white contacts__arrow-white">
-                  <div class="arrow-white__item"></div>
-                </div>
+                <div class="contacts__arrow arrow__item--white"></div>
               </div>
             </a>
             <div class="contacts__follow follow">
               <p class="contacts__follow-text">follow us</p>
               <div class="contacts__follow-items">
-                <a href="https://www.behance.net/" class="contacts__follow-link" aria-label="contacts-favicon-behance">
+                <a href="https://www.behance.net/" class="contacts__follow-link" aria-label="contacts-favicon-behance" tabindex="39">
                   <svg
                     id="image-behance"
                     xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@
                     </defs>
                   </svg>
                 </a>
-                <a href="https://ru-ru.facebook.com/" class="contacts__follow-link" aria-label="contacts-favicon-facebook">
+                <a href="https://ru-ru.facebook.com/" class="contacts__follow-link" aria-label="contacts-favicon-facebook" tabindex="40">
                   <svg
                     id="image-facebook"
                     xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +219,7 @@
                     </defs>
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/" class="contacts__follow-link" aria-label="contacts-favicon-instagram">
+                <a href="https://www.instagram.com/" class="contacts__follow-link" aria-label="contacts-favicon-instagram" tabindex="41">
                   <svg
                     id="image-instagram"
                     xmlns="http://www.w3.org/2000/svg"
@@ -254,6 +254,7 @@
             <a
               href="#"
               class="contacts__network-card contacts__network-card--different"
+              tabindex="42"
             >
               <div class="contacts__card-content">
                 <p
@@ -264,14 +265,13 @@
                 <p class="contacts__card-mail contacts__card-mail--different">
                   business@LEAD.com
                 </p>
-                <div class="arrow-black contacts__arrow-black">
-                  <div class="arrow-black__item"></div>
-                </div>
+                <div class="contacts__arrow arrow__item--black "></div>
               </div>
             </a>
             <a
               href="#"
               class="contacts__network-card contacts__network-card--normal"
+              tabindex="43"
             >
               <div class="contacts__card-content">
                 <p
@@ -282,19 +282,15 @@
                 <p class="contacts__card-mail contacts__card-mail--normal">
                   business@LEAD.com
                 </p>
-                <div class="arrow-white contacts__arrow-white">
-                  <div class="arrow-white__item"></div>
-                </div>
+                <div class="contacts__arrow arrow__item--white"></div>
               </div>
             </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="scroll-nav contacts__scroll-nav">
-      <label for="radio_1" class="scroll-nav__container">
-        <span class="scroll-nav__text"> scroll up </span>
-      </label>
-    </div>
+    <label for="radio_hero" class="contacts__scroll-nav scroll-nav__link" tabindex="44">
+      <span class="scroll-nav__text"> scroll up </span>
+    </label>
   </div>
 </section>

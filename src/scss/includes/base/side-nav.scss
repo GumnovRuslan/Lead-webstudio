@@ -57,10 +57,10 @@
     display: none;
 
     &:checked {
-      &[id="radio_1"] {
+      &[id="radio_hero"] {
         ~ .main {
           top: calc(100vh * 0 * -1);
-          .stap-slider_1 {
+          .stap-slider_hero {
             background: $color-red;
             width: pxToRem(14);
             height: pxToRem(14);
@@ -68,10 +68,10 @@
         }
       }
 
-      &[id="radio_2"] {
+      &[id="radio_about"] {
         ~ .main {
           top: calc(100vh * 1 * -1);
-          .stap-slider_2 {
+          .stap-slider_about {
             background: $color-red;
             width: pxToRem(14);
             height: pxToRem(14);
@@ -79,10 +79,10 @@
         }
       }
 
-      &[id="radio_3"] {
+      &[id="radio_reviews"] {
         ~ .main {
           top: calc(100vh * 2 * -1);
-          .stap-slider_3 {
+          .stap-slider_reviews {
             background: $color-red;
             width: pxToRem(14);
             height: pxToRem(14);
@@ -90,10 +90,10 @@
         }
       }
 
-      &[id="radio_4"] {
+      &[id="radio_services"] {
         ~ .main {
           top: calc(100vh * 3 * -1);
-          .stap-slider_4 {
+          .stap-slider_services {
             background: $color-red;
             width: pxToRem(14);
             height: pxToRem(14);
@@ -101,10 +101,10 @@
         }
       }
 
-      &[id="radio_5"] {
+      &[id="radio_portfolio"] {
         ~ .main {
           top: calc(100vh * 4 * -1);
-          .stap-slider_5 {
+          .stap-slider_portfolio {
             background: $color-red;
             width: pxToRem(14);
             height: pxToRem(14);
@@ -112,10 +112,10 @@
         }
       }
 
-      &[id="radio_6"] {
+      &[id="radio_contacts"] {
         ~ .main {
           top: calc(100vh * 5 * -1);
-          .stap-slider_6 {
+          .stap-slider_contacts {
             background: $color-red;
             width: pxToRem(14);
             height: pxToRem(14);

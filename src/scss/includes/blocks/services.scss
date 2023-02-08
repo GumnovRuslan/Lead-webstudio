@@ -67,7 +67,7 @@
     }
   }
 
-  &__heading {
+  &__title {
     @include mobile {
       position: absolute;
       top: pxToRem(80);
@@ -145,9 +145,8 @@
 
   &__button-container {
     position: relative;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-transform: uppercase;
 
     @include mobile {
       width: pxToRem(149);
@@ -168,45 +167,25 @@
       height: pxToRem(180);
       padding: 0 pxToRem(30);
       gap: pxToRem(15);
+      font-size: pxToRem(18);
     }
 
     @include desktop {
       width: pxToRem(225);
       height: pxToRem(221);
       padding: 0 pxToRem(36);
+      gap: pxToRem(15);
+      font-size: pxToRem(22);
     }
   }
 
-  &__button-text {
-    font-weight: 800;
-    line-height: 108.5%;
-    letter-spacing: 0.13em;
-    color: $color-white;
-    text-transform: uppercase;
-
-    @include desktop-light {
-      font-size: pxToRem(18);
-    }
-
-    @include desktop {
-      font-size: pxToRem(20);
-    }
-  }
-
-  &__button-arrow-white {
+  &__button-arrow {
     @include mobile {
       width: pxToRem(105);
     }
 
     @include desktop-light {
       width: pxToRem(100);
-    }
-
-    @include desktop {
-      position: absolute;
-      left: calc(50% - 75px);
-      bottom: 35%;
-      width: pxToRem(130);
     }
   }
 
@@ -349,7 +328,7 @@
     overflow-y: auto;
 
     @include mobile {
-      padding-left: 10px;
+      padding-left: pxToRem(10);
     }
   }
 
@@ -433,7 +412,7 @@
     }
   }
 
-  &__content-name {
+  &__content-subtitle {
     font-weight: 600;
     line-height: 108.5%;
     text-align: center;
@@ -457,7 +436,7 @@
     }
   }
 
-  &__content-text {
+  &__content-description {
     line-height: 168%;
     letter-spacing: 0.105em;
     color: $color-white;
@@ -524,6 +503,146 @@
         }
         .tabs__slider-container {
           left: calc((100% + 100px) * 3 * -1);
+        }
+      }
+    }
+  }
+}
+
+body[dir="rtl"] {
+
+  .tabs__slider {
+    @include mobile {
+      padding-right: pxToRem(10);
+    }
+  }
+
+  .tabs__nav {
+    padding-right: pxToRem(82);
+    padding-left: pxToRem(42);
+  }
+
+  .services__title {
+    left: auto;
+
+    @include mobile {
+      right: pxToRem(-63);
+    }
+
+    @include tablet {
+      right: pxToRem(-100);
+    }
+
+    @include desktop-light {
+      right: pxToRem(-80);
+    }
+
+    @include desktop {
+      right: pxToRem(-63);
+    }
+  }
+
+  .services__container {
+
+    @include mobile {
+      border-left: 0;
+      border-right: pxToRem(1) solid $color-white;
+    }
+
+    @include tablet {
+      border-left: 0;
+      border-right: pxToRem(1) solid $color-white;
+    }
+
+    @include desktop-light {
+      &::before {
+        left: auto;
+        right: pxToRem(80);
+      }
+    }
+
+    @include desktop {
+      &::before {
+        left: auto;
+        right: pxToRem(100);
+      }
+    }
+  }
+
+  .services__button {
+    left: auto;
+    @include desktop-light {
+      right: 0;
+    }
+
+    @include desktop {
+      right: pxToRem(26);
+    }
+  }
+
+  .tabs__content-img {
+    @include mobile {
+      background-position: 36% 50%, top right;
+    }
+
+    @include tablet {
+      background-position: 36% 50%, top right;
+    }
+
+    @include desktop-light {
+      background-position: 36% 50%, top right;
+    }
+
+    @include desktop {
+      background-position: 37% 50%, top right;
+    }
+  }
+
+  .services__scroll-nav {
+    right: auto;
+    @include desktop-light {
+      left: 3%;
+    }
+
+    @include desktop {
+      position: absolute;
+      left: 9.3%;
+    }
+  }
+
+  .services__radio {
+    display: none;
+  
+    &:checked {
+      &[id="services-radio_1"] {
+        ~ .tabs {
+          .tabs__slider-container {
+            right: calc((100% + 100px) * 0 * -1);
+          }
+        }
+      }
+  
+      &[id="services-radio_2"] {
+        ~ .tabs {
+          .tabs__slider-container {
+            right: calc((100% + 100px) * 1 * -1);
+          }
+        }
+      }
+  
+      &[id="services-radio_3"] {
+        ~ .tabs {
+          .tabs__slider-container {
+            right: calc((100% + 100px) * 2 * -1);
+          }
+        }
+      }
+  
+      &[id="services-radio_4"] {
+        ~ .tabs {
+          .tabs__slider-container {
+            right: calc((100% + 100px) * 3 * -1);
+          }
         }
       }
     }

@@ -41,7 +41,8 @@
 
     @include desktop {
       gap: pxToRem(67);
-      padding-top: pxToRem(58);
+      margin-top: pxToRem(100);
+      margin-right: pxToRem(100);
     }
   }
 
@@ -52,24 +53,6 @@
   }
 
   &__title {
-    @include mobile {
-      margin-bottom: pxToRem(18);
-    }
-
-    @include tablet {
-      margin-bottom: pxToRem(18);
-    }
-
-    @include desktop-light {
-      margin-bottom: pxToRem(15);
-    }
-
-    @include desktop {
-      margin-bottom: pxToRem(20);
-    }
-  }
-
-  &__title-text {
     font-family: $font-Body-Grotesque;
     font-weight: 800;
     line-height: 108.5%;
@@ -78,21 +61,25 @@
     color: $color-white;
 
     @include mobile {
+      margin-bottom: pxToRem(18);
       font-size: pxToRem(20);
       letter-spacing: 0.17em;
     }
 
     @include tablet {
+      margin-bottom: pxToRem(18);
       font-size: pxToRem(20);
       letter-spacing: 0.17em;
     }
 
     @include desktop-light {
+      margin-bottom: pxToRem(15);
       font-size: pxToRem(25);
       letter-spacing: 0.105em;
     }
 
     @include desktop {
+      margin-bottom: pxToRem(20);
       font-size: pxToRem(30);
       letter-spacing: 0.105em;
     }
@@ -629,6 +616,37 @@
         .btn-item-3 {
           background: $color-red;
           height: pxToRem(10);
+        }
+      }
+    }
+  }
+}
+
+body[dir="rtl"] {
+  .reviews__radio {
+  
+    &:checked {
+      &[id="reviews-slider_1"] {
+        ~ .slider {
+          .slider__container {
+            right: calc((100% + 50px) * 0 * -1);
+          }
+        }
+      }
+  
+      &[id="reviews-slider_2"] {
+        ~ .slider {
+          .slider__container {
+            right: calc((100% + 50px) * 1 * -1);
+          }
+        }
+      }
+  
+      &[id="reviews-slider_3"] {
+        ~ .slider {
+          .slider__container {
+            right: calc((100% + 50px) * 2 * -1);
+          }
         }
       }
     }

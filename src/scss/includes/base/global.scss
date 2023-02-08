@@ -110,8 +110,28 @@ a {
 
 //===================================
 
-.arrow-black {
-  &__item {
+.arrow {
+
+  &__item--white {
+    position: relative;
+    height: pxToRem(1);
+    background: $color-white;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: pxToRem(7);
+      height: pxToRem(7);
+      border-top: pxToRem(2) solid $color-white;
+      border-right: pxToRem(2) solid $color-white;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__item--black {
     position: relative;
     height: pxToRem(2);
     background: $color-black;
@@ -131,77 +151,61 @@ a {
   }
 }
 
-.arrow-white {
-  &__item {
-    position: relative;
-    height: pxToRem(1);
-    background: $color-white;
-    display: flex;
-    align-items: center;
-
-    &:before {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: pxToRem(7);
-      height: pxToRem(7);
-      border-top: pxToRem(2) solid $color-white;
-      border-right: pxToRem(2) solid $color-white;
-      transform: rotate(45deg);
-    }
+body[dir="rtl"] {
+  .arrow__item--white, .arrow__item--black {
+    transform: scale(-1, 1)
   }
 }
 
-.heading-vertical {
+.title--vertical {
+  font-family: $font-Body-Grotesque;
+  font-weight: 800;
+  line-height: 108.5%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: $color-white;
+  transform: rotate(-90deg);
 
-  &__text {
-    font-family: $font-Body-Grotesque;
-    font-weight: 800;
-    line-height: 108.5%;
-    letter-spacing: 0.19em;
-    text-transform: uppercase;
-    color: $color-white;
-    transform: rotate(-90deg);
+  @include mobile {
+    font-size: pxToRem(30);
+  }
 
-    @include mobile {
-      font-size: pxToRem(30);
-    }
+  @include tablet {
+    font-size: pxToRem(50);
+  }
 
-    @include tablet {
-      font-size: pxToRem(50);
-    }
+  @include desktop-light {
+    font-size: pxToRem(60);
+  }
 
-    @include desktop-light {
-      font-size: pxToRem(60);
-    }
-
-    @include desktop {
-      font-size: pxToRem(70);
-    }
+  @include desktop {
+    font-size: pxToRem(70);
   }
 }
 
 .button {
-  &__container {
+  &__link {
+    display: flex;
+    justify-content: center;
     border-radius: 50%;
     background: $color-red;
     color: $color-white;
+    font-weight: 700;
+    line-height: 132.4%;
   }
 }
 
 .scroll-nav {
-  &__container {
+  &__link {
     display: inline-block;
     transform: rotate(-90deg);
     padding: pxToRem(15);
 
     &:hover {
       .scroll-nav__text {
-        color: $color-red;
-        text-shadow: 0 0 pxToRem(4) $color-white;
+        text-shadow: 0 0 pxToRem(4) $color-red;
         &::before {
           background: $color-red;
-          box-shadow: 0 0 pxToRem(4) $color-white;
         }
       }
     }
@@ -247,16 +251,16 @@ a {
 
   &__track {
 
-    @include desktop {
+    @include desktop-light {
       position: relative;
-      height: pxToRem(687);
+      height: pxToRem(400);
       width: pxToRem(1);
       background: $color-white;
     }
 
-    @include desktop-light {
+    @include desktop {
       position: relative;
-      height: pxToRem(400);
+      height: pxToRem(550);
       width: pxToRem(1);
       background: $color-white;
     }
@@ -526,33 +530,6 @@ a {
 }
 
 // ====ANIMATION======
-
-// .heading-vertical {
-//   position: relative;
-//   animation: jump 4s ease-in-out 0s normal running none;
-
-//   @keyframes jump {
-    
-//     0% {
-//       bottom: 100%;
-//     }
-//     20% {
-//       bottom: 24.5%;
-//     }
-//     40% {
-//       bottom: 50%;
-//     }
-//     60% {
-//       bottom: 24.5%;
-//     }
-//     80% {
-//       bottom: 30%;
-//     }
-//     100% {
-//       bottom: 24.5%;
-//     }
-//   }
-// }
 
 .button, .scroll-nav {
   animation: emergence 2s linear 0s normal running none;

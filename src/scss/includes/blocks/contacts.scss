@@ -62,7 +62,7 @@
     }
   }
 
-  &__heading {
+  &__title {
     position: absolute;
 
     @include mobile {
@@ -132,29 +132,13 @@
   }
 
   &__us-form {
-    display: flex;
-    flex-direction: column;
-
-    @include mobile {
-      gap: pxToRem(35);
-    }
 
     @include tablet {
-      justify-content: center;
       width: pxToRem(600);
-      gap: pxToRem(35);
-    }
-
-    @include desktop-light {
-      gap: pxToRem(30);
-    }
-
-    @include desktop {
-      gap: pxToRem(50);
     }
   }
 
-  &__us-title-text {
+  &__us-title {
     font-family: $font-Body-Grotesque;
     font-weight: 800;
     font-size: pxToRem(30);
@@ -180,7 +164,7 @@
     }
   }
 
-  &__us-subtitle-text {
+  &__us-subtitle {
     font-size: pxToRem(20);
     line-height: 108.5%;
     letter-spacing: 0.105em;
@@ -188,6 +172,19 @@
 
     @include mobile {
       font-size: pxToRem(16);
+      margin-bottom: pxToRem(35);
+    }
+
+    @include tablet {
+      margin-bottom: pxToRem(35);
+    }
+
+    @include desktop-light {
+      margin-bottom: pxToRem(30);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(50);
     }
   }
 
@@ -237,6 +234,12 @@
     position: relative;
   }
 
+  &__form-error {
+    display: none;
+    color: $color-red;
+    text-shadow: 0 0 pxToRem(2) $color-red;
+  }
+
   &__form-line {
     padding: pxToRem(20);
     font-family: $font-Montserrat;
@@ -253,6 +256,10 @@
     &:invalid:not(:placeholder-shown) {
       border-color: $color-red;
       border-radius: pxToRem(15);
+      + .contacts__form-error {
+        display: block;
+        margin-top: pxToRem(10);
+        }
     }
 
     @include mobile {
@@ -596,7 +603,7 @@
       .contacts__card-mail--normal {
         color: $color-black;
       }
-      .arrow-white__item {
+      .arrow__item--white {
         background-color: $color-black;
         &::before {
           border-color: $color-black;
@@ -627,7 +634,7 @@
       .contacts__card-mail--different {
         color: $color-white;
       }
-      .arrow-black__item {
+      .arrow__item--black {
         background-color: $color-white;
         &::before {
           border-color: $color-white;
@@ -644,11 +651,11 @@
     color: $color-black;
   }
 
-  &__arrow-black {
+  &__arrow {
     width: 80%;
   }
 
-  &__arrow-white {
+  &__arrow {
     width: 80%;
   }
 
@@ -775,5 +782,64 @@
   @include desktop {
     width: pxToRem(20);
     height: pxToRem(20);
+  }
+}
+
+body[dir="rtl"] {
+  .contacts {
+  
+    @include tablet {
+      padding-left: 0;
+      padding-right: pxToRem(40);
+    }
+
+    &__container {
+  
+      @include tablet {
+        border-left: 0;
+        border-right: pxToRem(1) solid $color-white;
+      }
+  
+      @include desktop-light {
+        padding-left: 0;
+        padding-right: pxToRem(80);
+  
+        &::before {
+          left: auto;
+          right: pxToRem(80);
+        }
+      }
+  
+      @include desktop {
+  
+        &::before {
+          left: auto;
+          right: pxToRem(100);
+        }
+      }
+    }
+
+    &__scroll-nav {
+      right: auto;
+
+      @include desktop-light {
+        left: 0;
+      }
+  
+      @include desktop {
+        left: 5.8%;
+      }
+    }
+
+    &__title {
+      left: auto;
+      @include desktop-light {
+        right: pxToRem(-80);
+      }
+  
+      @include desktop {
+        right: pxToRem(-63);
+      }
+    }
   }
 }
