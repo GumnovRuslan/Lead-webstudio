@@ -91,6 +91,7 @@
             order: -1;
             position: relative;
             align-self: center;
+            z-index: 6;
         }
 
         @include tablet {
@@ -110,15 +111,19 @@
 
         @include mobile {
             position: absolute;
-            top: pxToRem(83);
-            z-index: 20;
+            top: pxToRem(0);
+            z-index: 5;
             left: -100%;
             width: 100vw;
             min-height: 100vh;
-            padding-top: pxToRem(100);
+            padding-top: pxToRem(183);
             padding-bottom: pxToRem(50);
             background: $color-black;
             transition: all 0.7s ease-in-out;
+
+            @include light-theme {
+                background: linear-gradient(rgba(178, 178, 178, 0.8), rgba(255, 255, 255, 0.8),rgba(178, 178, 178, 0.8)), url(../../../img/i.webp);
+            }
         }
 
         @include tablet {
@@ -137,6 +142,11 @@
     }
 
     &__logo {
+
+        @include mobile {
+            position: relative;
+            z-index: 7;
+        }
 
         @include desktop-light {
             padding: 0 pxToRem(10) pxToRem(10) pxToRem(10);
@@ -220,6 +230,10 @@
         color: $color-white;
         font-size: pxToRem(16);
         text-transform: uppercase;
+
+        @include light-theme {
+            color: $color-black;
+        }
     }
 
     &__drop-list {
@@ -267,6 +281,10 @@
         font-weight: 600;
         color: $color-white;
 
+        @include light-theme {
+            color: $color-black;
+        }
+
         @include mobile {
             display: flex;
             align-items: center;
@@ -305,6 +323,13 @@
 
     &__arrow {
         width: 100%;
+        @include light-theme {
+            background: $color-black;
+            &::before {
+                border-top: pxToRem(2) solid $color-black;
+                border-right: pxToRem(2) solid $color-black;
+            }
+        }
 
         @include tablet {
             display: none;
@@ -322,6 +347,8 @@
     &__btn {
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 8;
     }
 
     &__btn-link {
@@ -369,6 +396,10 @@
 
         @include desktop {
             font-size: pxToRem(20);
+        }
+
+        @include light-theme {
+            color: $color-black;
         }
     }
 

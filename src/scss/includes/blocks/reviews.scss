@@ -60,6 +60,10 @@
     text-transform: uppercase;
     color: $color-white;
 
+    @include light-theme {
+      color: $color-black;
+    }
+
     @include mobile {
       margin-bottom: pxToRem(18);
       font-size: pxToRem(20);
@@ -106,6 +110,12 @@
       width: pxToRem(148);
       height: pxToRem(2);
       background: $color-white;
+    }
+
+    @include light-theme {
+      &::before, &::after {
+        background: $color-black;
+      }
     }
 
     @include mobile {
@@ -213,6 +223,10 @@
     text-align: center;
     letter-spacing: 0.365em;
     text-transform: uppercase;
+
+    @include light-theme {
+      color: $color-black;
+    }
   }
 
   &__stars {
@@ -398,6 +412,11 @@
     flex-direction: column;
     border: pxToRem(1) solid $color-white;
 
+    @include light-theme {
+      border-color: $color-black;
+      background: $color-light-gray;
+    }
+
     @include mobile {
       gap: pxToRem(19);
       width: pxToRem(284);
@@ -525,6 +544,10 @@
     text-transform: uppercase;
     color: $color-white;
 
+    // @include light-theme {
+    //   color: $color-black;
+    // }
+
     @include mobile {
       font-size: pxToRem(10);
     }
@@ -552,6 +575,10 @@
     line-height: 169%;
     letter-spacing: 0.105em;
     color: $color-white;
+
+    // @include light-theme {
+    //   color: $color-black;
+    // }
 
     @include mobile {
       font-size: pxToRem(12);

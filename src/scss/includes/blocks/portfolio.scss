@@ -68,6 +68,14 @@
         background: $color-white;
       }
     }
+
+    @include light-theme {
+      border-left: pxToRem(1) solid $color-black;
+
+      &::before {
+        background: $color-black;
+      }
+    }
   }
 
   &__heading {
@@ -95,6 +103,10 @@
   &__title {
     position: absolute;
     color: $color-white;
+
+    @include light-theme {
+      color: $color-black;
+    }
 
     @include mobile {
       left: pxToRem(-78);
@@ -139,6 +151,10 @@
 
     @include desktop {
       display: none;
+    }
+
+    @include light-theme {
+      color: $color-black;
     }
   }
 
@@ -330,6 +346,10 @@
     letter-spacing: 0.105em;
     text-transform: uppercase;
     color: $color-white;
+
+    @include light-theme {
+      color: $color-black;
+    }
   }
 
   &__scrollbar {

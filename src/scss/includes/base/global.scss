@@ -22,9 +22,9 @@ body {
   scroll-behavior: smooth;
   background: $color-black;
 
-//   @include desktop {
-//     overflow: hidden;
-// }
+  @include light-theme {
+    background: linear-gradient(rgba(178, 178, 178, 0.8), rgba(178, 178, 178, 0.8)), url(../../../img/backgound-ligth-theme.webp);
+  }
 }
 
 input[type="submit"]:focus {
@@ -166,6 +166,10 @@ body[dir="rtl"] {
   color: $color-white;
   transform: rotate(-90deg);
 
+  @include light-theme {
+    color: $color-black;
+  }
+
   @include mobile {
     font-size: pxToRem(30);
   }
@@ -219,6 +223,10 @@ body[dir="rtl"] {
     color: $color-white;
     transition: all 0,3s ease;
 
+    @include light-theme {
+      color: $color-black;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -228,6 +236,10 @@ body[dir="rtl"] {
       height: pxToRem(1);
       background: $color-white;
       transition: all 0,3s ease;
+
+      @include light-theme {
+        background: $color-black;
+      }
     }
   }
 }
@@ -256,6 +268,10 @@ body[dir="rtl"] {
       height: pxToRem(400);
       width: pxToRem(1);
       background: $color-white;
+
+      @include light-theme {
+        background: $color-black;
+      }
     }
 
     @include desktop {
@@ -263,6 +279,10 @@ body[dir="rtl"] {
       height: pxToRem(550);
       width: pxToRem(1);
       background: $color-white;
+
+      @include light-theme {
+        background: $color-black;
+      }
     }
   }
 
@@ -386,6 +406,11 @@ body[dir="rtl"] {
       transition: .4s;
       background-color: #1B1B1B;
 
+      @include light-theme {
+        background-color: $color-gray;
+        border: pxToRem(1) solid $color-black;
+      }
+
       @include mobile {
           width: pxToRem(60);
           height: pxToRem(24);
@@ -482,6 +507,10 @@ body[dir="rtl"] {
       background: $color-white;
       transition: 0.6s all;
 
+      @include light-theme {
+        background: $color-black;
+      }
+
       &::before {
           content: "";
           position: absolute;
@@ -490,6 +519,10 @@ body[dir="rtl"] {
           height: pxToRem(4);
           background: $color-white;
           transition: 0.6s all;
+
+          @include light-theme {
+            background: $color-black;
+          }
       }
 
       &::after {
@@ -500,6 +533,10 @@ body[dir="rtl"] {
           height: pxToRem(4);
           background: $color-white;
           transition: 0.6s all;
+
+          @include light-theme {
+            background: $color-black;
+          }
       }
   }
 }
@@ -526,6 +563,10 @@ body[dir="rtl"] {
       border-radius: pxToRem(100);
       background: $color-white;
       transition: all 1s;
+
+      @include light-theme {
+        background: $color-black;
+      }
   }
 }
 

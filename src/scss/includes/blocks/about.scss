@@ -13,7 +13,11 @@
       position: absolute;
       top: 0;
       width: pxToRem(1);
-      background: #fff;
+      background: $color-white;
+
+      @include light-theme {
+        background: $color-black;
+      }
     }
 
     @include mobile {
@@ -76,6 +80,12 @@
     border-top: pxToRem(1) solid $color-white;
     border-bottom: pxToRem(1) solid $color-white;
 
+    @include light-theme {
+      color: $color-black;
+      border-top: pxToRem(1) solid $color-black;
+      border-bottom: pxToRem(1) solid $color-black;
+    }
+
     @include mobile {
       padding: pxToRem(42) pxToRem(30) pxToRem(34) pxToRem(30);
       font-size: pxToRem(40);
@@ -129,6 +139,10 @@
     line-height: 169%;
     letter-spacing: 0.105em;
     color: $color-white;
+
+    @include light-theme {
+      color: $color-black;
+    }
 
     @include mobile {
       padding: pxToRem(11) pxToRem(15) pxToRem(17) pxToRem(15);
@@ -336,6 +350,10 @@
       font-size: pxToRem(20);
       margin-left: pxToRem(13);
     }
+
+    @include light-theme {
+      color: $color-black;
+    }
   }
 
   &__items {
@@ -347,6 +365,12 @@
       path {
         transition: all 0.5s ease;
         fill: $color-red;
+      }
+    }
+
+    @include light-theme {
+      path {
+        fill: $color-black;
       }
     }
 
@@ -391,6 +415,8 @@
     height: pxToRem(44.29);
   }
 }
+
+// =======RTL=========
 
 body[dir="rtl"] {
 

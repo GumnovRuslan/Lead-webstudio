@@ -60,6 +60,13 @@
         background: $color-white;
       }
     }
+
+    @include light-theme {
+      border-left-color: $color-black;
+      &::before {
+        background: $color-black;
+      }
+    }
   }
 
   &__title {
@@ -147,6 +154,10 @@
     text-transform: uppercase;
     color: $color-white;
 
+    @include light-theme {
+      color: $color-black;
+    }
+
     @include mobile {
       margin-bottom: pxToRem(4);
     }
@@ -169,6 +180,10 @@
     line-height: 108.5%;
     letter-spacing: 0.105em;
     color: $color-white;
+
+    @include light-theme {
+      color: $color-black;
+    }
 
     @include mobile {
       font-size: pxToRem(16);
@@ -259,7 +274,13 @@
       + .contacts__form-error {
         display: block;
         margin-top: pxToRem(10);
-        }
+      }
+    }
+
+    @include light-theme {
+      border: pxToRem(1) solid $color-black;
+      color: $color-black;
+      background: $color-gray;
     }
 
     @include mobile {
@@ -449,6 +470,10 @@
     path {
       transition: all 0.3s ease;
       fill: $color-white;
+
+      @include light-theme {
+        fill: $color-black;
+      }
     }
 
     &:hover {
@@ -482,6 +507,10 @@
     line-height: 132.4%;
     text-shadow: 0 0 pxToRem(4) rgba(255, 255, 255, 0.5);
     color: $color-white;
+
+    @include light-theme {
+      color: $color-black;
+    }
   }
 
   &__network-container {
@@ -516,6 +545,10 @@
     display: flex;
     align-items: center;
     border: pxToRem(2) solid $color-white;
+
+    @include light-theme {
+      border-color: $color-black;
+    }
 
     @include mobile {
       width: pxToRem(169);
@@ -689,6 +722,10 @@
     letter-spacing: 0.105em;
     text-transform: uppercase;
     color: $color-white;
+
+    @include light-theme {
+      color: $color-black;
+    }
   }
 
   &__follow-items {
@@ -711,6 +748,10 @@
     path {
       transition: all 0.3s ease;
       fill: $color-white;
+
+      @include light-theme {
+        fill: $color-black;
+      }
     }
 
     &:hover {

@@ -65,6 +65,13 @@
         background: $color-white;
       }
     }
+
+    @include light-theme {
+      border-left-color: $color-black;
+      &::before {
+        background: $color-black;
+      }
+    }
   }
 
   &__title {
@@ -301,6 +308,14 @@
 
     &:hover {
       background: rgba(255, 255, 255, 0.5);
+
+      @include light-theme {
+        background: $color-red-light;
+      }
+    }
+
+    @include light-theme {
+      color: $color-black;
     }
 
     @include mobile {
@@ -419,6 +434,10 @@
     text-transform: uppercase;
     color: $color-white;
 
+    @include light-theme {
+      color: $color-black;
+    }
+
     @include mobile {
       font-size: pxToRem(50);
     }
@@ -440,6 +459,10 @@
     line-height: 168%;
     letter-spacing: 0.105em;
     color: $color-white;
+
+    @include light-theme {
+      color: $color-black;
+    }
 
     @include mobile {
       padding-left: pxToRem(9);
@@ -464,6 +487,11 @@
         .nav-item-1 {
           background: $color-white;
           color: $color-black;
+
+          @include light-theme {
+            background: $color-red;
+            color: $color-white;
+          }
         }
         .tabs__slider-container {
           left: calc((100% + 100px) * 0 * -1);
@@ -476,6 +504,11 @@
         .nav-item-2 {
           background: $color-white;
           color: $color-black;
+
+          @include light-theme {
+            background: $color-red;
+            color: $color-white;
+          }
         }
         .tabs__slider-container {
           left: calc((100% + 100px) * 1 * -1);
@@ -488,6 +521,11 @@
         .nav-item-3 {
           background: $color-white;
           color: $color-black;
+
+          @include light-theme {
+            background: $color-red;
+            color: $color-white;
+          }
         }
         .tabs__slider-container {
           left: calc((100% + 100px) * 2 * -1);
@@ -500,6 +538,11 @@
         .nav-item-4 {
           background: $color-white;
           color: $color-black;
+
+          @include light-theme {
+            background: $color-red;
+            color: $color-white;
+          }
         }
         .tabs__slider-container {
           left: calc((100% + 100px) * 3 * -1);

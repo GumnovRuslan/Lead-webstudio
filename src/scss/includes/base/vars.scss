@@ -9,6 +9,10 @@ $color-red: #d91936;
 $color-white: #ffffff;
 $color-gray: rgba(255, 255, 255, 0.5);
 
+// Color for light-theme
+$color-red-light: #e88493;
+$color-light-gray: #373737;
+
 // Media queries
 $desktop-extra: pxToRem(1800, em);
 $desktop: pxToRem(1441, em);
