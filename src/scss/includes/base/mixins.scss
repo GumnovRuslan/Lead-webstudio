@@ -41,8 +41,16 @@
   }
 }
 
+// light theme
 @mixin light-theme() {
 	@media (prefers-color-scheme: light) {
+	  @content;
+	}
+}
+
+// Print version
+@mixin print() {
+	@media print {
 	  @content;
 	}
 }

@@ -1,5 +1,9 @@
 .header {
 
+    @include print {
+        display: none;
+    }
+
     @include mobile {
         position: relative;
         z-index: 9999;

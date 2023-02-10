@@ -1,6 +1,10 @@
 .reviews {
   overflow: hidden;
 
+  @include print {
+    display: none;
+  }
+
   @include desktop-light {
     position: relative;
     display: flex;

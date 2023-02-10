@@ -23,6 +23,10 @@
     @include mobile {
       padding-bottom: pxToRem(107);
       border-left: pxToRem(1) solid $color-white;
+
+      @include print {
+        padding-bottom: pxToRem(50);
+      }
     }
 
     @include tablet {
@@ -128,6 +132,11 @@
   }
 
   &__button {
+
+    @include print {
+      display: none;
+    }
+
     @include mobile {
       padding: pxToRem(10);
     }
@@ -251,6 +260,10 @@
   &__nav {
     display: flex;
 
+    @include print {
+      display: none;
+    }
+
     @include mobile {
       justify-content: center;
       gap: pxToRem(36);
@@ -353,6 +366,10 @@
     gap: pxToRem(100);
     transition: all 1s;
 
+    @include print {
+      flex-direction: column;
+    }
+
     @include mobile {
       max-width: pxToRem(373);
     }
@@ -373,6 +390,12 @@
   &__slide-content {
     display: flex;
     flex-direction: column;
+
+    @include print {
+      &:nth-child(3) {
+        margin-bottom: pxToRem(150);
+      }
+    }
 
     @include mobile {
       min-width: pxToRem(373);
@@ -407,6 +430,13 @@
       height: pxToRem(210);
       background-position: 36% 50%, top left;
       background-size: pxToRem(290) pxToRem(165), pxToRem(276) pxToRem(165);
+
+      @include print {
+        background: transparent;
+        background-size: auto;
+        height: auto;
+        justify-content: center;
+      }
     }
 
     @include tablet {

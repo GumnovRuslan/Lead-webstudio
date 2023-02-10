@@ -1,6 +1,12 @@
 .hero {
+
   @include mobile {
     height: pxToRem(746);
+
+    @include print {
+      height: auto;
+      padding: pxToRem(50) 0;
+    }
   }
 
   @include tablet {
@@ -19,6 +25,12 @@
 
   &__container {
     position: relative;
+
+    @include print {
+      padding: 0;
+      display: flex;
+      align-items: start;
+  }
 
     @include mobile {
       display: flex;
@@ -77,6 +89,10 @@
     @include mobile {
       margin-top: pxToRem(177);
       gap: pxToRem(34);
+
+      @include print {
+        margin: 0;
+      }
     }
 
     @include tablet {
@@ -225,6 +241,10 @@
     padding: 0 pxToRem(7);
     z-index: 2;
 
+    @include print {
+      display: none;
+  }
+
     @include desktop-light {
       position: absolute;
       left: pxToRem(-1);
@@ -291,6 +311,10 @@
 
   &__image-background {
     position: absolute;
+
+    @include print {
+      display: none;
+  }
 
     @include mobile {
       top: pxToRem(17);

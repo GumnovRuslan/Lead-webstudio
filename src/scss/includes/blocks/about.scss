@@ -24,6 +24,10 @@
       position: relative;
       padding-bottom: pxToRem(107);
 
+      @include print {
+        padding-bottom: pxToRem(50);
+      }
+
       &::before {
         left: pxToRem(15);
         min-height: pxToRem(489);
@@ -175,6 +179,11 @@
   }
 
   &__button {
+
+    @include print {
+      display: none;
+    }
+
     @include mobile {
       margin-left: pxToRem(15);
     }
@@ -271,6 +280,10 @@
   &__follow {
     display: flex;
     flex-direction: column;
+
+    @include print {
+      display: none;
+    }
 
     @include mobile {
       position: absolute;

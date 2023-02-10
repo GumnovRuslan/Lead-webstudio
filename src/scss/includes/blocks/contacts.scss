@@ -140,6 +140,10 @@
 
   &__us-form {
 
+    @include print {
+      display: none;
+    }
+
     @include tablet {
       width: pxToRem(600);
     }
@@ -686,10 +690,10 @@
 
   &__arrow {
     width: 80%;
-  }
 
-  &__arrow {
-    width: 80%;
+    @include print {
+      display: none;
+    }
   }
 
   //=====Follow=us=====================================================
@@ -698,6 +702,10 @@
     align-self: end;
     display: flex;
     flex-direction: column;
+
+    @include print {
+      display: none;
+    }
 
     @include mobile {
       gap: pxToRem(8);

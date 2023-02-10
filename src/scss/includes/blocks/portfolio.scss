@@ -1,4 +1,8 @@
 .portfolio {
+
+  @include print {
+    display: none;
+  }
   @include mobile {
     padding-left: pxToRem(15);
   }

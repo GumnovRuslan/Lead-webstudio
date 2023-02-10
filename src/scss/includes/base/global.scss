@@ -112,6 +112,10 @@ a {
 
 .arrow {
 
+  @include print {
+    display: none;
+  }
+
   &__item--white {
     position: relative;
     height: pxToRem(1);
@@ -188,6 +192,11 @@ body[dir="rtl"] {
 }
 
 .button {
+
+  @include print {
+    display: none;
+}
+
   &__link {
     display: flex;
     justify-content: center;
@@ -200,6 +209,11 @@ body[dir="rtl"] {
 }
 
 .scroll-nav {
+
+  @include print {
+    display: none;
+}
+
   &__link {
     display: inline-block;
     transform: rotate(-90deg);
@@ -221,7 +235,7 @@ body[dir="rtl"] {
     line-height: 132.4%;
     padding-left: pxToRem(95);
     color: $color-white;
-    transition: all 0,3s ease;
+    transition: all 0.3s ease;
 
     @include light-theme {
       color: $color-black;
@@ -235,7 +249,7 @@ body[dir="rtl"] {
       width: pxToRem(70);
       height: pxToRem(1);
       background: $color-white;
-      transition: all 0,3s ease;
+      transition: all 0.3s ease;
 
       @include light-theme {
         background: $color-black;
