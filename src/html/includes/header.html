@@ -14,7 +14,7 @@
     <header class="header">
       <div class="header__container">
         <div class="header__navigation">
-          <a href="https://test-task-site-2.netlify.app/" class="header__logo" tabindex="1">
+          <a href="https://test-task-site-2.netlify.app/" class="header__logo">
             <svg class="header__logo--desktop" id="logo-desktop" aria-label="lead web studio logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="290" height="42" viewBox="0 0 290 42" fill="none">
               <rect width="290" height="42" fill="url(#pattern0)"/>
               <defs>
@@ -39,53 +39,49 @@
           <div class="header__main">
             <div class="header__dop-service">
               <div class="header__languages">
-                <select class="header__drop-down" name="languages" id="languages" tabindex="2">
+                <select class="header__drop-down" name="languages" id="languages">
                   <option class="header__drop-list" value="en">en</option>
                   <option class="header__drop-list" value="ru">ru</option>
                   <option class="header__drop-list" value="br">br</option>
                 </select>
               </div>
-              <label for="checkbox" class="header__switch" tabindex="3">
+              <label for="checkbox" class="header__switch">
                 <input class="switch__checkbox" type="checkbox" id="checkbox">
                 <span class="switch__slider"></span>
               </label>
             </div>
             <nav class="header__nav">
-              <label for="radio_hero" class="header__nav-item" tabindex="4">Home
+              <label for="radio_hero" class="header__nav-item">Home
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_about" class="header__nav-item" tabindex="5">About
+              <label for="radio_about" class="header__nav-item">About
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_portfolio" class="header__nav-item" tabindex="6">Works
+              <label for="radio_portfolio" class="header__nav-item">Works
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_reviews" class="header__nav-item" tabindex="7">Prices
+              <label for="radio_reviews" class="header__nav-item">Prices
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_services" class="header__nav-item" tabindex="8">For clients
+              <label for="radio_services" class="header__nav-item">For clients
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
-              <label for="radio_contacts" class="header__nav-item" tabindex="9">Contacts
+              <label for="radio_contacts" class="header__nav-item">Contacts
                 <span class="header__arrow arrow__item--white">
                 </span>
               </label>
             </nav>
           </div>
         </div>
-        <div class="header__btn">
-          <button href="https://test-task-site-2.netlify.app/" class="header__btn-link" aria-label="button start project" tabindex="10">
-            <p class="header__btn-text">Start a project</p>
-            <div class="header__btn-badge">
-              <div class="header__btn-container"></div>
-            </div>
-          </button>
-        </div>
+        <button class="header__btn" aria-label="button start project">
+          <span class="header__btn-text">Start a project</span>
+          <span class="header__btn-badge"></span>
+        </button>
       </div>
     </header>
     <input class="radio__check" name="slider" type="radio" id="radio_hero" checked>
